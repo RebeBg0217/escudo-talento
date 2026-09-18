@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diagnóstico PRODHAB — ¿Su empresa cumple la Ley 8968? | GTI Consultoría</title>
+<style>
+:root {
+  --blue: #1a365d; --accent: #2b6cb0; --light: #ebf4ff; --gold: #d69e2e;
+  --green: #38a169; --red: #e53e3e; --dark: #1a202c; --gray: #718096;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', system-ui, sans-serif; color: var(--dark); background: #f7fafc; }
+.header { background: linear-gradient(135deg, var(--blue), #2c5282); color: white; padding: 2.5rem 1.5rem; text-align: center; }
+.header h1 { font-size: 1.6rem; margin-bottom: 0.5rem; }
+.header p { opacity: 0.9; font-size: 0.95rem; max-width: 500px; margin: 0 auto; }
+.badge { display: inline-block; background: var(--gold); color: var(--blue); padding: 0.3rem 1rem; border-radius: 20px; font-weight: 700; font-size: 0.8rem; margin-bottom: 1rem; }
+.container { max-width: 700px; margin: 0 auto; padding: 1.5rem; }
+.progress-bar { background: #e2e8f0; border-radius: 10px; height: 8px; margin: 1rem 0 2rem; overflow: hidden; }
+.progress-fill { height: 100%; background: var(--accent); border-radius: 10px; transition: width 0.3s; width: 0%; }
+.progress-text { text-align: center; font-size: 0.8rem; color: var(--gray); margin-bottom: 0.5rem; }
+.question-card {
+  background: white; border-radius: 12px; padding: 2rem; margin-bottom: 1rem;
+  border: 1px solid #e2e8f0; display: none;
+}
+.question-card.active { display: block; }
+.q-number { color: var(--accent); font-size: 0.8rem; font-weight: 700; }
+.q-text { font-size: 1.05rem; font-weight: 600; margin: 0.5rem 0 1rem; line-height: 1.4; }
+.q-context { font-size: 0.8rem; color: var(--gray); margin-bottom: 1rem; font-style: italic; }
+.options label {
+  display: block; padding: 0.8rem 1rem; margin-bottom: 0.5rem; border: 2px solid #e2e8f0;
+  border-radius: 8px; cursor: pointer; font-size: 0.9rem; transition: all 0.2s;
+}
+.options label:hover { border-color: var(--accent); background: var(--light); }
+.options input[type="radio"] { display: none; }
+.options input[type="radio"]:checked + span { font-weight: 600; }
+.options label:has(input:checked) { border-color: var(--accent); background: var(--light); }
+.btn-next {
+  display: block; width: 100%; padding: 0.8rem; background: var(--accent); color: white;
+  border: none; border-radius: 8px; font-size: 1rem; font-weight: 600; cursor: pointer;
+  margin-top: 1rem; transition: background 0.2s;
+}
+.btn-next:hover { background: #2c5282; }
+.btn-next:disabled { background: #cbd5e0; cursor: not-allowed; }
+.results-section { display: none; }
+.score-circle {
+  width: 150px; height: 150px; border-radius: 50%; margin: 1.5rem auto;
+  display: flex; align-items: center; justify-content: center; flex-direction: column;
+  border: 8px solid; position: relative;
+}
+.score-circle .score { font-size: 2.5rem; font-weight: 700; }
+.score-circle .max { font-size: 0.8rem; color: var(--gray); }
+.score-label { text-align: center; font-size: 1.2rem; font-weight: 700; margin: 0.5rem 0 1.5rem; }
+.gap-item {
+  background: white; padding: 1rem 1.2rem; margin-bottom: 0.5rem; border-radius: 8px;
+  border-left: 4px solid var(--red); font-size: 0.9rem;
+}
+.gap-item.ok { border-left-color: var(--green); }
+.gap-item .gap-title { font-weight: 600; margin-bottom: 0.2rem; }
+.gap-item .gap-detail { color: var(--gray); font-size: 0.8rem; }
+.risk-meter { display: flex; gap: 0; margin: 1.5rem 0; border-radius: 8px; overflow: hidden; height: 30px; }
+.risk-meter div { flex: 1; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; font-weight: 700; color: white; }
+.risk-meter .r-high { background: #e53e3e; }
+.risk-meter .r-med { background: #ed8936; }
+.risk-meter .r-low { background: #ecc94b; color: var(--dark); }
+.risk-meter .r-safe { background: #38a169; }
+.risk-indicator { width: 0; height: 0; border-left: 8px solid transparent; border-right: 8px solid transparent; border-bottom: 12px solid var(--dark); margin: 0 auto; transition: margin-left 0.5s; }
+.cta-box { background: var(--blue); border-radius: 12px; padding: 2rem; color: white; text-align: center; margin-top: 2rem; }
+.cta-box a { display: inline-block; background: var(--gold); color: var(--blue); padding: 0.8rem 2rem; border-radius: 8px; font-weight: 700; text-decoration: none; margin-top: 1rem; }
+.form-datos { background: white; border-radius: 12px; padding: 2rem; margin-top: 1.5rem; border: 1px solid #e2e8f0; }
+.form-datos input { width: 100%; padding: 0.7rem; border: 1px solid #cbd5e0; border-radius: 6px; margin-bottom: 0.8rem; font-size: 0.9rem; }
+footer { text-align: center; padding: 2rem; font-size: 0.75rem; color: var(--gray); }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="badge">GRATIS — 3 MINUTOS</div>
+  <h1>¿Su empresa cumple la Ley 8968?</h1>
+  <p>Diagnóstico rápido de protección de datos personales conforme a PRODHAB</p>
+</div>
+
+<div class="container">
+  <div class="progress-text" id="progText">Pregunta 1 de 15</div>
+  <div class="progress-bar"><div class="progress-fill" id="progBar"></div></div>
+
+  <div id="quizSection"></div>
+
+  <div class="results-section" id="resultados">
+    <div style="background:white;border-radius:12px;padding:2rem;border:1px solid #e2e8f0;">
+      <h2 style="color:var(--blue);text-align:center;margin-bottom:0.5rem;">Su diagnóstico PRODHAB</h2>
+      <div class="score-circle" id="scoreCircle">
+        <div class="score" id="scoreNum"></div>
+        <div class="max">de 100</div>
+      </div>
+      <div class="score-label" id="scoreLabel"></div>
+      <div class="risk-meter">
+        <div class="r-high">CRÍTICO</div>
+        <div class="r-med">RIESGO</div>
+        <div class="r-low">PRECAUCIÓN</div>
+        <div class="r-safe">CUMPLE</div>
+      </div>
+      <div style="position:relative;height:15px;margin-bottom:1.5rem;">
+        <div class="risk-indicator" id="riskArrow"></div>
+      </div>
+    </div>
+
+    <div style="background:white;border-radius:12px;padding:2rem;margin-top:1rem;border:1px solid #e2e8f0;">
+      <h3 style="color:var(--blue);margin-bottom:1rem;">Detalle por área</h3>
+      <div id="gapList"></div>
+    </div>
+
+    <div class="cta-box">
+      <p style="font-size:1.1rem;font-weight:600;">¿Quiere cerrar estas brechas antes de que PRODHAB lo visite?</p>
+      <p style="opacity:0.9;font-size:0.9rem;margin-top:0.5rem;">Auditoría completa + plan de remediación + plantillas legales = $497</p>
+      <a href="https://wa.me/50670464896?text=Hola%2C%20hice%20el%20diagn%C3%B3stico%20PRODHAB%20y%20me%20interesa%20la%20auditor%C3%ADa%20completa">Solicitar auditoría PRODHAB</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>Este diagnóstico es orientativo y no constituye asesoría legal. Para una auditoría formal, contacte a GTI Consultoría.</p>
+  <p>GTI Consultoría en Recursos Humanos · <a href="https://gticr.net" style="color:var(--accent)">gticr.net</a> · +506 7046-4896</p>
+</footer>
+
+<script>
+const preguntas = [
+  {
+    texto: "¿Su empresa tiene registrada alguna base de datos ante la PRODHAB?",
+    contexto: "La Ley 8968 obliga a registrar ante PRODHAB toda base de datos con información personal.",
+    opciones: [
+      { texto: "Sí, todas las bases están registradas", pts: 7 },
+      { texto: "Solo algunas están registradas", pts: 3 },
+      { texto: "No sabemos si están registradas", pts: 1 },
+      { texto: "No, ninguna está registrada", pts: 0 }
+    ],
+    area: "Registro de bases de datos"
+  },
+  {
+    texto: "¿Tienen un oficial o encargado de protección de datos designado?",
+    contexto: "El reglamento a la Ley 8968 recomienda designar un responsable del tratamiento de datos.",
+    opciones: [
+      { texto: "Sí, con funciones formalmente asignadas", pts: 7 },
+      { texto: "Alguien lo hace informalmente", pts: 3 },
+      { texto: "No, nadie tiene esa función", pts: 0 }
+    ],
+    area: "Gobernanza"
+  },
+  {
+    texto: "¿Obtienen consentimiento informado antes de recolectar datos personales de empleados y clientes?",
+    contexto: "Art. 5 de la Ley 8968: el consentimiento debe ser libre, específico e informado.",
+    opciones: [
+      { texto: "Sí, con formulario firmado y cláusula explícita", pts: 7 },
+      { texto: "Solo verbalmente o con un aviso genérico", pts: 3 },
+      { texto: "No solicitamos consentimiento explícito", pts: 0 }
+    ],
+    area: "Consentimiento"
+  },
+  {
+    texto: "¿Tienen una política de privacidad publicada y accesible?",
+    contexto: "La ley exige que el titular de los datos pueda conocer cómo se tratarán sus datos.",
+    opciones: [
+      { texto: "Sí, en nuestro sitio web y en documentos internos", pts: 7 },
+      { texto: "Solo interna, no publicada", pts: 3 },
+      { texto: "No tenemos política de privacidad", pts: 0 }
+    ],
+    area: "Política de privacidad"
+  },
+  {
+    texto: "¿Tienen un procedimiento para atender solicitudes de acceso, rectificación o eliminación de datos (derechos ARCO)?",
+    contexto: "Art. 7-8 de la Ley 8968: toda persona tiene derecho a acceder, rectificar, cancelar u oponerse al tratamiento de sus datos.",
+    opciones: [
+      { texto: "Sí, con procedimiento documentado y plazos definidos", pts: 7 },
+      { texto: "Atendemos solicitudes caso por caso sin procedimiento formal", pts: 3 },
+      { texto: "No hemos recibido solicitudes y no tenemos procedimiento", pts: 0 }
+    ],
+    area: "Derechos ARCO"
+  },
+  {
+    texto: "¿Controlan quién tiene acceso a los expedientes de personal y datos sensibles?",
+    contexto: "El principio de seguridad (Art. 10) exige medidas para proteger los datos contra acceso no autorizado.",
+    opciones: [
+      { texto: "Sí, acceso por roles con registro de quién consulta qué", pts: 7 },
+      { texto: "Solo algunas personas tienen acceso pero sin registro", pts: 4 },
+      { texto: "Cualquiera con acceso al sistema puede ver los expedientes", pts: 0 }
+    ],
+    area: "Control de acceso"
+  },
+  {
+    texto: "¿Los contratos con proveedores que manejan datos de sus empleados o clientes incluyen cláusulas de protección de datos?",
+    contexto: "Art. 13: el responsable debe asegurar que terceros cumplan las mismas obligaciones.",
+    opciones: [
+      { texto: "Sí, todos los contratos tienen cláusula de confidencialidad y protección de datos", pts: 7 },
+      { texto: "Solo algunos contratos lo incluyen", pts: 3 },
+      { texto: "No incluimos cláusulas de protección de datos en contratos", pts: 0 }
+    ],
+    area: "Contratos con terceros"
+  },
+  {
+    texto: "¿Tienen un protocolo para notificar una brecha de seguridad que afecte datos personales?",
+    contexto: "En caso de vulneración, se debe notificar a la PRODHAB y a los titulares afectados.",
+    opciones: [
+      { texto: "Sí, con procedimiento, responsables y plazos definidos", pts: 7 },
+      { texto: "Sabemos que debemos notificar pero no tenemos procedimiento formal", pts: 3 },
+      { texto: "No tenemos protocolo de notificación de brechas", pts: 0 }
+    ],
+    area: "Gestión de brechas"
+  },
+  {
+    texto: "¿Capacitan a sus colaboradores sobre protección de datos personales?",
+    contexto: "La sensibilización del personal es una medida de seguridad organizativa recomendada.",
+    opciones: [
+      { texto: "Sí, capacitación anual o al ingresar", pts: 7 },
+      { texto: "Solo se les menciona en la inducción", pts: 3 },
+      { texto: "No hay capacitación sobre este tema", pts: 0 }
+    ],
+    area: "Capacitación"
+  },
+  {
+    texto: "¿Tienen definido un periodo de retención para los datos personales que recolectan?",
+    contexto: "Art. 6: los datos solo deben conservarse por el tiempo necesario para cumplir su finalidad.",
+    opciones: [
+      { texto: "Sí, con plazos definidos y proceso de eliminación", pts: 7 },
+      { texto: "Conservamos todo indefinidamente", pts: 1 },
+      { texto: "No hemos definido periodos de retención", pts: 0 }
+    ],
+    area: "Retención de datos"
+  },
+  {
+    texto: "¿Los datos de expedientes laborales se almacenan de forma segura (cifrado, respaldos, acceso controlado)?",
+    contexto: "El principio de seguridad exige medidas técnicas adecuadas al tipo de datos.",
+    opciones: [
+      { texto: "Sí, cifrados, con respaldo y acceso controlado", pts: 7 },
+      { texto: "Respaldos sí, pero no cifrados ni con acceso diferenciado", pts: 3 },
+      { texto: "Están en carpetas compartidas o físicas sin control especial", pts: 0 }
+    ],
+    area: "Seguridad técnica"
+  },
+  {
+    texto: "¿Manejan datos sensibles (salud, biométricos, antecedentes) con protección reforzada?",
+    contexto: "Art. 9: los datos sensibles requieren consentimiento expreso y medidas de seguridad reforzadas.",
+    opciones: [
+      { texto: "Sí, con consentimiento expreso y almacenamiento separado", pts: 7 },
+      { texto: "Los tenemos pero sin tratamiento diferenciado", pts: 2 },
+      { texto: "No distinguimos entre datos sensibles y no sensibles", pts: 0 }
+    ],
+    area: "Datos sensibles"
+  },
+  {
+    texto: "¿Realizan transferencias internacionales de datos personales?",
+    contexto: "Art. 14: la transferencia internacional requiere que el país destino tenga nivel adecuado de protección.",
+    opciones: [
+      { texto: "Sí, con evaluación de nivel de protección del país destino", pts: 7 },
+      { texto: "Sí, pero sin evaluar el nivel de protección", pts: 2 },
+      { texto: "No transferimos datos internacionalmente", pts: 5 },
+      { texto: "No sabemos si nuestros sistemas transfieren datos fuera de CR", pts: 0 }
+    ],
+    area: "Transferencia internacional"
+  },
+  {
+    texto: "¿Tienen un inventario de todas las bases de datos con información personal que manejan?",
+    contexto: "Sin inventario, es imposible saber qué datos se tienen y cómo protegerlos.",
+    opciones: [
+      { texto: "Sí, inventario completo y actualizado", pts: 7 },
+      { texto: "Tenemos idea general pero no documentado", pts: 3 },
+      { texto: "No tenemos inventario de bases de datos", pts: 0 }
+    ],
+    area: "Inventario de datos"
+  },
+  {
+    texto: "¿Han realizado alguna vez una evaluación de impacto en protección de datos?",
+    contexto: "La evaluación de impacto identifica riesgos y medidas de mitigación para el tratamiento de datos.",
+    opciones: [
+      { texto: "Sí, con resultados documentados y plan de acción", pts: 7 },
+      { texto: "Hemos hecho una revisión informal", pts: 3 },
+      { texto: "Nunca hemos evaluado el impacto", pts: 0 }
+    ],
+    area: "Evaluación de impacto"
+  }
+];
+
+let current = 0;
+let respuestas = [];
+
+function renderQuiz() {
+  const section = document.getElementById('quizSection');
+  let html = '';
+  preguntas.forEach((p, i) => {
+    html += `<div class="question-card ${i === 0 ? 'active' : ''}" id="q${i}">
+      <div class="q-number">PREGUNTA ${i + 1} DE 15 · ${p.area.toUpperCase()}</div>
+      <div class="q-text">${p.texto}</div>
+      <div class="q-context">${p.contexto}</div>
+      <div class="options">
+        ${p.opciones.map((o, j) => `<label onclick="selectOption(${i}, ${j})">
+          <input type="radio" name="q${i}" value="${j}"><span>${o.texto}</span>
+        </label>`).join('')}
+      </div>
+      <button class="btn-next" id="btn${i}" disabled onclick="siguiente(${i})">${i === preguntas.length - 1 ? 'Ver mi diagnóstico' : 'Siguiente'}</button>
+    </div>`;
+  });
+  section.innerHTML = html;
+}
+
+function selectOption(qi, oi) {
+  respuestas[qi] = oi;
+  document.getElementById('btn' + qi).disabled = false;
+}
+
+function siguiente(qi) {
+  document.getElementById('q' + qi).classList.remove('active');
+  if (qi < preguntas.length - 1) {
+    current = qi + 1;
+    document.getElementById('q' + current).classList.add('active');
+    document.getElementById('progText').textContent = `Pregunta ${current + 1} de 15`;
+    document.getElementById('progBar').style.width = ((current + 1) / preguntas.length * 100) + '%';
+  } else {
+    mostrarResultados();
+  }
+}
+
+function mostrarResultados() {
+  document.getElementById('quizSection').style.display = 'none';
+  document.querySelector('.progress-bar').style.display = 'none';
+  document.getElementById('progText').style.display = 'none';
+
+  let total = 0;
+  let maxPts = preguntas.length * 7;
+  let gaps = [];
+
+  preguntas.forEach((p, i) => {
+    const pts = p.opciones[respuestas[i]].pts;
+    total += pts;
+    gaps.push({
+      area: p.area,
+      pts: pts,
+      max: 7,
+      respuesta: p.opciones[respuestas[i]].texto,
+      ok: pts >= 5
+    });
+  });
+
+  const score = Math.round((total / maxPts) * 100);
+
+  let nivel, color;
+  if (score >= 75) { nivel = 'Buen cumplimiento'; color = '#38a169'; }
+  else if (score >= 50) { nivel = 'Precaución — brechas importantes'; color = '#ecc94b'; }
+  else if (score >= 25) { nivel = 'Riesgo alto — múltiples incumplimientos'; color = '#ed8936'; }
+  else { nivel = 'Crítico — exposición severa'; color = '#e53e3e'; }
+
+  document.getElementById('scoreCircle').style.borderColor = color;
+  document.getElementById('scoreNum').textContent = score;
+  document.getElementById('scoreNum').style.color = color;
+  document.getElementById('scoreLabel').textContent = nivel;
+  document.getElementById('scoreLabel').style.color = color;
+
+  const arrowPos = Math.min(95, Math.max(5, score));
+  document.getElementById('riskArrow').style.marginLeft = `calc(${100 - arrowPos}% - 8px)`;
+
+  let gapHtml = '';
+  gaps.forEach(g => {
+    const cls = g.ok ? 'ok' : '';
+    gapHtml += `<div class="gap-item ${cls}">
+      <div class="gap-title">${g.ok ? '✓' : '✗'} ${g.area}</div>
+      <div class="gap-detail">${g.respuesta} (${g.pts}/${g.max})</div>
+    </div>`;
+  });
+  document.getElementById('gapList').innerHTML = gapHtml;
+  document.getElementById('resultados').style.display = 'block';
+  document.getElementById('resultados').scrollIntoView({ behavior: 'smooth' });
+}
+
+renderQuiz();
+</script>
+
+</body>
+</html>

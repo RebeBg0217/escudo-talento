@@ -1,0 +1,7 @@
+generar_guia.py
+guia-template.html
+mensajes-la-entrega.md
+api/
+__pycache__/
+*.pyc
+.env

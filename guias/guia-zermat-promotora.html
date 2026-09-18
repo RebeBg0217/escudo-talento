@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guía de Entrevista Conductual — Promotora de Ventas / Facturador / Recepcionista | GTI Consultoría</title>
+<style>
+:root {
+  --gti-blue: #1a365d;
+  --gti-accent: #2b6cb0;
+  --gti-light: #ebf4ff;
+  --gti-gold: #d69e2e;
+  --gti-red: #e53e3e;
+  --gti-green: #38a169;
+  --gti-gray: #718096;
+  --gti-dark: #2d3748;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; color: var(--gti-dark); line-height: 1.6; background: #f7fafc; }
+.header { background: var(--gti-blue); color: white; padding: 2rem; text-align: center; }
+.header h1 { font-size: 1.5rem; margin-bottom: 0.5rem; }
+.header .subtitle { font-size: 1rem; opacity: 0.9; }
+.header .badge { display: inline-block; background: var(--gti-gold); color: var(--gti-blue); padding: 0.3rem 1rem; border-radius: 20px; font-weight: 700; font-size: 0.85rem; margin-top: 0.5rem; }
+.meta { background: white; border: 1px solid #e2e8f0; border-radius: 8px; margin: 1.5rem auto; max-width: 800px; padding: 1.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.meta-item { font-size: 0.9rem; }
+.meta-item strong { color: var(--gti-accent); display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; }
+.container { max-width: 800px; margin: 0 auto; padding: 0 1rem 3rem; }
+.section { background: white; border-radius: 8px; margin-top: 1.5rem; overflow: hidden; border: 1px solid #e2e8f0; }
+.section-header { background: var(--gti-light); padding: 1rem 1.5rem; border-bottom: 2px solid var(--gti-accent); }
+.section-header h2 { color: var(--gti-blue); font-size: 1.1rem; }
+.section-body { padding: 1.5rem; }
+.question { margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid #edf2f7; }
+.question:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+.q-number { display: inline-block; background: var(--gti-accent); color: white; width: 28px; height: 28px; border-radius: 50%; text-align: center; line-height: 28px; font-size: 0.8rem; font-weight: 700; margin-right: 0.5rem; }
+.q-competency { display: inline-block; background: var(--gti-light); color: var(--gti-accent); padding: 0.15rem 0.6rem; border-radius: 12px; font-size: 0.75rem; font-weight: 600; margin-left: 0.5rem; }
+.q-text { font-size: 1rem; font-weight: 600; color: var(--gti-dark); margin: 0.5rem 0; }
+.q-followup { font-size: 0.85rem; color: var(--gti-gray); margin-top: 0.3rem; font-style: italic; }
+.rubric { margin-top: 0.8rem; }
+.rubric-row { display: flex; align-items: flex-start; gap: 0.5rem; margin-bottom: 0.3rem; font-size: 0.85rem; }
+.rubric-level { min-width: 80px; font-weight: 600; padding: 0.1rem 0.4rem; border-radius: 4px; text-align: center; font-size: 0.75rem; }
+.level-excellent { background: #c6f6d5; color: #22543d; }
+.level-good { background: #bee3f8; color: #2a4365; }
+.level-basic { background: #fefcbf; color: #744210; }
+.level-poor { background: #fed7d7; color: #742a2a; }
+.redflag { background: #fff5f5; border-left: 3px solid var(--gti-red); padding: 1rem; margin-top: 1rem; border-radius: 0 8px 8px 0; }
+.redflag-title { color: var(--gti-red); font-weight: 700; font-size: 0.85rem; margin-bottom: 0.3rem; }
+.redflag li { font-size: 0.85rem; margin-left: 1rem; margin-bottom: 0.2rem; }
+.illegal { background: #fffff0; border-left: 3px solid var(--gti-gold); padding: 1rem; margin-top: 1rem; border-radius: 0 8px 8px 0; }
+.illegal-title { color: #975a16; font-weight: 700; font-size: 0.85rem; margin-bottom: 0.3rem; }
+.illegal li { font-size: 0.85rem; margin-left: 1rem; margin-bottom: 0.2rem; }
+.scoresheet { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+.scoresheet th { background: var(--gti-blue); color: white; padding: 0.6rem; text-align: left; }
+.scoresheet td { padding: 0.5rem 0.6rem; border-bottom: 1px solid #edf2f7; }
+.scoresheet tr:nth-child(even) { background: #f7fafc; }
+.score-cell { width: 60px; text-align: center; }
+.footer { background: var(--gti-blue); color: white; padding: 2rem; text-align: center; margin-top: 2rem; }
+.footer a { color: var(--gti-gold); text-decoration: none; font-weight: 600; }
+.cta { display: inline-block; background: var(--gti-gold); color: var(--gti-blue); padding: 0.8rem 2rem; border-radius: 8px; font-weight: 700; text-decoration: none; margin-top: 1rem; font-size: 1rem; }
+.cta:hover { background: #ecc94b; }
+@media print {
+  body { background: white; }
+  .footer { break-before: page; }
+  .section { break-inside: avoid; }
+}
+@media (max-width: 600px) {
+  .meta { grid-template-columns: 1fr; }
+  .header h1 { font-size: 1.2rem; }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="badge">GENERADO POR IA</div>
+  <h1>Guía de Entrevista Conductual</h1>
+  <div class="subtitle">Promotora de Ventas / Facturador / Recepcionista — Zermat Corporación</div>
+</div>
+
+<div class="meta">
+  <div class="meta-item"><strong>Empresa</strong> Zermat Corporación</div>
+  <div class="meta-item"><strong>Puesto</strong> Promotora de Ventas / Facturador / Recepcionista</div>
+  <div class="meta-item"><strong>Fecha de generación</strong> 2026-09-18</div>
+  <div class="meta-item"><strong>Preparado por</strong> GTI Consultoría en RRHH</div>
+</div>
+
+<div class="container">
+
+  <div class="section">
+    <div class="section-header"><h2>Preguntas Conductuales (Método STAR)</h2></div>
+    <div class="section-body">
+      <div class="question">
+          <span class="q-number">1</span>
+          <span class="q-competency">Orientación al cliente</span>
+          <div class="q-text">Cuénteme sobre una clienta que no sabía qué producto comprar. ¿Cómo la asesoró?</div>
+          <div class="q-followup">Profundice: ¿La clienta regresó? ¿Le refirió a alguien?</div>
+          <div class="rubric">
+              <div class="rubric-row"><span class="rubric-level level-excellent">Excelente</span> Diagnóstico de necesidades, recomendación personalizada, seguimiento</div>
+              <div class="rubric-row"><span class="rubric-level level-good">Bueno</span> Buena asesoría que resultó en compra satisfactoria</div>
+              <div class="rubric-row"><span class="rubric-level level-basic">Básico</span> Mostró opciones sin recomendar</div>
+              <div class="rubric-row"><span class="rubric-level level-poor">Insuficiente</span> Vendió sin asesorar o presionó</div>
+            </div>
+        </div>
+<div class="question">
+          <span class="q-number">2</span>
+          <span class="q-competency">Conocimiento de producto (cosmética)</span>
+          <div class="q-text">¿Qué tipo de piel tiene usted? ¿Cómo le explicaría a una clienta la diferencia entre una crema hidratante y una nutritiva?</div>
+          <div class="q-followup">Profundice: ¿Cómo aprendía sobre productos nuevos que llegaban?</div>
+          <div class="rubric">
+              <div class="rubric-row"><span class="rubric-level level-excellent">Excelente</span> Conocimiento técnico, usa analogías, adapta al nivel de la clienta</div>
+              <div class="rubric-row"><span class="rubric-level level-good">Bueno</span> Conoce bien los productos y puede explicarlos</div>
+              <div class="rubric-row"><span class="rubric-level level-basic">Básico</span> Sabe lo básico que le enseñaron</div>
+              <div class="rubric-row"><span class="rubric-level level-poor">Insuficiente</span> No distingue entre tipos de productos</div>
+            </div>
+        </div>
+<div class="question">
+          <span class="q-number">3</span>
+          <span class="q-competency">Imagen personal</span>
+          <div class="q-text">En cosmética, usted es el primer ejemplo del producto. ¿Cómo se preparaba para ir a trabajar?</div>
+          <div class="q-followup">Profundice: ¿Usaba los productos que vendía?</div>
+          <div class="rubric">
+              <div class="rubric-row"><span class="rubric-level level-excellent">Excelente</span> Embajadora de la marca, usa productos, imagen impecable</div>
+              <div class="rubric-row"><span class="rubric-level level-good">Bueno</span> Se cuida y representa bien la marca</div>
+              <div class="rubric-row"><span class="rubric-level level-basic">Básico</span> Cumple con lo mínimo de presentación</div>
+              <div class="rubric-row"><span class="rubric-level level-poor">Insuficiente</span> No le da importancia a ser ejemplo del producto</div>
+            </div>
+        </div>
+<div class="question">
+          <span class="q-number">4</span>
+          <span class="q-competency">Venta consultiva</span>
+          <div class="q-text">Una clienta quiere un producto que usted sabe que no es el adecuado para su tipo de piel. ¿Qué le dice?</div>
+          <div class="q-followup">Profundice: ¿Cómo balancea honestidad con ventas?</div>
+          <div class="rubric">
+              <div class="rubric-row"><span class="rubric-level level-excellent">Excelente</span> Redirige con fundamento, gana confianza, la clienta agradece</div>
+              <div class="rubric-row"><span class="rubric-level level-good">Bueno</span> Honesta sobre lo que conviene</div>
+              <div class="rubric-row"><span class="rubric-level level-basic">Básico</span> Le vende lo que pide</div>
+              <div class="rubric-row"><span class="rubric-level level-poor">Insuficiente</span> Le vende sabiendo que no le conviene</div>
+            </div>
+        </div>
+<div class="question">
+          <span class="q-number">5</span>
+          <span class="q-competency">Facturación y orden</span>
+          <div class="q-text">¿Ha manejado facturación? ¿Qué sistema usaba? ¿Cómo aseguraba que no hubiera errores?</div>
+          <div class="q-followup">Profundice: ¿Alguna vez tuvo un error de facturación? ¿Cómo lo corrigió?</div>
+          <div class="rubric">
+              <div class="rubric-row"><span class="rubric-level level-excellent">Excelente</span> Precisa, revisa antes de enviar, sistema de verificación propio</div>
+              <div class="rubric-row"><span class="rubric-level level-good">Bueno</span> Ordenada y con pocos errores</div>
+              <div class="rubric-row"><span class="rubric-level level-basic">Básico</span> Factura pero comete errores ocasionales</div>
+              <div class="rubric-row"><span class="rubric-level level-poor">Insuficiente</span> Errores frecuentes o no tiene experiencia</div>
+            </div>
+        </div>
+<div class="question">
+          <span class="q-number">6</span>
+          <span class="q-competency">Trabajo en equipo</span>
+          <div class="q-text">¿Cómo era la dinámica con sus compañeras de tienda o de equipo?</div>
+          <div class="q-followup">Profundice: ¿Alguna vez tuvo un conflicto? ¿Cómo lo resolvió?</div>
+          <div class="rubric">
+              <div class="rubric-row"><span class="rubric-level level-excellent">Excelente</span> Colabora, comparte tips de venta, ambiente positivo</div>
+              <div class="rubric-row"><span class="rubric-level level-good">Bueno</span> Buena relación sin problemas</div>
+              <div class="rubric-row"><span class="rubric-level level-basic">Básico</span> Funcional sin conflicto</div>
+              <div class="rubric-row"><span class="rubric-level level-poor">Insuficiente</span> Conflictos o chismes frecuentes</div>
+            </div>
+        </div>
+<div class="question">
+          <span class="q-number">7</span>
+          <span class="q-competency">Manejo de inventario</span>
+          <div class="q-text">¿Cómo controlaba el inventario de productos? ¿Alguna vez detectó un faltante o un producto vencido?</div>
+          <div class="q-followup">Profundice: ¿Qué hizo?</div>
+          <div class="rubric">
+              <div class="rubric-row"><span class="rubric-level level-excellent">Excelente</span> Control proactivo, FIFO, reporta discrepancias de inmediato</div>
+              <div class="rubric-row"><span class="rubric-level level-good">Bueno</span> Consciente del inventario y reporta</div>
+              <div class="rubric-row"><span class="rubric-level level-basic">Básico</span> Participa cuando se lo piden</div>
+              <div class="rubric-row"><span class="rubric-level level-poor">Insuficiente</span> No le da importancia</div>
+            </div>
+        </div>
+<div class="question">
+          <span class="q-number">8</span>
+          <span class="q-competency">Metas de venta</span>
+          <div class="q-text">¿Tenía metas de venta mensuales? ¿Las cumplía?</div>
+          <div class="q-followup">Profundice: ¿Qué hacía cuando iba atrasada en la meta?</div>
+          <div class="rubric">
+              <div class="rubric-row"><span class="rubric-level level-excellent">Excelente</span> Cifras claras, cumplimiento >90%, ajusta estrategia cuando va atrás</div>
+              <div class="rubric-row"><span class="rubric-level level-good">Bueno</span> Buenos resultados consistentes</div>
+              <div class="rubric-row"><span class="rubric-level level-basic">Básico</span> No recuerda cifras pero cree que le iba bien</div>
+              <div class="rubric-row"><span class="rubric-level level-poor">Insuficiente</span> Evasiva sobre resultados</div>
+            </div>
+        </div>
+<div class="question">
+          <span class="q-number">9</span>
+          <span class="q-competency">Atención telefónica/recepción</span>
+          <div class="q-text">¿Cómo atendía una llamada o recibía a alguien que llegaba a la oficina?</div>
+          <div class="q-followup">Profundice: ¿Qué hacía cuando llegaban varias personas al mismo tiempo?</div>
+          <div class="rubric">
+              <div class="rubric-row"><span class="rubric-level level-excellent">Excelente</span> Protocolo profesional, prioriza, hace sentir bienvenido a todos</div>
+              <div class="rubric-row"><span class="rubric-level level-good">Bueno</span> Atención cordial y eficiente</div>
+              <div class="rubric-row"><span class="rubric-level level-basic">Básico</span> Atiende pero sin protocolo claro</div>
+              <div class="rubric-row"><span class="rubric-level level-poor">Insuficiente</span> Desorganizada o poco cordial</div>
+            </div>
+        </div>
+<div class="question">
+          <span class="q-number">10</span>
+          <span class="q-competency">Honestidad</span>
+          <div class="q-text">¿Alguna vez una clienta le devolvió un producto diciendo que estaba defectuoso cuando usted sabía que no lo era?</div>
+          <div class="q-followup">Profundice: ¿Cómo lo manejó?</div>
+          <div class="rubric">
+              <div class="rubric-row"><span class="rubric-level level-excellent">Excelente</span> Manejo diplomático, verifica, resuelve sin acusar, sigue política</div>
+              <div class="rubric-row"><span class="rubric-level level-good">Bueno</span> Sigue protocolo de devoluciones sin conflicto</div>
+              <div class="rubric-row"><span class="rubric-level level-basic">Básico</span> Devuelve sin verificar</div>
+              <div class="rubric-row"><span class="rubric-level level-poor">Insuficiente</span> Confronta a la clienta o ignora la política</div>
+            </div>
+        </div>
+<div class="question">
+          <span class="q-number">11</span>
+          <span class="q-competency">Promociones y eventos</span>
+          <div class="q-text">¿Ha participado en la organización de eventos de venta, demostraciones de producto o activaciones?</div>
+          <div class="q-followup">Profundice: ¿Qué resultados tuvo?</div>
+          <div class="rubric">
+              <div class="rubric-row"><span class="rubric-level level-excellent">Excelente</span> Organiza eventos, mide asistencia y venta resultante</div>
+              <div class="rubric-row"><span class="rubric-level level-good">Bueno</span> Participa activamente y contribuye al éxito</div>
+              <div class="rubric-row"><span class="rubric-level level-basic">Básico</span> Asiste pero no lidera</div>
+              <div class="rubric-row"><span class="rubric-level level-poor">Insuficiente</span> No tiene experiencia ni interés</div>
+            </div>
+        </div>
+<div class="question">
+          <span class="q-number">12</span>
+          <span class="q-competency">Fidelización</span>
+          <div class="q-text">¿Cómo hacía para que las clientas regresaran a comprar con usted?</div>
+          <div class="q-followup">Profundice: ¿Tenía una base de clientas frecuentes?</div>
+          <div class="rubric">
+              <div class="rubric-row"><span class="rubric-level level-excellent">Excelente</span> Base de datos propia, seguimiento, recomienda según historial</div>
+              <div class="rubric-row"><span class="rubric-level level-good">Bueno</span> Recuerda clientas y las atiende personalizadamente</div>
+              <div class="rubric-row"><span class="rubric-level level-basic">Básico</span> Atiende bien a quien llega</div>
+              <div class="rubric-row"><span class="rubric-level level-poor">Insuficiente</span> No piensa en fidelización</div>
+            </div>
+        </div>
+<div class="question">
+          <span class="q-number">13</span>
+          <span class="q-competency">Disponibilidad</span>
+          <div class="q-text">El puesto puede requerir trabajar fines de semana o viajar a otras zonas. ¿Cómo le queda eso?</div>
+          <div class="q-followup">Profundice: ¿Tiene alguna restricción de horario o zona?</div>
+          <div class="rubric">
+              <div class="rubric-row"><span class="rubric-level level-excellent">Excelente</span> Total disponibilidad, experiencia viajando por trabajo</div>
+              <div class="rubric-row"><span class="rubric-level level-good">Bueno</span> Disponible y flexible</div>
+              <div class="rubric-row"><span class="rubric-level level-basic">Básico</span> Con algunas condiciones menores</div>
+              <div class="rubric-row"><span class="rubric-level level-poor">Insuficiente</span> Restricciones significativas</div>
+            </div>
+        </div>
+<div class="question">
+          <span class="q-number">14</span>
+          <span class="q-competency">Maquillaje profesional (para puesto de maquillista)</span>
+          <div class="q-text">¿Tiene formación en maquillaje? ¿Qué técnicas domina?</div>
+          <div class="q-followup">Profundice: ¿Puede hacer una demostración rápida?</div>
+          <div class="rubric">
+              <div class="rubric-row"><span class="rubric-level level-excellent">Excelente</span> Formación certificada, portafolio, múltiples técnicas</div>
+              <div class="rubric-row"><span class="rubric-level level-good">Bueno</span> Experiencia práctica y buen ojo</div>
+              <div class="rubric-row"><span class="rubric-level level-basic">Básico</span> Conocimiento autodidacta</div>
+              <div class="rubric-row"><span class="rubric-level level-poor">Insuficiente</span> No tiene formación relevante</div>
+            </div>
+        </div>
+<div class="question">
+          <span class="q-number">15</span>
+          <span class="q-competency">Motivación</span>
+          <div class="q-text">¿Por qué Zermat? ¿Conoce la marca? ¿Ha usado sus productos?</div>
+          <div class="q-followup">Profundice: ¿Qué le atrae de trabajar en cosmética?</div>
+          <div class="rubric">
+              <div class="rubric-row"><span class="rubric-level level-excellent">Excelente</span> Conoce y usa la marca, conecta con la industria</div>
+              <div class="rubric-row"><span class="rubric-level level-good">Bueno</span> Interesada y con afinidad por cosmética</div>
+              <div class="rubric-row"><span class="rubric-level level-basic">Básico</span> Busca trabajo en general</div>
+              <div class="rubric-row"><span class="rubric-level level-poor">Insuficiente</span> No conoce ni le interesa la marca</div>
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header"><h2>Red Flags: Señales de Alerta</h2></div>
+    <div class="section-body">
+      <div class="redflag">
+        <div class="redflag-title">Observe estas señales durante la entrevista:</div>
+        <ul>
+          <li>No puede dar cifras de ventas</li>
+<li>No conoce los productos de cosmética básicos</li>
+<li>Imagen descuidada en la entrevista (es industria de imagen)</li>
+<li>Faltantes de inventario o caja sin explicar</li>
+<li>Chismes o conflictos con compañeras</li>
+<li>No muestra interés en cosmética o la marca</li>
+<li>Vende sin asesorar — presiona al cliente</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header"><h2>Preguntas Prohibidas en Costa Rica</h2></div>
+    <div class="section-body">
+      <div class="illegal">
+        <div class="illegal-title">Estas preguntas violan la legislación laboral costarricense (Código de Trabajo + Ley 2694 + Ley 8107):</div>
+        <ul>
+          <li>Estado civil, si tiene pareja o planes de casarse</li>
+<li>Si está embarazada, planea embarazarse o tiene hijos</li>
+<li>Edad exacta (puede preguntar si es mayor de 18)</li>
+<li>Religión o creencias</li>
+<li>Orientación sexual o identidad de género</li>
+<li>Afiliación política o sindical</li>
+<li>Nacionalidad u origen étnico (puede preguntar permiso de trabajo)</li>
+<li>Deudas o problemas financieros personales</li>
+<li>Enfermedades o discapacidades (salvo requisitos del puesto)</li>
+<li>Antecedentes penales (solo si el puesto lo justifica por ley)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header"><h2>Hoja de Calificación</h2></div>
+    <div class="section-body">
+      <table class="scoresheet">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Competencia</th>
+            <th class="score-cell">1</th>
+            <th class="score-cell">2</th>
+            <th class="score-cell">3</th>
+            <th class="score-cell">4</th>
+            <th class="score-cell">5</th>
+            <th>Notas</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>Orientación al cliente</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td style="min-width:120px"></td></tr>
+<tr><td>2</td><td>Conocimiento de producto (cosmética)</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td style="min-width:120px"></td></tr>
+<tr><td>3</td><td>Imagen personal</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td style="min-width:120px"></td></tr>
+<tr><td>4</td><td>Venta consultiva</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td style="min-width:120px"></td></tr>
+<tr><td>5</td><td>Facturación y orden</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td style="min-width:120px"></td></tr>
+<tr><td>6</td><td>Trabajo en equipo</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td style="min-width:120px"></td></tr>
+<tr><td>7</td><td>Manejo de inventario</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td style="min-width:120px"></td></tr>
+<tr><td>8</td><td>Metas de venta</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td style="min-width:120px"></td></tr>
+<tr><td>9</td><td>Atención telefónica/recepción</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td style="min-width:120px"></td></tr>
+<tr><td>10</td><td>Honestidad</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td style="min-width:120px"></td></tr>
+<tr><td>11</td><td>Promociones y eventos</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td style="min-width:120px"></td></tr>
+<tr><td>12</td><td>Fidelización</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td style="min-width:120px"></td></tr>
+<tr><td>13</td><td>Disponibilidad</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td style="min-width:120px"></td></tr>
+<tr><td>14</td><td>Maquillaje profesional (para puesto de maquillista)</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td style="min-width:120px"></td></tr>
+<tr><td>15</td><td>Motivación</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td style="min-width:120px"></td></tr>
+        </tbody>
+      </table>
+      <p style="margin-top:1rem;font-size:0.8rem;color:var(--gti-gray);">
+        <strong>Escala:</strong> 1 = No demuestra la competencia · 2 = Básico · 3 = Competente · 4 = Avanzado · 5 = Excepcional
+      </p>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
+  <p style="font-size:0.9rem;margin-bottom:0.5rem;">Esta guía fue generada automáticamente por el sistema de IA de GTI Consultoría.</p>
+  <p style="font-size:0.85rem;opacity:0.9;">¿Quiere evaluar a sus candidatos con pruebas psicométricas validadas?</p>
+  <a href="https://wa.me/50670464896?text=Hola%2C%20recib%C3%AD%20la%20gu%C3%ADa%20de%20entrevista%20y%20me%20interesa%20saber%20m%C3%A1s%20sobre%20evaluaciones%20psicom%C3%A9tricas" class="cta">Solicitar evaluación gratuita</a>
+  <p style="margin-top:1.5rem;font-size:0.75rem;opacity:0.7;">GTI Consultoría en Recursos Humanos · gticr.net · +506 7046-4896</p>
+</div>
+
+</body>
+</html>

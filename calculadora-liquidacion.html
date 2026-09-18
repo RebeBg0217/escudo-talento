@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de Liquidación Laboral — Costa Rica | GTI Consultoría</title>
+<style>
+:root {
+  --blue: #1a365d;
+  --accent: #2b6cb0;
+  --light: #ebf4ff;
+  --gold: #d69e2e;
+  --green: #38a169;
+  --red: #e53e3e;
+  --dark: #1a202c;
+  --gray: #718096;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', system-ui, sans-serif; color: var(--dark); background: #f7fafc; }
+.header { background: var(--blue); color: white; padding: 2rem; text-align: center; }
+.header h1 { font-size: 1.5rem; }
+.header p { opacity: 0.8; font-size: 0.9rem; margin-top: 0.5rem; }
+.container { max-width: 700px; margin: 0 auto; padding: 1.5rem; }
+.form-section { background: white; border-radius: 12px; padding: 2rem; margin-top: 1.5rem; border: 1px solid #e2e8f0; }
+.form-section h2 { color: var(--blue); font-size: 1.1rem; margin-bottom: 1rem; border-bottom: 2px solid var(--light); padding-bottom: 0.5rem; }
+.field { margin-bottom: 1.2rem; }
+.field label { display: block; font-size: 0.85rem; font-weight: 600; color: var(--dark); margin-bottom: 0.3rem; }
+.field input, .field select { width: 100%; padding: 0.7rem; border: 1px solid #cbd5e0; border-radius: 6px; font-size: 0.95rem; }
+.field input:focus, .field select:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(43,108,176,0.1); }
+.field small { color: var(--gray); font-size: 0.75rem; }
+.row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.btn {
+  display: block; width: 100%; padding: 1rem; background: var(--accent); color: white;
+  border: none; border-radius: 8px; font-size: 1rem; font-weight: 700; cursor: pointer;
+  transition: background 0.2s;
+}
+.btn:hover { background: #2c5282; }
+.results { display: none; }
+.result-card { background: white; border-radius: 12px; padding: 2rem; margin-top: 1.5rem; border: 1px solid #e2e8f0; }
+.result-card h2 { color: var(--blue); font-size: 1.2rem; margin-bottom: 1rem; }
+.result-row { display: flex; justify-content: space-between; padding: 0.6rem 0; border-bottom: 1px solid #edf2f7; font-size: 0.9rem; }
+.result-row:last-child { border-bottom: none; }
+.result-row .label { color: var(--gray); }
+.result-row .value { font-weight: 600; }
+.result-total { display: flex; justify-content: space-between; padding: 1rem 0; border-top: 2px solid var(--blue); margin-top: 0.5rem; font-size: 1.1rem; }
+.result-total .value { color: var(--accent); font-weight: 700; font-size: 1.3rem; }
+.warning { background: #fff5f5; border-left: 3px solid var(--red); padding: 1rem; margin-top: 1rem; border-radius: 0 8px 8px 0; font-size: 0.85rem; color: #742a2a; }
+.info { background: var(--light); border-left: 3px solid var(--accent); padding: 1rem; margin-top: 1rem; border-radius: 0 8px 8px 0; font-size: 0.85rem; }
+.cta-section { text-align: center; margin-top: 2rem; padding: 2rem; background: var(--blue); border-radius: 12px; color: white; }
+.cta-section p { margin-bottom: 1rem; font-size: 0.95rem; }
+.cta-link { display: inline-block; background: var(--gold); color: var(--blue); padding: 0.8rem 2rem; border-radius: 8px; font-weight: 700; text-decoration: none; }
+footer { text-align: center; padding: 2rem; font-size: 0.8rem; color: var(--gray); }
+@media (max-width: 600px) { .row { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Calculadora de Liquidación Laboral — Costa Rica</h1>
+  <p>Conforme al Código de Trabajo vigente</p>
+</div>
+
+<div class="container">
+  <div class="form-section">
+    <h2>Datos del colaborador</h2>
+    <div class="row">
+      <div class="field">
+        <label>Fecha de ingreso</label>
+        <input type="date" id="fechaIngreso">
+      </div>
+      <div class="field">
+        <label>Fecha de salida</label>
+        <input type="date" id="fechaSalida">
+      </div>
+    </div>
+    <div class="field">
+      <label>Salario mensual bruto (colones)</label>
+      <input type="number" id="salario" placeholder="Ej: 650000">
+    </div>
+    <div class="field">
+      <label>Motivo de terminación</label>
+      <select id="motivo">
+        <option value="despido_sin_causa">Despido sin justa causa (responsabilidad patronal)</option>
+        <option value="despido_con_causa">Despido con justa causa</option>
+        <option value="renuncia">Renuncia voluntaria</option>
+      </select>
+      <small>El motivo determina qué rubros aplican</small>
+    </div>
+    <div class="row">
+      <div class="field">
+        <label>Días de vacaciones tomados (periodo actual)</label>
+        <input type="number" id="vacTomadas" value="0">
+      </div>
+      <div class="field">
+        <label>Salario en especie mensual (si aplica)</label>
+        <input type="number" id="salarioEspecie" value="0" placeholder="0">
+      </div>
+    </div>
+    <button class="btn" onclick="calcular()">Calcular liquidación</button>
+  </div>
+
+  <div class="results" id="resultados">
+    <div class="result-card">
+      <h2>Desglose de liquidación</h2>
+      <div id="desglose"></div>
+      <div class="result-total">
+        <span>TOTAL A PAGAR</span>
+        <span class="value" id="total"></span>
+      </div>
+    </div>
+    <div class="info" id="notas"></div>
+    <div class="warning" id="advertencias" style="display:none"></div>
+    <div class="cta-section">
+      <p>¿Necesita la carta de despido, el guion de conversación y el checklist post-terminación?</p>
+      <a href="https://wa.me/50670464896?text=Hola%2C%20necesito%20el%20paquete%20completo%20de%20Despido%20Seguro" class="cta-link">Solicitar Despido Seguro completo — $297</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>Esta calculadora es una herramienta orientativa basada en el Código de Trabajo de Costa Rica vigente a septiembre 2026.</p>
+  <p>Para casos complejos, consulte con un abogado laboralista. GTI Consultoría · <a href="https://gticr.net" style="color:var(--accent)">gticr.net</a></p>
+</footer>
+
+<script>
+function calcular() {
+  const fi = new Date(document.getElementById('fechaIngreso').value);
+  const fs = new Date(document.getElementById('fechaSalida').value);
+  const salario = parseFloat(document.getElementById('salario').value) || 0;
+  const motivo = document.getElementById('motivo').value;
+  const vacTomadas = parseInt(document.getElementById('vacTomadas').value) || 0;
+  const especie = parseFloat(document.getElementById('salarioEspecie').value) || 0;
+
+  if (!fi || !fs || !salario || fi >= fs) {
+    alert('Por favor complete todos los campos correctamente.');
+    return;
+  }
+
+  const salarioTotal = salario + especie;
+  const salarioDiario = salarioTotal / 30;
+  const diffMs = fs - fi;
+  const diffDias = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+  const anos = diffDias / 365.25;
+  const meses = diffDias / 30.44;
+
+  let rubros = [];
+  let notas = [];
+  let advertencias = [];
+
+  // PREAVISO (Art. 28-29 Código de Trabajo)
+  if (motivo === 'despido_sin_causa') {
+    let diasPreaviso = 0;
+    if (meses >= 3 && meses < 6) diasPreaviso = 7;
+    else if (meses >= 6 && anos < 1) diasPreaviso = 15;
+    else if (anos >= 1) diasPreaviso = 30;
+
+    if (diasPreaviso > 0) {
+      const montoPreaviso = salarioDiario * diasPreaviso;
+      rubros.push({ label: `Preaviso (${diasPreaviso} días)`, value: montoPreaviso });
+      notas.push(`Preaviso: ${diasPreaviso} días según Art. 28 CT por antigüedad de ${Math.floor(anos)} año(s) y ${Math.floor(meses % 12)} mes(es).`);
+    }
+  }
+
+  // CESANTÍA (Art. 29 Código de Trabajo)
+  if (motivo === 'despido_sin_causa') {
+    let diasCesantia = 0;
+    const anosEnteros = Math.floor(anos);
+    // Tabla de cesantía Art. 29
+    if (anosEnteros >= 1 && anosEnteros < 2) diasCesantia = 19.5;
+    else if (anosEnteros >= 2 && anosEnteros < 3) diasCesantia = 20 * 2; // 20 días por año
+    else if (anosEnteros >= 3 && anosEnteros < 4) diasCesantia = 20 * 3;
+    else if (anosEnteros >= 4 && anosEnteros < 5) diasCesantia = 20 * 4;
+    else if (anosEnteros >= 5 && anosEnteros < 6) diasCesantia = 20 * 5;
+    else if (anosEnteros >= 6 && anosEnteros < 7) diasCesantia = 21 * 6;
+    else if (anosEnteros >= 7 && anosEnteros < 8) diasCesantia = 21 * 7; // corregido con tabla real
+    else if (anosEnteros >= 8 && anosEnteros < 9) diasCesantia = 22 * 8;
+    else if (anosEnteros >= 9 && anosEnteros < 10) diasCesantia = 22 * 9;
+    else if (anosEnteros >= 10 && anosEnteros < 11) diasCesantia = 21.5 * 10;
+    else if (anosEnteros >= 11 && anosEnteros < 12) diasCesantia = 21 * 11;
+    else if (anosEnteros >= 12) diasCesantia = 20 * Math.min(anosEnteros, 20); // tope 20 años
+
+    // Fracción proporcional del año en curso
+    const fraccion = anos - anosEnteros;
+    if (fraccion > 0 && anosEnteros >= 1) {
+      diasCesantia += 20 * fraccion;
+    } else if (fraccion > 0 && anosEnteros < 1 && meses >= 3) {
+      diasCesantia = 19.5 * fraccion;
+    }
+
+    if (diasCesantia > 0) {
+      const montoCesantia = salarioDiario * diasCesantia;
+      rubros.push({ label: `Cesantía (${diasCesantia.toFixed(1)} días)`, value: montoCesantia });
+      notas.push(`Cesantía calculada según tabla del Art. 29 CT para ${anosEnteros} año(s) de servicio.`);
+    }
+
+    advertencias.push('La cesantía tiene un tope legal. Para antigüedades mayores a 12 años, consulte la tabla exacta con un abogado laboralista.');
+  }
+
+  // VACACIONES PROPORCIONALES (Art. 153-155 CT)
+  // 2 semanas por año = 14 días por cada 50 semanas trabajadas
+  const semanasAnoParcial = ((diffDias % 365.25) / 7);
+  const diasVacProporcional = Math.max(0, (semanasAnoParcial / 50) * 14 - vacTomadas);
+  if (diasVacProporcional > 0) {
+    const montoVac = salarioDiario * diasVacProporcional;
+    rubros.push({ label: `Vacaciones proporcionales (${diasVacProporcional.toFixed(1)} días)`, value: montoVac });
+    notas.push(`Vacaciones: ${diasVacProporcional.toFixed(1)} días proporcionales del periodo actual menos ${vacTomadas} días ya tomados.`);
+  }
+
+  // AGUINALDO PROPORCIONAL (Ley 2412)
+  // 1 mes de salario por cada 12 meses (dic a dic)
+  const mesActual = fs.getMonth(); // 0-11
+  const mesesAguinaldo = mesActual; // meses trabajados desde diciembre anterior
+  const montoAguinaldo = (salarioTotal / 12) * mesesAguinaldo;
+  if (montoAguinaldo > 0) {
+    rubros.push({ label: `Aguinaldo proporcional (${mesesAguinaldo} meses)`, value: montoAguinaldo });
+    notas.push(`Aguinaldo proporcional: ${mesesAguinaldo} meses del periodo dic 2025 a la fecha de salida (Ley 2412).`);
+  }
+
+  // SALARIOS PENDIENTES (si aplica, se agrega como nota)
+  notas.push('Verifique si hay salarios, horas extra, comisiones o bonificaciones pendientes de pago — estos se suman al total.');
+
+  if (motivo === 'despido_con_causa') {
+    notas.push('Despido con justa causa: NO aplica preaviso ni cesantía. Solo aplican vacaciones y aguinaldo proporcional.');
+  }
+  if (motivo === 'renuncia') {
+    notas.push('Renuncia voluntaria: NO aplica preaviso ni cesantía a cargo del patrono. El trabajador debe dar preaviso al patrono o se le descuenta.');
+  }
+
+  // Renderizar
+  const total = rubros.reduce((sum, r) => sum + r.value, 0);
+  const fmt = n => '₡' + Math.round(n).toLocaleString('es-CR');
+
+  let html = '';
+  rubros.forEach(r => {
+    html += `<div class="result-row"><span class="label">${r.label}</span><span class="value">${fmt(r.value)}</span></div>`;
+  });
+  if (rubros.length === 0) {
+    html = '<div class="result-row"><span class="label">No aplican rubros de liquidación adicionales</span><span class="value">₡0</span></div>';
+  }
+
+  document.getElementById('desglose').innerHTML = html;
+  document.getElementById('total').textContent = fmt(total);
+  document.getElementById('notas').innerHTML = '<strong>Notas legales:</strong><ul>' + notas.map(n => `<li>${n}</li>`).join('') + '</ul>';
+
+  if (advertencias.length > 0) {
+    document.getElementById('advertencias').innerHTML = '<strong>⚠️ Advertencias:</strong><ul>' + advertencias.map(a => `<li>${a}</li>`).join('') + '</ul>';
+    document.getElementById('advertencias').style.display = 'block';
+  }
+
+  document.getElementById('resultados').style.display = 'block';
+  document.getElementById('resultados').scrollIntoView({ behavior: 'smooth' });
+}
+
+// Setear fecha de hoy como default
+document.getElementById('fechaSalida').value = new Date().toISOString().split('T')[0];
+</script>
+
+</body>
+</html>

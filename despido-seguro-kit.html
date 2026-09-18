@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kit Despido Seguro — Plantillas y Guías | GTI Consultoría</title>
+<style>
+:root {
+  --blue: #1a365d; --accent: #2b6cb0; --light: #ebf4ff; --gold: #d69e2e;
+  --green: #38a169; --red: #e53e3e; --dark: #1a202c; --gray: #718096;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', system-ui, sans-serif; color: var(--dark); background: #f7fafc; }
+.header { background: linear-gradient(135deg, var(--blue), #2c5282); color: white; padding: 2.5rem 1.5rem; text-align: center; }
+.header h1 { font-size: 1.6rem; margin-bottom: 0.5rem; }
+.header p { opacity: 0.9; font-size: 0.95rem; max-width: 550px; margin: 0 auto; }
+.badge { display: inline-block; background: var(--gold); color: var(--blue); padding: 0.3rem 1rem; border-radius: 20px; font-weight: 700; font-size: 0.8rem; margin-bottom: 1rem; }
+.container { max-width: 800px; margin: 0 auto; padding: 1.5rem; }
+.tabs { display: flex; gap: 0; margin: 1.5rem 0; border-bottom: 2px solid #e2e8f0; }
+.tab { padding: 0.8rem 1.5rem; font-weight: 600; font-size: 0.9rem; cursor: pointer; border-bottom: 3px solid transparent; color: var(--gray); transition: all 0.2s; }
+.tab:hover { color: var(--accent); }
+.tab.active { color: var(--accent); border-bottom-color: var(--accent); }
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+.card { background: white; border-radius: 12px; padding: 2rem; margin-bottom: 1.5rem; border: 1px solid #e2e8f0; }
+.card h2 { color: var(--blue); font-size: 1.2rem; margin-bottom: 1rem; border-bottom: 2px solid var(--light); padding-bottom: 0.5rem; }
+.card h3 { color: var(--accent); font-size: 1rem; margin: 1.2rem 0 0.5rem; }
+.field { margin-bottom: 1rem; }
+.field label { display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.3rem; }
+.field input, .field select, .field textarea { width: 100%; padding: 0.7rem; border: 1px solid #cbd5e0; border-radius: 6px; font-size: 0.9rem; font-family: inherit; }
+.field textarea { min-height: 80px; resize: vertical; }
+.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(43,108,176,0.1); }
+.row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.btn { display: block; width: 100%; padding: 0.9rem; background: var(--accent); color: white; border: none; border-radius: 8px; font-size: 1rem; font-weight: 700; cursor: pointer; transition: background 0.2s; margin-top: 1rem; }
+.btn:hover { background: #2c5282; }
+.btn-secondary { background: var(--light); color: var(--accent); }
+.btn-secondary:hover { background: #dbeafe; }
+.output { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 1.5rem; margin-top: 1rem; font-size: 0.9rem; line-height: 1.7; white-space: pre-wrap; display: none; }
+.output.visible { display: block; }
+.warning { background: #fff5f5; border-left: 3px solid var(--red); padding: 1rem; margin: 1rem 0; border-radius: 0 8px 8px 0; font-size: 0.85rem; color: #742a2a; }
+.info { background: var(--light); border-left: 3px solid var(--accent); padding: 1rem; margin: 1rem 0; border-radius: 0 8px 8px 0; font-size: 0.85rem; }
+.checklist { list-style: none; }
+.checklist li { padding: 0.6rem 0; border-bottom: 1px solid #f0f0f0; font-size: 0.9rem; display: flex; align-items: flex-start; gap: 0.5rem; }
+.checklist li:last-child { border-bottom: none; }
+.check { width: 20px; height: 20px; border: 2px solid #cbd5e0; border-radius: 4px; flex-shrink: 0; cursor: pointer; display: flex; align-items: center; justify-content: center; margin-top: 2px; }
+.check.checked { background: var(--green); border-color: var(--green); color: white; }
+.phase { display: inline-block; background: var(--light); color: var(--accent); padding: 0.15rem 0.6rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600; margin-right: 0.5rem; }
+.guion-step { background: white; border-left: 3px solid var(--accent); padding: 1rem; margin: 0.8rem 0; border-radius: 0 8px 8px 0; }
+.guion-step .step-title { font-weight: 700; color: var(--blue); font-size: 0.9rem; margin-bottom: 0.3rem; }
+.guion-step .step-time { font-size: 0.75rem; color: var(--gray); }
+.guion-step .step-script { font-size: 0.88rem; color: var(--dark); line-height: 1.6; margin-top: 0.5rem; }
+.guion-step .step-script em { color: var(--gray); font-style: italic; }
+.guion-step .step-dont { color: var(--red); font-size: 0.8rem; margin-top: 0.5rem; }
+.cta-box { background: var(--blue); border-radius: 12px; padding: 2rem; color: white; text-align: center; margin: 2rem 0; }
+.cta-box a { display: inline-block; background: var(--gold); color: var(--blue); padding: 0.8rem 2rem; border-radius: 8px; font-weight: 700; text-decoration: none; margin-top: 1rem; }
+footer { text-align: center; padding: 2rem; font-size: 0.75rem; color: var(--gray); }
+@media (max-width: 600px) { .row { grid-template-columns: 1fr; } .tabs { overflow-x: auto; } .tab { white-space: nowrap; font-size: 0.8rem; padding: 0.6rem 1rem; } }
+@media print {
+  .tabs, .btn, .cta-box, .header, footer { display: none; }
+  .tab-content { display: block !important; page-break-before: always; }
+  .tab-content:first-child { page-break-before: avoid; }
+  body { background: white; }
+  .card { border: 1px solid #ccc; box-shadow: none; }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="badge">DESPIDO SEGURO — KIT COMPLETO</div>
+  <h1>Desvinculación laboral sin riesgo legal</h1>
+  <p>Carta de despido, guión de conversación y checklist post-terminación conforme al Código de Trabajo de Costa Rica</p>
+</div>
+
+<div class="container">
+  <div class="tabs">
+    <div class="tab active" onclick="showTab('carta')">Carta de despido</div>
+    <div class="tab" onclick="showTab('guion')">Guión de conversación</div>
+    <div class="tab" onclick="showTab('checklist')">Checklist post-salida</div>
+  </div>
+
+  <!-- TAB 1: CARTA DE DESPIDO -->
+  <div class="tab-content active" id="tab-carta">
+    <div class="card">
+      <h2>Generador de carta de despido</h2>
+      <p style="color:var(--gray);font-size:0.85rem;margin-bottom:1rem;">Complete los datos y genere una carta conforme al Código de Trabajo de Costa Rica.</p>
+
+      <div class="row">
+        <div class="field"><label>Lugar y fecha</label><input type="text" id="c_lugar" placeholder="San José, 18 de septiembre de 2026"></div>
+        <div class="field"><label>Nombre del colaborador</label><input type="text" id="c_nombre" placeholder="Juan Pérez López"></div>
+      </div>
+      <div class="row">
+        <div class="field"><label>Cédula</label><input type="text" id="c_cedula" placeholder="1-1234-5678"></div>
+        <div class="field"><label>Puesto</label><input type="text" id="c_puesto" placeholder="Analista de ventas"></div>
+      </div>
+      <div class="row">
+        <div class="field"><label>Fecha de ingreso</label><input type="date" id="c_ingreso"></div>
+        <div class="field"><label>Fecha efectiva de salida</label><input type="date" id="c_salida"></div>
+      </div>
+      <div class="field">
+        <label>Tipo de despido</label>
+        <select id="c_tipo">
+          <option value="sin_causa">Despido sin justa causa (responsabilidad patronal)</option>
+          <option value="con_causa">Despido con justa causa (Art. 81 CT)</option>
+        </select>
+      </div>
+      <div class="field" id="c_causales_section" style="display:none;">
+        <label>Causales aplicables (Art. 81 CT)</label>
+        <textarea id="c_causales" placeholder="Describa los hechos específicos que configuran la falta grave..."></textarea>
+        <small style="color:var(--gray);">Sea específico: fecha, hora, lugar y naturaleza de los hechos. Evite juicios de valor.</small>
+      </div>
+      <div class="row">
+        <div class="field"><label>Nombre del representante patronal</label><input type="text" id="c_rep_nombre" placeholder="María García Solano"></div>
+        <div class="field"><label>Cargo del representante</label><input type="text" id="c_rep_cargo" placeholder="Gerente de Recursos Humanos"></div>
+      </div>
+      <div class="field"><label>Nombre de la empresa</label><input type="text" id="c_empresa" placeholder="Empresa ABC, S.A."></div>
+
+      <button class="btn" onclick="generarCarta()">Generar carta de despido</button>
+
+      <div class="output" id="carta_output"></div>
+      <button class="btn btn-secondary" id="btn_copiar_carta" style="display:none" onclick="copiarCarta()">Copiar al portapapeles</button>
+    </div>
+
+    <div class="warning">
+      <strong>Importante:</strong> Esta carta es una plantilla orientativa. Para casos complejos (embarazo, fuero sindical, discapacidad, acoso), consulte con un abogado laboralista antes de ejecutar el despido. Un error en la carta puede costarle millones en un juicio.
+    </div>
+  </div>
+
+  <!-- TAB 2: GUIÓN DE CONVERSACIÓN -->
+  <div class="tab-content" id="tab-guion">
+    <div class="card">
+      <h2>Guión de la reunión de desvinculación</h2>
+      <p style="color:var(--gray);font-size:0.85rem;margin-bottom:1.5rem;">Siga estos 7 pasos en orden. La reunión no debe durar más de 15-20 minutos. Tenga la carta firmada y el cálculo de liquidación listos antes de empezar.</p>
+
+      <div class="info">
+        <strong>Antes de la reunión:</strong> Confirme que tiene: (1) carta de despido firmada por el representante, (2) cálculo de liquidación impreso, (3) sala privada reservada, (4) un testigo presente (idealmente otro gerente o de RRHH), (5) pañuelos disponibles.
+      </div>
+
+      <div class="guion-step">
+        <div class="step-title"><span class="phase">PASO 1</span> Abrir con respeto</div>
+        <div class="step-time">~1 minuto</div>
+        <div class="step-script">
+          "Buenas [tardes/días], [nombre]. Gracias por venir. Quiero hablar con usted sobre una decisión que se ha tomado respecto a su posición en la empresa. Le pido que me escuche con calma."
+          <br><br><em>[Pausar. No llenar el silencio. Dejar que procese.]</em>
+        </div>
+        <div class="step-dont">NO diga: "¿Cómo está?" / "Tengo una mala noticia" / "Esto es difícil para mí también"</div>
+      </div>
+
+      <div class="guion-step">
+        <div class="step-title"><span class="phase">PASO 2</span> Comunicar la decisión — claro y directo</div>
+        <div class="step-time">~1 minuto</div>
+        <div class="step-script">
+          "La empresa ha decidido prescindir de sus servicios a partir del [fecha]. Esta es una decisión definitiva."
+          <br><br>
+          <strong>Si es sin causa:</strong> "Esta decisión no se debe a una falta de su parte. Se le reconocerán todos los derechos que le corresponden por ley."
+          <br><br>
+          <strong>Si es con causa:</strong> "Esta decisión se basa en [descripción factual breve del incidente/patrón]. Los detalles están en la carta que le voy a entregar."
+          <br><br><em>[No debatir. Si pregunta "¿por qué?", repetir la razón una vez, sin ampliar.]</em>
+        </div>
+        <div class="step-dont">NO negocie, NO justifique en exceso, NO culpe a terceros ("la gerencia decidió"), NO dé esperanzas falsas ("quizás más adelante")</div>
+      </div>
+
+      <div class="guion-step">
+        <div class="step-title"><span class="phase">PASO 3</span> Entregar la carta</div>
+        <div class="step-time">~2 minutos</div>
+        <div class="step-script">
+          "Aquí tiene la carta formal con los detalles. Tómese un momento para leerla."
+          <br><br><em>[Entregar la carta. Esperar en silencio mientras la lee. No apurar.]</em>
+          <br><br>"¿Tiene alguna pregunta sobre lo que dice la carta?"
+        </div>
+        <div class="step-dont">NO le pida que firme de recibido en este momento si está muy alterado/a. Puede firmar después con un testigo.</div>
+      </div>
+
+      <div class="guion-step">
+        <div class="step-title"><span class="phase">PASO 4</span> Explicar la liquidación</div>
+        <div class="step-time">~3 minutos</div>
+        <div class="step-script">
+          "Le voy a explicar los rubros de su liquidación. Todo se calcula conforme al Código de Trabajo:"
+          <br><br>
+          • <strong>Preaviso:</strong> "[X] días según su antigüedad de [Y] años."<br>
+          • <strong>Cesantía:</strong> "[X] días conforme a la tabla del artículo 29."<br>
+          • <strong>Vacaciones:</strong> "[X] días proporcionales del periodo actual."<br>
+          • <strong>Aguinaldo:</strong> "Proporcional de [mes inicio] a la fecha."<br>
+          • <strong>Total:</strong> "El total es de ₡[monto]. Se deposita en [plazo]."
+          <br><br><em>[Entregar hoja de cálculo impresa. Si no la tiene, usar la calculadora de GTI.]</em>
+        </div>
+        <div class="step-dont">NO redondee a la baja. NO prometa plazos de pago que no pueda cumplir. Si no tiene el cálculo exacto, diga "se lo entrego mañana por escrito."</div>
+      </div>
+
+      <div class="guion-step">
+        <div class="step-title"><span class="phase">PASO 5</span> Logística de salida</div>
+        <div class="step-time">~3 minutos</div>
+        <div class="step-script">
+          "Sobre los próximos pasos:"
+          <br><br>
+          • "Hoy puede recoger sus pertenencias personales. Le damos [30 min/1 hora] con privacidad."<br>
+          • "Le pedimos devolver [llaves/gafete/equipo/laptop] antes de salir."<br>
+          • "Su acceso a correo y sistemas se desactivará hoy a las [hora]."<br>
+          • "La constancia de trabajo se la enviamos a su correo personal en [X] días hábiles."<br>
+          • "Si tiene preguntas después, puede comunicarse con [nombre, teléfono]."
+        </div>
+        <div class="step-dont">NO haga recoger pertenencias con escolta visible a menos que haya riesgo real. Es humillante e innecesario en el 95% de los casos.</div>
+      </div>
+
+      <div class="guion-step">
+        <div class="step-title"><span class="phase">PASO 6</span> Espacio para la persona</div>
+        <div class="step-time">~3-5 minutos</div>
+        <div class="step-script">
+          "Entiendo que esto no es fácil. ¿Tiene alguna pregunta o algo que quiera decir?"
+          <br><br><em>[Escuchar sin interrumpir. Si llora, esperar con respeto. Si se enoja, no responder al enojo — validar: "Entiendo su frustración." Si amenaza con demanda, responder: "Respetamos su derecho. Todo está calculado conforme a la ley."]</em>
+          <br><br><em>[Si la persona no puede hablar, ofrecer agua y un momento.]</em>
+        </div>
+        <div class="step-dont">NO discuta. NO se defienda. NO minimice ("va a encontrar algo mejor"). NO revele información de otros despidos.</div>
+      </div>
+
+      <div class="guion-step">
+        <div class="step-title"><span class="phase">PASO 7</span> Cierre digno</div>
+        <div class="step-time">~1 minuto</div>
+        <div class="step-script">
+          "Le agradecemos su trabajo durante [tiempo]. Le deseamos lo mejor en sus proyectos futuros."
+          <br><br><em>[Levantarse. Dar la mano o una despedida acorde a la cultura de la empresa. Acompañar a la puerta si es apropiado.]</em>
+          <br><br><em>[Después de que se vaya: documentar en acta breve qué se dijo, quién estuvo presente, hora inicio y fin, si firmó la carta o no.]</em>
+        </div>
+        <div class="step-dont">NO pida confidencialidad ("no le cuente a sus compañeros"). Tienen derecho a hablar de su despido.</div>
+      </div>
+
+      <div class="warning" style="margin-top:1.5rem;">
+        <strong>Escenarios especiales — NO despedir sin asesoría legal:</strong><br>
+        • Embarazo o periodo de lactancia (fuero de maternidad, Art. 94-94 bis CT)<br>
+        • Dirigente sindical (fuero sindical)<br>
+        • Persona con discapacidad (Ley 7600)<br>
+        • Trabajador en incapacidad por enfermedad o accidente laboral<br>
+        • Menor de edad (requiere autorización del PANI y MTSS)<br>
+        • Denuncia por acoso (posible represalia, Ley 7476)
+      </div>
+    </div>
+  </div>
+
+  <!-- TAB 3: CHECKLIST POST-SALIDA -->
+  <div class="tab-content" id="tab-checklist">
+    <div class="card">
+      <h2>Checklist post-terminación</h2>
+      <p style="color:var(--gray);font-size:0.85rem;margin-bottom:1.5rem;">Marque cada punto conforme lo complete. Imprima esta página o use desde su teléfono.</p>
+
+      <h3>Mismo día del despido</h3>
+      <ul class="checklist" id="cl-dia">
+        <li><div class="check" onclick="toggleCheck(this)"></div><div><strong>Carta entregada y firmada de recibido</strong> (si no firmó, anotar "se negó a firmar" ante testigo)</div></li>
+        <li><div class="check" onclick="toggleCheck(this)"></div><div><strong>Copia de carta al expediente</strong> — original al trabajador, copia al expediente laboral</div></li>
+        <li><div class="check" onclick="toggleCheck(this)"></div><div><strong>Acta de reunión documentada</strong> — fecha, hora, presentes, resumen de lo comunicado, reacciones</div></li>
+        <li><div class="check" onclick="toggleCheck(this)"></div><div><strong>Accesos desactivados</strong> — correo corporativo, VPN, sistemas internos, alarma, accesos físicos</div></li>
+        <li><div class="check" onclick="toggleCheck(this)"></div><div><strong>Equipo devuelto</strong> — laptop, teléfono, llaves, gafete, tarjetas, uniformes</div></li>
+        <li><div class="check" onclick="toggleCheck(this)"></div><div><strong>Pertenencias personales entregadas</strong> — verificar escritorio, locker, espacios comunes</div></li>
+        <li><div class="check" onclick="toggleCheck(this)"></div><div><strong>Notificar al equipo</strong> — mensaje breve y respetuoso al equipo directo (sin detalles del motivo)</div></li>
+      </ul>
+
+      <h3>Primeras 48 horas</h3>
+      <ul class="checklist" id="cl-48h">
+        <li><div class="check" onclick="toggleCheck(this)"></div><div><strong>Cálculo de liquidación revisado por contabilidad</strong> — verificar cifras antes de pagar</div></li>
+        <li><div class="check" onclick="toggleCheck(this)"></div><div><strong>Orden de pago procesada</strong> — preaviso + cesantía + vacaciones + aguinaldo proporcional</div></li>
+        <li><div class="check" onclick="toggleCheck(this)"></div><div><strong>Baja en CCSS</strong> — presentar aviso de salida dentro de 8 días hábiles (Art. 44 Ley 17)</div></li>
+        <li><div class="check" onclick="toggleCheck(this)"></div><div><strong>Baja en INS</strong> — actualizar póliza de riesgos del trabajo</div></li>
+        <li><div class="check" onclick="toggleCheck(this)"></div><div><strong>Reasignar funciones</strong> — redistribuir tareas, proyectos y clientes del puesto</div></li>
+        <li><div class="check" onclick="toggleCheck(this)"></div><div><strong>Reasignar accesos compartidos</strong> — contraseñas de cuentas compartidas, admin de sistemas</div></li>
+      </ul>
+
+      <h3>Primera semana</h3>
+      <ul class="checklist" id="cl-semana">
+        <li><div class="check" onclick="toggleCheck(this)"></div><div><strong>Liquidación pagada</strong> — plazo legal: inmediato para despido sin causa; verificar depósito</div></li>
+        <li><div class="check" onclick="toggleCheck(this)"></div><div><strong>Constancia de trabajo emitida</strong> — fechas, puesto, salario (Art. 35 CT). Enviar al correo personal.</div></li>
+        <li><div class="check" onclick="toggleCheck(this)"></div><div><strong>Expediente laboral archivado</strong> — conservar mínimo 5 años (prescripción laboral + tributaria)</div></li>
+        <li><div class="check" onclick="toggleCheck(this)"></div><div><strong>Datos personales del ex-colaborador</strong> — plan de retención/eliminación conforme Ley 8968</div></li>
+        <li><div class="check" onclick="toggleCheck(this)"></div><div><strong>Evaluación de salida (opcional)</strong> — si aplica, documentar feedback para mejora interna</div></li>
+      </ul>
+
+      <h3>Primer mes</h3>
+      <ul class="checklist" id="cl-mes">
+        <li><div class="check" onclick="toggleCheck(this)"></div><div><strong>Verificar pago efectivo de liquidación</strong> — confirmar que se depositó y el ex-colaborador lo recibió</div></li>
+        <li><div class="check" onclick="toggleCheck(this)"></div><div><strong>Declaración de retenciones</strong> — reportar a Hacienda si aplican retenciones sobre la liquidación</div></li>
+        <li><div class="check" onclick="toggleCheck(this)"></div><div><strong>Actualizar organigrama y planilla</strong> — eliminar del payroll, actualizar CCSS, INS, banco</div></li>
+        <li><div class="check" onclick="toggleCheck(this)"></div><div><strong>Revisar cláusulas post-empleo</strong> — confidencialidad, no competencia (si firmó al ingresar)</div></li>
+        <li><div class="check" onclick="toggleCheck(this)"></div><div><strong>Documentar lecciones</strong> — ¿qué se aprendió? ¿se puede prevenir? ¿mejorar el proceso de selección?</div></li>
+      </ul>
+
+      <div class="info" style="margin-top:1.5rem;">
+        <strong>Plazos legales críticos en Costa Rica:</strong><br>
+        • Pago de liquidación: <strong>inmediato</strong> al cesar la relación laboral<br>
+        • Aviso de salida CCSS: <strong>8 días hábiles</strong><br>
+        • Prescripción de derechos laborales: <strong>1 año</strong> (Art. 602 CT) — el ex-colaborador tiene 1 año para demandar<br>
+        • Conservación de expediente recomendada: <strong>5 años</strong>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta-box">
+    <p style="font-size:1.1rem;font-weight:600;">¿Necesita que un especialista revise su caso?</p>
+    <p style="opacity:0.9;font-size:0.9rem;margin-top:0.5rem;">Calculamos su liquidación exacta, preparamos la carta personalizada y le acompañamos en todo el proceso.</p>
+    <a href="https://wa.me/50670464896?text=Hola%2C%20necesito%20asesor%C3%ADa%20para%20un%20despido%20seguro">Solicitar Despido Seguro — $297</a>
+  </div>
+</div>
+
+<footer>
+  <p>Este kit es orientativo y no constituye asesoría legal. Para casos complejos, consulte con un abogado laboralista.</p>
+  <p>GTI Consultoría en Recursos Humanos · <a href="https://gticr.net" style="color:var(--accent)">gticr.net</a> · +506 7046-4896</p>
+</footer>
+
+<script>
+function showTab(tab) {
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+  document.querySelector(`#tab-${tab}`).classList.add('active');
+  document.querySelectorAll('.tab')[['carta','guion','checklist'].indexOf(tab)].classList.add('active');
+}
+
+document.getElementById('c_tipo').addEventListener('change', function() {
+  document.getElementById('c_causales_section').style.display = this.value === 'con_causa' ? 'block' : 'none';
+});
+
+function generarCarta() {
+  const lugar = document.getElementById('c_lugar').value || '[Lugar y fecha]';
+  const nombre = document.getElementById('c_nombre').value || '[Nombre del colaborador]';
+  const cedula = document.getElementById('c_cedula').value || '[Cédula]';
+  const puesto = document.getElementById('c_puesto').value || '[Puesto]';
+  const ingreso = document.getElementById('c_ingreso').value ? new Date(document.getElementById('c_ingreso').value).toLocaleDateString('es-CR', {day:'numeric',month:'long',year:'numeric'}) : '[fecha de ingreso]';
+  const salida = document.getElementById('c_salida').value ? new Date(document.getElementById('c_salida').value).toLocaleDateString('es-CR', {day:'numeric',month:'long',year:'numeric'}) : '[fecha de salida]';
+  const tipo = document.getElementById('c_tipo').value;
+  const causales = document.getElementById('c_causales').value;
+  const repNombre = document.getElementById('c_rep_nombre').value || '[Nombre del representante]';
+  const repCargo = document.getElementById('c_rep_cargo').value || '[Cargo]';
+  const empresa = document.getElementById('c_empresa').value || '[Nombre de la empresa]';
+
+  let cuerpo = '';
+  if (tipo === 'sin_causa') {
+    cuerpo = `Por medio de la presente, le comunicamos formalmente que ${empresa} ha tomado la decisión de prescindir de sus servicios a partir del ${salida}, con responsabilidad patronal.
+
+Esta decisión no obedece a falta alguna de su parte. Se le reconocerán todos los extremos laborales que le corresponden conforme al Código de Trabajo de Costa Rica, incluyendo:
+
+    • Preaviso (Art. 28-29 CT)
+    • Auxilio de cesantía (Art. 29 CT)
+    • Vacaciones proporcionales (Art. 153-155 CT)
+    • Aguinaldo proporcional (Ley 2412)
+    • Cualquier otro rubro pendiente de pago
+
+El cálculo detallado de su liquidación se le entregará por escrito y el pago se realizará conforme a los plazos establecidos por la ley.`;
+  } else {
+    cuerpo = `Por medio de la presente, le comunicamos formalmente que ${empresa} ha tomado la decisión de prescindir de sus servicios a partir del ${salida}, con justa causa, al amparo del artículo 81 del Código de Trabajo de Costa Rica.
+
+Los hechos que fundamentan esta decisión son los siguientes:
+
+${causales || '    [Describir los hechos específicos: fecha, hora, lugar, naturaleza de la falta]'}
+
+En virtud de lo anterior, y conforme a la legislación laboral vigente, no corresponde el pago de preaviso ni auxilio de cesantía. Se le liquidarán los rubros que sí le corresponden:
+
+    • Vacaciones proporcionales (Art. 153-155 CT)
+    • Aguinaldo proporcional (Ley 2412)
+    • Salarios pendientes, si los hubiere`;
+  }
+
+  const carta = `${lugar}
+
+Señor(a)
+${nombre}
+Cédula: ${cedula}
+Puesto: ${puesto}
+Fecha de ingreso: ${ingreso}
+
+ASUNTO: Comunicación formal de terminación de la relación laboral
+
+Estimado(a) ${nombre.split(' ')[0]}:
+
+${cuerpo}
+
+Le solicitamos hacer entrega de los bienes de la empresa que tenga bajo su custodia (equipo, llaves, tarjetas de acceso, uniformes) y coordinar la transición de sus funciones.
+
+La empresa emitirá una constancia de trabajo conforme al artículo 35 del Código de Trabajo.
+
+Le agradecemos su aporte durante el tiempo que formó parte de la organización y le deseamos éxito en sus proyectos futuros.
+
+Atentamente,
+
+
+_________________________________
+${repNombre}
+${repCargo}
+${empresa}
+
+
+Recibido por el trabajador:
+
+Firma: _________________________________
+Nombre: ${nombre}
+Cédula: ${cedula}
+Fecha: ${salida}
+
+Testigo:
+
+Firma: _________________________________
+Nombre: _________________________________
+Cédula: _________________________________`;
+
+  document.getElementById('carta_output').textContent = carta;
+  document.getElementById('carta_output').classList.add('visible');
+  document.getElementById('btn_copiar_carta').style.display = 'block';
+}
+
+function copiarCarta() {
+  const text = document.getElementById('carta_output').textContent;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.getElementById('btn_copiar_carta');
+    btn.textContent = '¡Copiado!';
+    setTimeout(() => btn.textContent = 'Copiar al portapapeles', 2000);
+  });
+}
+
+function toggleCheck(el) {
+  el.classList.toggle('checked');
+  el.innerHTML = el.classList.contains('checked') ? '✓' : '';
+}
+</script>
+
+</body>
+</html>

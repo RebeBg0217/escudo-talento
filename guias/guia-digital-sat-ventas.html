@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guía de Entrevista Conductual — Gestor Comercial / Promotor de Tiendas / Supervisor Call Center | GTI Consultoría</title>
+<style>
+:root {
+  --gti-blue: #1a365d;
+  --gti-accent: #2b6cb0;
+  --gti-light: #ebf4ff;
+  --gti-gold: #d69e2e;
+  --gti-red: #e53e3e;
+  --gti-green: #38a169;
+  --gti-gray: #718096;
+  --gti-dark: #2d3748;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; color: var(--gti-dark); line-height: 1.6; background: #f7fafc; }
+.header { background: var(--gti-blue); color: white; padding: 2rem; text-align: center; }
+.header h1 { font-size: 1.5rem; margin-bottom: 0.5rem; }
+.header .subtitle { font-size: 1rem; opacity: 0.9; }
+.header .badge { display: inline-block; background: var(--gti-gold); color: var(--gti-blue); padding: 0.3rem 1rem; border-radius: 20px; font-weight: 700; font-size: 0.85rem; margin-top: 0.5rem; }
+.meta { background: white; border: 1px solid #e2e8f0; border-radius: 8px; margin: 1.5rem auto; max-width: 800px; padding: 1.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.meta-item { font-size: 0.9rem; }
+.meta-item strong { color: var(--gti-accent); display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; }
+.container { max-width: 800px; margin: 0 auto; padding: 0 1rem 3rem; }
+.section { background: white; border-radius: 8px; margin-top: 1.5rem; overflow: hidden; border: 1px solid #e2e8f0; }
+.section-header { background: var(--gti-light); padding: 1rem 1.5rem; border-bottom: 2px solid var(--gti-accent); }
+.section-header h2 { color: var(--gti-blue); font-size: 1.1rem; }
+.section-body { padding: 1.5rem; }
+.question { margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid #edf2f7; }
+.question:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+.q-number { display: inline-block; background: var(--gti-accent); color: white; width: 28px; height: 28px; border-radius: 50%; text-align: center; line-height: 28px; font-size: 0.8rem; font-weight: 700; margin-right: 0.5rem; }
+.q-competency { display: inline-block; background: var(--gti-light); color: var(--gti-accent); padding: 0.15rem 0.6rem; border-radius: 12px; font-size: 0.75rem; font-weight: 600; margin-left: 0.5rem; }
+.q-text { font-size: 1rem; font-weight: 600; color: var(--gti-dark); margin: 0.5rem 0; }
+.q-followup { font-size: 0.85rem; color: var(--gti-gray); margin-top: 0.3rem; font-style: italic; }
+.rubric { margin-top: 0.8rem; }
+.rubric-row { display: flex; align-items: flex-start; gap: 0.5rem; margin-bottom: 0.3rem; font-size: 0.85rem; }
+.rubric-level { min-width: 80px; font-weight: 600; padding: 0.1rem 0.4rem; border-radius: 4px; text-align: center; font-size: 0.75rem; }
+.level-excellent { background: #c6f6d5; color: #22543d; }
+.level-good { background: #bee3f8; color: #2a4365; }
+.level-basic { background: #fefcbf; color: #744210; }
+.level-poor { background: #fed7d7; color: #742a2a; }
+.redflag { background: #fff5f5; border-left: 3px solid var(--gti-red); padding: 1rem; margin-top: 1rem; border-radius: 0 8px 8px 0; }
+.redflag-title { color: var(--gti-red); font-weight: 700; font-size: 0.85rem; margin-bottom: 0.3rem; }
+.redflag li { font-size: 0.85rem; margin-left: 1rem; margin-bottom: 0.2rem; }
+.illegal { background: #fffff0; border-left: 3px solid var(--gti-gold); padding: 1rem; margin-top: 1rem; border-radius: 0 8px 8px 0; }
+.illegal-title { color: #975a16; font-weight: 700; font-size: 0.85rem; margin-bottom: 0.3rem; }
+.illegal li { font-size: 0.85rem; margin-left: 1rem; margin-bottom: 0.2rem; }
+.scoresheet { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+.scoresheet th { background: var(--gti-blue); color: white; padding: 0.6rem; text-align: left; }
+.scoresheet td { padding: 0.5rem 0.6rem; border-bottom: 1px solid #edf2f7; }
+.scoresheet tr:nth-child(even) { background: #f7fafc; }
+.score-cell { width: 60px; text-align: center; }
+.footer { background: var(--gti-blue); color: white; padding: 2rem; text-align: center; margin-top: 2rem; }
+.footer a { color: var(--gti-gold); text-decoration: none; font-weight: 600; }
+.cta { display: inline-block; background: var(--gti-gold); color: var(--gti-blue); padding: 0.8rem 2rem; border-radius: 8px; font-weight: 700; text-decoration: none; margin-top: 1rem; font-size: 1rem; }
+.cta:hover { background: #ecc94b; }
+@media print {
+  body { background: white; }
+  .footer { break-before: page; }
+  .section { break-inside: avoid; }
+}
+@media (max-width: 600px) {
+  .meta { grid-template-columns: 1fr; }
+  .header h1 { font-size: 1.2rem; }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="badge">GENERADO POR IA</div>
+  <h1>Guía de Entrevista Conductual</h1>
+  <div class="subtitle">Gestor Comercial / Promotor de Tiendas / Supervisor Call Center — Digital Sat S.A. (Claro Costa Rica)</div>
+</div>
+
+<div class="meta">
+  <div class="meta-item"><strong>Empresa</strong> Digital Sat S.A. (Claro Costa Rica)</div>
+  <div class="meta-item"><strong>Puesto</strong> Gestor Comercial / Promotor de Tiendas / Supervisor Call Center</div>
+  <div class="meta-item"><strong>Fecha de generación</strong> 2026-09-18</div>
+  <div class="meta-item"><strong>Preparado por</strong> GTI Consultoría en RRHH</div>
+</div>
+
+<div class="container">
+
+  <div class="section">
+    <div class="section-header"><h2>Preguntas Conductuales (Método STAR)</h2></div>
+    <div class="section-body">
+      <div class="question">
+          <span class="q-number">1</span>
+          <span class="q-competency">Orientación comercial</span>
+          <div class="q-text">Cuénteme sobre su mejor mes de ventas. ¿Cuánto vendió y qué hizo diferente ese mes?</div>
+          <div class="q-followup">Profundice: ¿Qué porcentaje de su meta cumplía normalmente?</div>
+          <div class="rubric">
+              <div class="rubric-row"><span class="rubric-level level-excellent">Excelente</span> Cifras concretas, identifica qué funcionó, replica lo exitoso</div>
+              <div class="rubric-row"><span class="rubric-level level-good">Bueno</span> Tiene buenos resultados y sabe por qué</div>
+              <div class="rubric-row"><span class="rubric-level level-basic">Básico</span> No recuerda cifras pero cree que le iba bien</div>
+              <div class="rubric-row"><span class="rubric-level level-poor">Insuficiente</span> No puede hablar de resultados o culpa factores externos</div>
+            </div>
+        </div>
+<div class="question">
+          <span class="q-number">2</span>
+          <span class="q-competency">Conocimiento del sector telecom</span>
+          <div class="q-text">¿Qué diferencia un plan prepago de un pospago para el cliente? ¿Cuándo recomendaría uno sobre otro?</div>
+          <div class="q-followup">Profundice: ¿Qué sabe de la competencia de Claro en Costa Rica?</div>
+          <div class="rubric">
+              <div class="rubric-row"><span class="rubric-level level-excellent">Excelente</span> Entiende el sector, conoce productos de Claro y competencia, asesora bien</div>
+              <div class="rubric-row"><span class="rubric-level level-good">Bueno</span> Conoce las diferencias y puede explicarlas</div>
+              <div class="rubric-row"><span class="rubric-level level-basic">Básico</span> Conocimiento superficial del sector</div>
+              <div class="rubric-row"><span class="rubric-level level-poor">Insuficiente</span> No entiende el negocio de telecomunicaciones</div>
+            </div>
+        </div>
+<div class="question">
+          <span class="q-number">3</span>
+          <span class="q-competency">Venta en punto de venta</span>
+          <div class="q-text">¿Cómo abordaba a un cliente que entraba a la tienda 'solo a ver'? ¿Qué hacía para convertirlo en comprador?</div>
+          <div class="q-followup">Profundice: ¿Cuál era su tasa de conversión (de los que entraban, cuántos compraban)?</div>
+          <div class="rubric">
+              <div class="rubric-row"><span class="rubric-level level-excellent">Excelente</span> Técnica de apertura no invasiva, diagnóstico de necesidades, cierre natural</div>
+              <div class="rubric-row"><span class="rubric-level level-good">Bueno</span> Buena técnica de acercamiento y cierre</div>
+              <div class="rubric-row"><span class="rubric-level level-basic">Básico</span> Espera a que el cliente pregunte</div>
+              <div class="rubric-row"><span class="rubric-level level-poor">Insuficiente</span> Abordaje agresivo o pasividad total</div>
+            </div>
+        </div>
+<div class="question">
+          <span class="q-number">4</span>
+          <span class="q-competency">Capacitación (para puesto de Capacitador Comercial)</span>
+          <div class="q-text">¿Ha tenido que enseñarle a alguien cómo vender? ¿Cómo lo hizo?</div>
+          <div class="q-followup">Profundice: ¿Esa persona mejoró sus resultados? ¿Cómo lo midió?</div>
+          <div class="rubric">
+              <div class="rubric-row"><span class="rubric-level level-excellent">Excelente</span> Método de enseñanza, mide antes/después, adapta al aprendiz</div>
+              <div class="rubric-row"><span class="rubric-level level-good">Bueno</span> Experiencia capacitando con resultados positivos</div>
+              <div class="rubric-row"><span class="rubric-level level-basic">Básico</span> Ha ayudado informalmente pero sin método</div>
+              <div class="rubric-row"><span class="rubric-level level-poor">Insuficiente</span> No tiene experiencia ni interés en capacitar</div>
+            </div>
+        </div>
+<div class="question">
+          <span class="q-number">5</span>
+          <span class="q-competency">Manejo de inventario/activaciones</span>
+          <div class="q-text">En telecomunicaciones se manejan SIMs, equipos y activaciones. ¿Cómo controlaba su inventario?</div>
+          <div class="q-followup">Profundice: ¿Alguna vez tuvo un faltante? ¿Qué pasó?</div>
+          <div class="rubric">
+              <div class="rubric-row"><span class="rubric-level level-excellent">Excelente</span> Control riguroso, reporta al cierre del día, cero discrepancias</div>
+              <div class="rubric-row"><span class="rubric-level level-good">Bueno</span> Lleva control adecuado y reporta diferencias</div>
+              <div class="rubric-row"><span class="rubric-level level-basic">Básico</span> Cumple con lo mínimo de control</div>
+              <div class="rubric-row"><span class="rubric-level level-poor">Insuficiente</span> Faltantes o descontrol de inventario</div>
+            </div>
+        </div>
+<div class="question">
+          <span class="q-number">6</span>
+          <span class="q-competency">Trabajo de calle</span>
+          <div class="q-text">El puesto de promotor implica estar en la calle visitando tiendas. ¿Tiene experiencia en trabajo de campo? ¿Cómo organizaba su día?</div>
+          <div class="q-followup">Profundice: ¿Cuántos puntos de venta visitaba por día?</div>
+          <div class="rubric">
+              <div class="rubric-row"><span class="rubric-level level-excellent">Excelente</span> Ruta organizada, optimiza tiempo, visita 10+ puntos/día</div>
+              <div class="rubric-row"><span class="rubric-level level-good">Bueno</span> Experiencia en campo y buena organización</div>
+              <div class="rubric-row"><span class="rubric-level level-basic">Básico</span> Dispuesto pero poca experiencia en campo</div>
+              <div class="rubric-row"><span class="rubric-level level-poor">Insuficiente</span> Prefiere trabajo de oficina/tienda fija</div>
+            </div>
+        </div>
+<div class="question">
+          <span class="q-number">7</span>
+          <span class="q-competency">Supervisión de equipo (para Team Leader)</span>
+          <div class="q-text">Si tuviera que supervisar un equipo de 10 agentes de call center, ¿qué haría en su primera semana?</div>
+          <div class="q-followup">Profundice: ¿Cómo manejaría a un agente que no cumple sus metas pero tiene buena actitud?</div>
+          <div class="rubric">
+              <div class="rubric-row"><span class="rubric-level level-excellent">Excelente</span> Plan de acción claro: diagnóstico, escucha, metas individuales, coaching</div>
+              <div class="rubric-row"><span class="rubric-level level-good">Bueno</span> Tiene idea de cómo liderar y motivar</div>
+              <div class="rubric-row"><span class="rubric-level level-basic">Básico</span> Conceptos teóricos sin experiencia práctica</div>
+              <div class="rubric-row"><span class="rubric-level level-poor">Insuficiente</span> No sabe por dónde empezar o su enfoque es solo punitivo</div>
+            </div>
+        </div>
+<div class="question">
+          <span class="q-number">8</span>
+          <span class="q-competency">Manejo de objeciones</span>
+          <div class="q-text">Un cliente dice: 'Kolbi tiene mejor cobertura.' ¿Qué le responde?</div>
+          <div class="q-followup">Profundice: ¿Y si dice que ya tiene un plan con la competencia y está contento?</div>
+          <div class="rubric">
+              <div class="rubric-row"><span class="rubric-level level-excellent">Excelente</span> Conoce fortalezas propias, no ataca competencia, ofrece valor diferenciado</div>
+              <div class="rubric-row"><span class="rubric-level level-good">Bueno</span> Buenos argumentos sin desprestigiar</div>
+              <div class="rubric-row"><span class="rubric-level level-basic">Básico</span> Repite lo que le enseñaron sin personalizar</div>
+              <div class="rubric-row"><span class="rubric-level level-poor">Insuficiente</span> Se queda sin argumentos o habla mal de la competencia</div>
+            </div>
+        </div>
+<div class="question">
+          <span class="q-number">9</span>
+          <span class="q-competency">Presión por metas</span>
+          <div class="q-text">En telecomunicaciones las metas cambian mes a mes. ¿Cómo manejaba la presión cuando subían la meta?</div>
+          <div class="q-followup">Profundice: ¿Alguna vez sintió que la meta era imposible? ¿Qué hizo?</div>
+          <div class="rubric">
+              <div class="rubric-row"><span class="rubric-level level-excellent">Excelente</span> Se enfoca en lo controlable, ajusta estrategia, no se paraliza</div>
+              <div class="rubric-row"><span class="rubric-level level-good">Bueno</span> Acepta la presión y busca cumplir</div>
+              <div class="rubric-row"><span class="rubric-level level-basic">Básico</span> Se frustra pero sigue intentando</div>
+              <div class="rubric-row"><span class="rubric-level level-poor">Insuficiente</span> La presión lo desmoraliza o lo lleva a prácticas cuestionables</div>
+            </div>
+        </div>
+<div class="question">
+          <span class="q-number">10</span>
+          <span class="q-competency">Honestidad con el cliente</span>
+          <div class="q-text">Un cliente quiere el plan más caro pero usted sabe que con el más barato le alcanza. ¿Qué le dice?</div>
+          <div class="q-followup">Profundice: ¿Qué impacto tiene la honestidad en sus ventas a largo plazo?</div>
+          <div class="rubric">
+              <div class="rubric-row"><span class="rubric-level level-excellent">Excelente</span> Asesora con honestidad, gana confianza, genera referidos</div>
+              <div class="rubric-row"><span class="rubric-level level-good">Bueno</span> Transparente sobre opciones, deja que el cliente decida</div>
+              <div class="rubric-row"><span class="rubric-level level-basic">Básico</span> Muestra ambas opciones sin recomendar la más barata</div>
+              <div class="rubric-row"><span class="rubric-level level-poor">Insuficiente</span> Le vende el plan más caro sin importar la necesidad</div>
+            </div>
+        </div>
+<div class="question">
+          <span class="q-number">11</span>
+          <span class="q-competency">Disponibilidad geográfica</span>
+          <div class="q-text">Las tiendas Claro están en varias zonas del GAM. ¿Tiene disponibilidad para trabajar en diferentes sucursales?</div>
+          <div class="q-followup">Profundice: ¿Tiene medio de transporte propio?</div>
+          <div class="rubric">
+              <div class="rubric-row"><span class="rubric-level level-excellent">Excelente</span> Disponibilidad total, medio de transporte, flexible con ubicación</div>
+              <div class="rubric-row"><span class="rubric-level level-good">Bueno</span> Disponible en la mayoría de zonas</div>
+              <div class="rubric-row"><span class="rubric-level level-basic">Básico</span> Solo en zonas cercanas a su domicilio</div>
+              <div class="rubric-row"><span class="rubric-level level-poor">Insuficiente</span> Restricciones geográficas importantes</div>
+            </div>
+        </div>
+<div class="question">
+          <span class="q-number">12</span>
+          <span class="q-competency">Uso de tecnología</span>
+          <div class="q-text">¿Qué herramientas digitales ha usado para gestión de ventas, CRM o reportes?</div>
+          <div class="q-followup">Profundice: ¿Se le facilita aprender apps nuevas rápidamente?</div>
+          <div class="rubric">
+              <div class="rubric-row"><span class="rubric-level level-excellent">Excelente</span> Múltiples herramientas, cómodo con tecnología, aprende solo</div>
+              <div class="rubric-row"><span class="rubric-level level-good">Bueno</span> Usa las herramientas necesarias sin problema</div>
+              <div class="rubric-row"><span class="rubric-level level-basic">Básico</span> Nivel básico pero dispuesto a aprender</div>
+              <div class="rubric-row"><span class="rubric-level level-poor">Insuficiente</span> Resistencia a usar tecnología</div>
+            </div>
+        </div>
+<div class="question">
+          <span class="q-number">13</span>
+          <span class="q-competency">Trabajo en equipo</span>
+          <div class="q-text">¿Cómo era la relación con sus compañeros de tienda o de equipo en su trabajo anterior?</div>
+          <div class="q-followup">Profundice: ¿Ayudaba a compañeros nuevos? ¿Cómo?</div>
+          <div class="rubric">
+              <div class="rubric-row"><span class="rubric-level level-excellent">Excelente</span> Colaborativo, comparte conocimiento, eleva al equipo</div>
+              <div class="rubric-row"><span class="rubric-level level-good">Bueno</span> Buena relación y disposición a ayudar</div>
+              <div class="rubric-row"><span class="rubric-level level-basic">Básico</span> Trabaja bien solo sin generar conflicto</div>
+              <div class="rubric-row"><span class="rubric-level level-poor">Insuficiente</span> Competencia destructiva o aislamiento</div>
+            </div>
+        </div>
+<div class="question">
+          <span class="q-number">14</span>
+          <span class="q-competency">Imagen y comunicación</span>
+          <div class="q-text">Represente a Claro en 30 segundos. Véndame un plan como si yo fuera un cliente que acaba de entrar a la tienda.</div>
+          <div class="q-followup">Profundice: (Evaluar fluidez, energía, claridad, cierre)</div>
+          <div class="rubric">
+              <div class="rubric-row"><span class="rubric-level level-excellent">Excelente</span> Natural, entusiasta, pregunta antes de ofrecer, cierra con próximo paso</div>
+              <div class="rubric-row"><span class="rubric-level level-good">Bueno</span> Buen pitch, claro y convincente</div>
+              <div class="rubric-row"><span class="rubric-level level-basic">Básico</span> Recita características sin conectar con necesidades</div>
+              <div class="rubric-row"><span class="rubric-level level-poor">Insuficiente</span> Inseguro, desordenado, no genera confianza</div>
+            </div>
+        </div>
+<div class="question">
+          <span class="q-number">15</span>
+          <span class="q-competency">Compromiso a largo plazo</span>
+          <div class="q-text">¿Cuánto tiempo estuvo en su último trabajo? ¿Por qué se fue? ¿Qué busca aquí que no encontró allá?</div>
+          <div class="q-followup">Profundice: ¿Dónde se ve en un año?</div>
+          <div class="rubric">
+              <div class="rubric-row"><span class="rubric-level level-excellent">Excelente</span> Estabilidad, razón clara de cambio, busca crecimiento</div>
+              <div class="rubric-row"><span class="rubric-level level-good">Bueno</span> Razones razonables y expectativas realistas</div>
+              <div class="rubric-row"><span class="rubric-level level-basic">Básico</span> Cambio frecuente pero con explicación</div>
+              <div class="rubric-row"><span class="rubric-level level-poor">Insuficiente</span> Patrón de inestabilidad sin reflexión</div>
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header"><h2>Red Flags: Señales de Alerta</h2></div>
+    <div class="section-body">
+      <div class="redflag">
+        <div class="redflag-title">Observe estas señales durante la entrevista:</div>
+        <ul>
+          <li>No puede dar cifras de ventas o metas</li>
+<li>No conoce los productos de telecomunicaciones básicos</li>
+<li>Habla mal de empresas anteriores (ICE, Kolbi, Liberty)</li>
+<li>Historial de faltantes de inventario (SIMs, equipos)</li>
+<li>Cambios de trabajo cada 2-3 meses</li>
+<li>No puede hacer un pitch de 30 segundos convincente</li>
+<li>Actitud de 'solo quiero el salario fijo' sin hambre comercial</li>
+<li>Restricciones geográficas que limiten la asignación a tiendas</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header"><h2>Preguntas Prohibidas en Costa Rica</h2></div>
+    <div class="section-body">
+      <div class="illegal">
+        <div class="illegal-title">Estas preguntas violan la legislación laboral costarricense (Código de Trabajo + Ley 2694 + Ley 8107):</div>
+        <ul>
+          <li>Estado civil, si tiene pareja o planes de casarse</li>
+<li>Si está embarazada, planea embarazarse o tiene hijos</li>
+<li>Edad exacta (puede preguntar si es mayor de 18 para efectos legales)</li>
+<li>Religión, creencias espirituales o prácticas religiosas</li>
+<li>Orientación sexual o identidad de género</li>
+<li>Afiliación política o sindical</li>
+<li>Nacionalidad u origen étnico (puede preguntar si tiene permiso de trabajo)</li>
+<li>Si tiene deudas, embargos o problemas financieros personales</li>
+<li>Si padece alguna enfermedad crónica o discapacidad (salvo requisitos objetivos del puesto)</li>
+<li>Antecedentes penales (solo puede solicitar hoja de delincuencia si el puesto lo justifica por ley)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header"><h2>Hoja de Calificación</h2></div>
+    <div class="section-body">
+      <table class="scoresheet">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Competencia</th>
+            <th class="score-cell">1</th>
+            <th class="score-cell">2</th>
+            <th class="score-cell">3</th>
+            <th class="score-cell">4</th>
+            <th class="score-cell">5</th>
+            <th>Notas</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>Orientación comercial</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td style="min-width:120px"></td></tr>
+<tr><td>2</td><td>Conocimiento del sector telecom</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td style="min-width:120px"></td></tr>
+<tr><td>3</td><td>Venta en punto de venta</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td style="min-width:120px"></td></tr>
+<tr><td>4</td><td>Capacitación (para puesto de Capacitador Comercial)</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td style="min-width:120px"></td></tr>
+<tr><td>5</td><td>Manejo de inventario/activaciones</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td style="min-width:120px"></td></tr>
+<tr><td>6</td><td>Trabajo de calle</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td style="min-width:120px"></td></tr>
+<tr><td>7</td><td>Supervisión de equipo (para Team Leader)</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td style="min-width:120px"></td></tr>
+<tr><td>8</td><td>Manejo de objeciones</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td style="min-width:120px"></td></tr>
+<tr><td>9</td><td>Presión por metas</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td style="min-width:120px"></td></tr>
+<tr><td>10</td><td>Honestidad con el cliente</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td style="min-width:120px"></td></tr>
+<tr><td>11</td><td>Disponibilidad geográfica</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td style="min-width:120px"></td></tr>
+<tr><td>12</td><td>Uso de tecnología</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td style="min-width:120px"></td></tr>
+<tr><td>13</td><td>Trabajo en equipo</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td style="min-width:120px"></td></tr>
+<tr><td>14</td><td>Imagen y comunicación</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td style="min-width:120px"></td></tr>
+<tr><td>15</td><td>Compromiso a largo plazo</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td style="min-width:120px"></td></tr>
+        </tbody>
+      </table>
+      <p style="margin-top:1rem;font-size:0.8rem;color:var(--gti-gray);">
+        <strong>Escala:</strong> 1 = No demuestra la competencia · 2 = Básico · 3 = Competente · 4 = Avanzado · 5 = Excepcional
+      </p>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
+  <p style="font-size:0.9rem;margin-bottom:0.5rem;">Esta guía fue generada automáticamente por el sistema de IA de GTI Consultoría.</p>
+  <p style="font-size:0.85rem;opacity:0.9;">¿Quiere evaluar a sus candidatos con pruebas psicométricas validadas?</p>
+  <a href="https://wa.me/50670464896?text=Hola%2C%20recib%C3%AD%20la%20gu%C3%ADa%20de%20entrevista%20y%20me%20interesa%20saber%20m%C3%A1s%20sobre%20evaluaciones%20psicom%C3%A9tricas" class="cta">Solicitar evaluación gratuita</a>
+  <p style="margin-top:1.5rem;font-size:0.75rem;opacity:0.7;">GTI Consultoría en Recursos Humanos · gticr.net · +506 7046-4896</p>
+</div>
+
+</body>
+</html>

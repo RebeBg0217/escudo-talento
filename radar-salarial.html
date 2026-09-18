@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Radar Laboral CR — Septiembre 2026 | GTI Consultoría</title>
+<style>
+:root {
+  --blue: #1a365d; --accent: #2b6cb0; --light: #ebf4ff; --gold: #d69e2e;
+  --green: #38a169; --red: #e53e3e; --dark: #1a202c; --gray: #718096;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', system-ui, sans-serif; color: var(--dark); background: #f7fafc; }
+.header { background: linear-gradient(135deg, var(--blue), #2c5282); color: white; padding: 2.5rem 1.5rem; text-align: center; }
+.header h1 { font-size: 1.6rem; margin-bottom: 0.5rem; }
+.header p { opacity: 0.9; font-size: 0.95rem; }
+.badge { display: inline-block; background: var(--gold); color: var(--blue); padding: 0.3rem 1rem; border-radius: 20px; font-weight: 700; font-size: 0.8rem; margin-bottom: 1rem; }
+.container { max-width: 900px; margin: 0 auto; padding: 1.5rem; }
+.kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
+.kpi { background: white; border-radius: 10px; padding: 1.2rem; text-align: center; border: 1px solid #e2e8f0; }
+.kpi .num { font-size: 2rem; font-weight: 700; color: var(--accent); }
+.kpi .label { font-size: 0.8rem; color: var(--gray); margin-top: 0.2rem; }
+.section { background: white; border-radius: 12px; padding: 2rem; margin-bottom: 1.5rem; border: 1px solid #e2e8f0; }
+.section h2 { color: var(--blue); font-size: 1.15rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--light); }
+.bar-chart { margin: 0.5rem 0; }
+.bar-row { display: flex; align-items: center; margin-bottom: 0.4rem; font-size: 0.85rem; }
+.bar-label { width: 180px; flex-shrink: 0; text-align: right; padding-right: 0.8rem; color: var(--dark); }
+.bar-track { flex: 1; background: #edf2f7; border-radius: 4px; height: 22px; position: relative; overflow: hidden; }
+.bar-fill { height: 100%; border-radius: 4px; display: flex; align-items: center; justify-content: flex-end; padding-right: 6px; font-size: 0.75rem; font-weight: 600; color: white; transition: width 0.5s; }
+.bar-value { position: absolute; right: 6px; top: 50%; transform: translateY(-50%); font-size: 0.75rem; font-weight: 600; color: var(--gray); }
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+th { background: var(--blue); color: white; padding: 0.6rem 0.8rem; text-align: left; font-weight: 600; font-size: 0.8rem; }
+td { padding: 0.5rem 0.8rem; border-bottom: 1px solid #edf2f7; }
+tr:hover td { background: var(--light); }
+.tag { display: inline-block; padding: 0.15rem 0.5rem; border-radius: 4px; font-size: 0.7rem; font-weight: 600; }
+.tag-hot { background: #fed7d7; color: #c53030; }
+.tag-warm { background: #fefcbf; color: #975a16; }
+.tag-cool { background: #c6f6d5; color: #276749; }
+.insight { background: var(--light); border-left: 3px solid var(--accent); padding: 1rem; margin: 1rem 0; border-radius: 0 8px 8px 0; font-size: 0.88rem; line-height: 1.5; }
+.insight strong { color: var(--blue); }
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.prov-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 0.5rem; }
+.prov { background: var(--light); border-radius: 8px; padding: 0.8rem; text-align: center; }
+.prov .prov-name { font-size: 0.8rem; font-weight: 600; color: var(--blue); }
+.prov .prov-num { font-size: 1.3rem; font-weight: 700; color: var(--accent); }
+.prov .prov-pct { font-size: 0.7rem; color: var(--gray); }
+.cta-box { background: var(--blue); border-radius: 12px; padding: 2rem; color: white; text-align: center; margin: 2rem 0; }
+.cta-box a { display: inline-block; background: var(--gold); color: var(--blue); padding: 0.8rem 2rem; border-radius: 8px; font-weight: 700; text-decoration: none; margin-top: 1rem; }
+.watermark { text-align: center; color: var(--gray); font-size: 0.75rem; margin: 1rem 0; opacity: 0.7; }
+footer { text-align: center; padding: 2rem; font-size: 0.75rem; color: var(--gray); }
+@media (max-width: 600px) { .bar-label { width: 120px; font-size: 0.75rem; } .two-col { grid-template-columns: 1fr; } .kpis { grid-template-columns: 1fr 1fr; } }
+@media print { .cta-box { display: none; } body { background: white; } }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="badge">RADAR LABORAL CR — SEPTIEMBRE 2026</div>
+  <h1>Inteligencia de Mercado Laboral — Costa Rica</h1>
+  <p>Fuente: Agencia Nacional de Empleo (ANE) · Fecha de corte: 18 de septiembre de 2026</p>
+</div>
+
+<div class="container">
+
+  <div class="kpis">
+    <div class="kpi"><div class="num">6,011</div><div class="label">Plazas abiertas</div></div>
+    <div class="kpi"><div class="num">649</div><div class="label">Empresas contratando</div></div>
+    <div class="kpi"><div class="num">551</div><div class="label">Tipos de puesto</div></div>
+    <div class="kpi"><div class="num">1,935</div><div class="label">Publicaciones activas</div></div>
+    <div class="kpi"><div class="num">9.3</div><div class="label">Plazas/empresa promedio</div></div>
+  </div>
+
+  <!-- SECTORES MAS DEMANDADOS -->
+  <div class="section">
+    <h2>Demanda por sector — ¿Dónde está la competencia por talento?</h2>
+    <div class="bar-chart">
+      <div class="bar-row"><div class="bar-label">Ventas / Comercial</div><div class="bar-track"><div class="bar-fill" style="width:100%;background:var(--accent);">1,082</div></div></div>
+      <div class="bar-row"><div class="bar-label">Servicio al cliente / BPO</div><div class="bar-track"><div class="bar-fill" style="width:57%;background:#4299e1;">622</div></div></div>
+      <div class="bar-row"><div class="bar-label">Manufactura / Producción</div><div class="bar-track"><div class="bar-fill" style="width:52%;background:#48bb78;">562</div></div></div>
+      <div class="bar-row"><div class="bar-label">Alimentos / Hospitalidad</div><div class="bar-track"><div class="bar-fill" style="width:44%;background:#ed8936;">477</div></div></div>
+      <div class="bar-row"><div class="bar-label">Agrícola</div><div class="bar-track"><div class="bar-fill" style="width:17%;background:#38b2ac;">180</div></div></div>
+      <div class="bar-row"><div class="bar-label">Logística / Bodega</div><div class="bar-track"><div class="bar-fill" style="width:16%;background:#9f7aea;">171</div></div></div>
+      <div class="bar-row"><div class="bar-label">Ventas a domicilio</div><div class="bar-track"><div class="bar-fill" style="width:13%;background:#f56565;">140</div></div></div>
+      <div class="bar-row"><div class="bar-label">Telecomunicaciones</div><div class="bar-track"><div class="bar-fill" style="width:8%;background:#667eea;">83</div></div></div>
+      <div class="bar-row"><div class="bar-label">Seguridad</div><div class="bar-track"><div class="bar-fill" style="width:7%;background:#4a5568;">74</div></div></div>
+      <div class="bar-row"><div class="bar-label">Limpieza / Misceláneos</div><div class="bar-track"><div class="bar-fill" style="width:10%;background:#b7791f;">104</div></div></div>
+    </div>
+    <div class="insight">
+      <strong>Hallazgo clave:</strong> Ventas lidera con el 18% de toda la demanda. Las empresas están compitiendo agresivamente por vendedores — si usted tiene vacantes de ventas abiertas, sus candidatos tienen en promedio <strong>6+ ofertas competidoras activas</strong> en ANE. Sin evaluación diferenciada, contratará al mismo perfil que todos los demás.
+    </div>
+  </div>
+
+  <!-- EMPRESAS MAS ACTIVAS -->
+  <div class="section">
+    <h2>Top 15 empresas contratando — ¿Quién compite por su talento?</h2>
+    <div class="table-wrap">
+      <table>
+        <tr><th>#</th><th>Empresa</th><th>Plazas</th><th>Intensidad</th><th>Sector principal</th></tr>
+        <tr><td>1</td><td>Confidencial (varias)</td><td><strong>1,847</strong></td><td><span class="tag tag-hot">Masiva</span></td><td>Mixto</td></tr>
+        <tr><td>2</td><td>Bill Gosling Outsourcing</td><td><strong>400</strong></td><td><span class="tag tag-hot">Alta</span></td><td>BPO / Call center</td></tr>
+        <tr><td>3</td><td>AR-Holdings</td><td><strong>243</strong></td><td><span class="tag tag-hot">Alta</span></td><td>Retail / Ventas</td></tr>
+        <tr><td>4</td><td>Foundever</td><td><strong>200</strong></td><td><span class="tag tag-hot">Alta</span></td><td>BPO / Call center</td></tr>
+        <tr><td>5</td><td>Grupo ACON</td><td><strong>180</strong></td><td><span class="tag tag-hot">Alta</span></td><td>Agroindustria</td></tr>
+        <tr><td>6</td><td>Digital Sat / Claro</td><td><strong>128</strong></td><td><span class="tag tag-warm">Media-alta</span></td><td>Telecomunicaciones</td></tr>
+        <tr><td>7</td><td>Ópticas Munkel</td><td><strong>103</strong></td><td><span class="tag tag-warm">Media-alta</span></td><td>Retail especializado</td></tr>
+        <tr><td>8</td><td>Salesland CR</td><td><strong>101</strong></td><td><span class="tag tag-warm">Media-alta</span></td><td>Outsourcing ventas</td></tr>
+        <tr><td>9</td><td>Grupo SFA</td><td><strong>95</strong></td><td><span class="tag tag-warm">Media-alta</span></td><td>Distribución / Ventas</td></tr>
+        <tr><td>10</td><td>Trixo Solutions</td><td><strong>86</strong></td><td><span class="tag tag-warm">Media</span></td><td>BPO</td></tr>
+        <tr><td>11</td><td>OFG Costa Rica</td><td><strong>80</strong></td><td><span class="tag tag-warm">Media</span></td><td>Servicios financieros</td></tr>
+        <tr><td>12</td><td>Nekajui Ritz-Carlton</td><td><strong>80</strong></td><td><span class="tag tag-warm">Media</span></td><td>Hotelería de lujo</td></tr>
+        <tr><td>13</td><td>Dataphone CR</td><td><strong>55</strong></td><td><span class="tag tag-cool">Media</span></td><td>Fintech / Ventas</td></tr>
+        <tr><td>14</td><td>Grupo VISA</td><td><strong>45</strong></td><td><span class="tag tag-cool">Media</span></td><td>Distribución</td></tr>
+        <tr><td>15</td><td>PBS</td><td><strong>37</strong></td><td><span class="tag tag-cool">Moderada</span></td><td>Retail</td></tr>
+      </table>
+    </div>
+    <div class="insight">
+      <strong>Lo que esto significa para usted:</strong> Las 15 empresas más activas concentran el 59% de todas las plazas. Si alguna de estas empresas está en su misma industria, están compitiendo directamente por los mismos candidatos. ¿Sabe cuánto están ofreciendo? ¿Sabe qué beneficios dan?
+    </div>
+  </div>
+
+  <!-- DISTRIBUCIÓN GEOGRÁFICA -->
+  <div class="section">
+    <h2>Distribución geográfica — ¿Dónde se concentra la demanda?</h2>
+    <div class="prov-grid">
+      <div class="prov"><div class="prov-name">San José</div><div class="prov-num">2,772</div><div class="prov-pct">46.1%</div></div>
+      <div class="prov"><div class="prov-name">Alajuela</div><div class="prov-num">1,247</div><div class="prov-pct">20.7%</div></div>
+      <div class="prov"><div class="prov-name">Heredia</div><div class="prov-num">1,114</div><div class="prov-pct">18.5%</div></div>
+      <div class="prov"><div class="prov-name">Guanacaste</div><div class="prov-num">359</div><div class="prov-pct">6.0%</div></div>
+      <div class="prov"><div class="prov-name">Limón</div><div class="prov-num">225</div><div class="prov-pct">3.7%</div></div>
+      <div class="prov"><div class="prov-name">Cartago</div><div class="prov-num">174</div><div class="prov-pct">2.9%</div></div>
+      <div class="prov"><div class="prov-name">Puntarenas</div><div class="prov-num">120</div><div class="prov-pct">2.0%</div></div>
+    </div>
+    <div class="insight">
+      <strong>GAM domina:</strong> el 85% de las plazas están en San José + Alajuela + Heredia. Las empresas fuera del GAM tienen <strong>menos competencia por talento</strong> pero también menor oferta de candidatos calificados. Guanacaste sube por hotelería (temporada alta acercándose).
+    </div>
+  </div>
+
+  <!-- POSICIONES MÁS DIFÍCILES DE LLENAR -->
+  <div class="section">
+    <h2>Posiciones de alta competencia — ¿Dónde hay guerra de talento?</h2>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Puesto</th><th>Plazas abiertas</th><th>Empresas buscando</th><th>Dificultad</th></tr>
+        <tr><td>Asesor de ventas</td><td>607</td><td>45+</td><td><span class="tag tag-hot">Extrema</span></td></tr>
+        <tr><td>Agente de servicio al cliente</td><td>502</td><td>20+</td><td><span class="tag tag-hot">Alta</span></td></tr>
+        <tr><td>Operario de ensamble</td><td>400</td><td>8+</td><td><span class="tag tag-warm">Media-alta</span></td></tr>
+        <tr><td>Ayudante de cocina</td><td>290</td><td>30+</td><td><span class="tag tag-hot">Alta</span></td></tr>
+        <tr><td>Agente de ventas</td><td>270</td><td>25+</td><td><span class="tag tag-hot">Alta</span></td></tr>
+        <tr><td>Jornalero</td><td>180</td><td>5+</td><td><span class="tag tag-warm">Media</span></td></tr>
+        <tr><td>Vendedor a domicilio</td><td>140</td><td>10+</td><td><span class="tag tag-warm">Media-alta</span></td></tr>
+        <tr><td>Operador bilingüe call center</td><td>120</td><td>6+</td><td><span class="tag tag-hot">Alta</span></td></tr>
+        <tr><td>Bodeguero</td><td>87</td><td>15+</td><td><span class="tag tag-warm">Media</span></td></tr>
+        <tr><td>Salonero</td><td>85</td><td>20+</td><td><span class="tag tag-warm">Media-alta</span></td></tr>
+      </table>
+    </div>
+    <div class="insight">
+      <strong>Dato crítico:</strong> Para un asesor de ventas, hay <strong>45+ empresas compitiendo por el mismo perfil</strong> en este momento. Si su proceso de selección toma más de 5 días, el candidato ya aceptó otra oferta. La velocidad de evaluación es ventaja competitiva directa.
+    </div>
+  </div>
+
+  <!-- VELOCIDAD DE CONTRATACIÓN -->
+  <div class="section">
+    <h2>Velocidad de contratación — ¿Cuándo publicaron?</h2>
+    <div class="bar-chart">
+      <div class="bar-row"><div class="bar-label">Última semana</div><div class="bar-track"><div class="bar-fill" style="width:100%;background:var(--red);">2,596</div></div></div>
+      <div class="bar-row"><div class="bar-label">Hace 2 semanas</div><div class="bar-track"><div class="bar-fill" style="width:33%;background:#ed8936;">862</div></div></div>
+      <div class="bar-row"><div class="bar-label">Hace 3-4 semanas</div><div class="bar-track"><div class="bar-fill" style="width:29%;background:#ecc94b;">746</div></div></div>
+      <div class="bar-row"><div class="bar-label">Hace 1-2 meses</div><div class="bar-track"><div class="bar-fill" style="width:43%;background:#48bb78;">1,118</div></div></div>
+      <div class="bar-row"><div class="bar-label">Más de 2 meses</div><div class="bar-track"><div class="bar-fill" style="width:27%;background:var(--gray);">689</div></div></div>
+    </div>
+    <div class="insight">
+      <strong>Señal de mercado:</strong> El 43% de las plazas se publicaron en la última semana — el mercado está muy activo. Las 689 plazas con más de 2 meses abiertas son las más difíciles de llenar: son oportunidades donde su servicio de evaluación marca la diferencia.
+    </div>
+  </div>
+
+  <!-- RECOMENDACIONES -->
+  <div class="section">
+    <h2>Recomendaciones para su empresa</h2>
+    <div style="font-size:0.9rem;line-height:1.7;">
+      <p><strong>1. Si está contratando vendedores:</strong> Tiene 45+ competidores por el mismo candidato. Necesita: proceso de selección de máximo 3 días, oferta salarial competitiva, y evaluación de competencias que le diga en 24h si el candidato vale la pena.</p>
+      <br>
+      <p><strong>2. Si está contratando servicio al cliente / BPO:</strong> Bill Gosling y Foundever acaparan 600 plazas. Competir por salario es difícil — compita por cultura, flexibilidad y velocidad de contratación.</p>
+      <br>
+      <p><strong>3. Si tiene plazas abiertas hace más de 30 días:</strong> Su oferta no está atrayendo. Opciones: revisar el rango salarial, ampliar la zona geográfica, o reducir requisitos no esenciales.</p>
+      <br>
+      <p><strong>4. Si está fuera del GAM:</strong> Tiene menos competencia pero también menor oferta. Considere esquemas de transporte o teletrabajo parcial para atraer candidatos del GAM.</p>
+      <br>
+      <p><strong>5. Para todos:</strong> El 31% de las publicaciones son "Confidencial" — eso significa que sus competidores no quieren que usted sepa que están contratando. Con este radar, usted sí lo sabe.</p>
+    </div>
+  </div>
+
+  <div class="watermark">
+    Reporte generado por GTI Consultoría · Datos de ANE al 18/sept/2026 · Versión gratuita (muestra)
+  </div>
+
+  <div class="cta-box">
+    <p style="font-size:1.1rem;font-weight:600;">¿Quiere el reporte completo cada mes, personalizado a su industria?</p>
+    <p style="opacity:0.9;font-size:0.9rem;margin-top:0.5rem;">Radar Salarial CR: datos de mercado reales, análisis por sector, comparativo de compensación y alertas de competidores.</p>
+    <a href="https://wa.me/50670464896?text=Hola%2C%20me%20interesa%20el%20Radar%20Salarial%20CR%20de%20%24149%2Fmes">Suscribirme al Radar — $149/mes</a>
+  </div>
+</div>
+
+<footer>
+  <p>Fuente: Agencia Nacional de Empleo de Costa Rica (ane.cr). Datos recopilados el 18 de septiembre de 2026.</p>
+  <p>Este reporte es orientativo. Para análisis personalizados por industria, contacte a GTI Consultoría.</p>
+  <p>GTI Consultoría en Recursos Humanos · <a href="https://gticr.net" style="color:var(--accent)">gticr.net</a> · +506 7046-4896</p>
+</footer>
+
+</body>
+</html>

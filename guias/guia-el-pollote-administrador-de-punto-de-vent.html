@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guía de Entrevista Conductual — Administrador de Punto de Venta / Dependiente de Restaurante | GTI Consultoría</title>
+<style>
+:root {
+  --gti-blue: #1a365d;
+  --gti-accent: #2b6cb0;
+  --gti-light: #ebf4ff;
+  --gti-gold: #d69e2e;
+  --gti-red: #e53e3e;
+  --gti-green: #38a169;
+  --gti-gray: #718096;
+  --gti-dark: #2d3748;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; color: var(--gti-dark); line-height: 1.6; background: #f7fafc; }
+.header { background: var(--gti-blue); color: white; padding: 2rem; text-align: center; }
+.header h1 { font-size: 1.5rem; margin-bottom: 0.5rem; }
+.header .subtitle { font-size: 1rem; opacity: 0.9; }
+.header .badge { display: inline-block; background: var(--gti-gold); color: var(--gti-blue); padding: 0.3rem 1rem; border-radius: 20px; font-weight: 700; font-size: 0.85rem; margin-top: 0.5rem; }
+.meta { background: white; border: 1px solid #e2e8f0; border-radius: 8px; margin: 1.5rem auto; max-width: 800px; padding: 1.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.meta-item { font-size: 0.9rem; }
+.meta-item strong { color: var(--gti-accent); display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; }
+.container { max-width: 800px; margin: 0 auto; padding: 0 1rem 3rem; }
+.section { background: white; border-radius: 8px; margin-top: 1.5rem; overflow: hidden; border: 1px solid #e2e8f0; }
+.section-header { background: var(--gti-light); padding: 1rem 1.5rem; border-bottom: 2px solid var(--gti-accent); }
+.section-header h2 { color: var(--gti-blue); font-size: 1.1rem; }
+.section-body { padding: 1.5rem; }
+.question { margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid #edf2f7; }
+.question:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+.q-number { display: inline-block; background: var(--gti-accent); color: white; width: 28px; height: 28px; border-radius: 50%; text-align: center; line-height: 28px; font-size: 0.8rem; font-weight: 700; margin-right: 0.5rem; }
+.q-competency { display: inline-block; background: var(--gti-light); color: var(--gti-accent); padding: 0.15rem 0.6rem; border-radius: 12px; font-size: 0.75rem; font-weight: 600; margin-left: 0.5rem; }
+.q-text { font-size: 1rem; font-weight: 600; color: var(--gti-dark); margin: 0.5rem 0; }
+.q-followup { font-size: 0.85rem; color: var(--gti-gray); margin-top: 0.3rem; font-style: italic; }
+.rubric { margin-top: 0.8rem; }
+.rubric-row { display: flex; align-items: flex-start; gap: 0.5rem; margin-bottom: 0.3rem; font-size: 0.85rem; }
+.rubric-level { min-width: 80px; font-weight: 600; padding: 0.1rem 0.4rem; border-radius: 4px; text-align: center; font-size: 0.75rem; }
+.level-excellent { background: #c6f6d5; color: #22543d; }
+.level-good { background: #bee3f8; color: #2a4365; }
+.level-basic { background: #fefcbf; color: #744210; }
+.level-poor { background: #fed7d7; color: #742a2a; }
+.redflag { background: #fff5f5; border-left: 3px solid var(--gti-red); padding: 1rem; margin-top: 1rem; border-radius: 0 8px 8px 0; }
+.redflag-title { color: var(--gti-red); font-weight: 700; font-size: 0.85rem; margin-bottom: 0.3rem; }
+.redflag li { font-size: 0.85rem; margin-left: 1rem; margin-bottom: 0.2rem; }
+.illegal { background: #fffff0; border-left: 3px solid var(--gti-gold); padding: 1rem; margin-top: 1rem; border-radius: 0 8px 8px 0; }
+.illegal-title { color: #975a16; font-weight: 700; font-size: 0.85rem; margin-bottom: 0.3rem; }
+.illegal li { font-size: 0.85rem; margin-left: 1rem; margin-bottom: 0.2rem; }
+.scoresheet { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+.scoresheet th { background: var(--gti-blue); color: white; padding: 0.6rem; text-align: left; }
+.scoresheet td { padding: 0.5rem 0.6rem; border-bottom: 1px solid #edf2f7; }
+.scoresheet tr:nth-child(even) { background: #f7fafc; }
+.score-cell { width: 60px; text-align: center; }
+.footer { background: var(--gti-blue); color: white; padding: 2rem; text-align: center; margin-top: 2rem; }
+.footer a { color: var(--gti-gold); text-decoration: none; font-weight: 600; }
+.cta { display: inline-block; background: var(--gti-gold); color: var(--gti-blue); padding: 0.8rem 2rem; border-radius: 8px; font-weight: 700; text-decoration: none; margin-top: 1rem; font-size: 1rem; }
+.cta:hover { background: #ecc94b; }
+@media print {
+  body { background: white; }
+  .footer { break-before: page; }
+  .section { break-inside: avoid; }
+}
+@media (max-width: 600px) {
+  .meta { grid-template-columns: 1fr; }
+  .header h1 { font-size: 1.2rem; }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="badge">GENERADO POR IA</div>
+  <h1>Guía de Entrevista Conductual</h1>
+  <div class="subtitle">Administrador de Punto de Venta / Dependiente de Restaurante — El Pollote</div>
+</div>
+
+<div class="meta">
+  <div class="meta-item"><strong>Empresa</strong> El Pollote</div>
+  <div class="meta-item"><strong>Puesto</strong> Administrador de Punto de Venta / Dependiente de Restaurante</div>
+  <div class="meta-item"><strong>Fecha de generación</strong> 2026-09-18</div>
+  <div class="meta-item"><strong>Preparado por</strong> GTI Consultoría en RRHH</div>
+</div>
+
+<div class="container">
+
+  <div class="section">
+    <div class="section-header"><h2>Preguntas Conductuales (Método STAR)</h2></div>
+    <div class="section-body">
+      <div class="question">
+          <span class="q-number">1</span>
+          <span class="q-competency">Liderazgo operativo</span>
+          <div class="q-text">Cuénteme cómo organizaba un turno completo: apertura, rush del almuerzo, cierre. ¿Qué era lo primero que revisaba?</div>
+          <div class="q-followup">Profundice: ¿Cuántas personas tenía a cargo? ¿Cómo asignaba roles?</div>
+          <div class="rubric">
+              <div class="rubric-row"><span class="rubric-level level-excellent">Excelente</span> Sistema de gestión de turno, anticipa picos, asigna por fortaleza de cada persona</div>
+              <div class="rubric-row"><span class="rubric-level level-good">Bueno</span> Organiza bien y maneja el ritmo del restaurante</div>
+              <div class="rubric-row"><span class="rubric-level level-basic">Básico</span> Sigue rutina establecida sin innovar</div>
+              <div class="rubric-row"><span class="rubric-level level-poor">Insuficiente</span> Reactivo, no tiene sistema de organización</div>
+            </div>
+        </div>
+<div class="question">
+          <span class="q-number">2</span>
+          <span class="q-competency">Servicio al cliente</span>
+          <div class="q-text">Un cliente se queja de que su pedido tardó mucho y la comida llegó fría. ¿Qué hace?</div>
+          <div class="q-followup">Profundice: ¿Alguna vez perdió un cliente por mal servicio? ¿Qué aprendió?</div>
+          <div class="rubric">
+              <div class="rubric-row"><span class="rubric-level level-excellent">Excelente</span> Disculpa, corrige, compensa, el cliente regresa</div>
+              <div class="rubric-row"><span class="rubric-level level-good">Bueno</span> Resuelve sin escalar</div>
+              <div class="rubric-row"><span class="rubric-level level-basic">Básico</span> Corrige pero sin compensar</div>
+              <div class="rubric-row"><span class="rubric-level level-poor">Insuficiente</span> Se pone a la defensiva o culpa a la cocina</div>
+            </div>
+        </div>
+<div class="question">
+          <span class="q-number">3</span>
+          <span class="q-competency">Manejo de efectivo</span>
+          <div class="q-text">¿Cómo hacía el cierre de caja? ¿Alguna vez tuvo un faltante?</div>
+          <div class="q-followup">Profundice: ¿Qué sistema de control usaba?</div>
+          <div class="rubric">
+              <div class="rubric-row"><span class="rubric-level level-excellent">Excelente</span> Cierre metódico, arqueo diario, controles cruzados, historial limpio</div>
+              <div class="rubric-row"><span class="rubric-level level-good">Bueno</span> Proceso ordenado y transparente</div>
+              <div class="rubric-row"><span class="rubric-level level-basic">Básico</span> Cierra caja pero sin controles adicionales</div>
+              <div class="rubric-row"><span class="rubric-level level-poor">Insuficiente</span> Faltantes frecuentes o evasivas</div>
+            </div>
+        </div>
+<div class="question">
+          <span class="q-number">4</span>
+          <span class="q-competency">Higiene y BPM</span>
+          <div class="q-text">¿Qué protocolos de higiene y manipulación de alimentos conoce? ¿Tiene certificado del Ministerio de Salud?</div>
+          <div class="q-followup">Profundice: ¿Alguna vez tuvo que corregir a un compañero por incumplir normas de higiene?</div>
+          <div class="rubric">
+              <div class="rubric-row"><span class="rubric-level level-excellent">Excelente</span> Conoce BPM, certificado al día, vigila cumplimiento del equipo</div>
+              <div class="rubric-row"><span class="rubric-level level-good">Bueno</span> Cumple y conoce lo básico de higiene alimentaria</div>
+              <div class="rubric-row"><span class="rubric-level level-basic">Básico</span> Sabe que es importante pero no tiene formación</div>
+              <div class="rubric-row"><span class="rubric-level level-poor">Insuficiente</span> No conoce protocolos de higiene</div>
+            </div>
+        </div>
+<div class="question">
+          <span class="q-number">5</span>
+          <span class="q-competency">Trabajo bajo presión</span>
+          <div class="q-text">Viernes a las 12:30, cola hasta la puerta, cocina atrasada 15 minutos, un colaborador no llegó. ¿Qué hace?</div>
+          <div class="q-followup">Profundice: ¿Cuántos pedidos simultáneos ha manejado?</div>
+          <div class="rubric">
+              <div class="rubric-row"><span class="rubric-level level-excellent">Excelente</span> Prioriza, redistribuye, comunica tiempos al cliente, mantiene la calma</div>
+              <div class="rubric-row"><span class="rubric-level level-good">Bueno</span> Maneja el caos sin colapsar</div>
+              <div class="rubric-row"><span class="rubric-level level-basic">Básico</span> Se estresa pero sale adelante</div>
+              <div class="rubric-row"><span class="rubric-level level-poor">Insuficiente</span> Se paraliza o pierde el control</div>
+            </div>
+        </div>
+<div class="question">
+          <span class="q-number">6</span>
+          <span class="q-competency">Control de inventario y merma</span>
+          <div class="q-text">¿Cómo controlaba el inventario de producto? ¿Qué porcentaje de merma era aceptable?</div>
+          <div class="q-followup">Profundice: ¿Qué hacía para reducir la merma?</div>
+          <div class="rubric">
+              <div class="rubric-row"><span class="rubric-level level-excellent">Excelente</span> Monitoreo diario, FIFO, metas de merma, identifica causas</div>
+              <div class="rubric-row"><span class="rubric-level level-good">Bueno</span> Control organizado y consciente de la merma</div>
+              <div class="rubric-row"><span class="rubric-level level-basic">Básico</span> Hace inventario cuando se lo piden</div>
+              <div class="rubric-row"><span class="rubric-level level-poor">Insuficiente</span> No le da importancia al control de merma</div>
+            </div>
+        </div>
+<div class="question">
+          <span class="q-number">7</span>
+          <span class="q-competency">Gestión de personal</span>
+          <div class="q-text">¿Cómo manejaba cuando un colaborador llegaba tarde repetidamente o tenía mala actitud?</div>
+          <div class="q-followup">Profundice: ¿Alguna vez tuvo que despedir a alguien? ¿Cómo lo hizo?</div>
+          <div class="rubric">
+              <div class="rubric-row"><span class="rubric-level level-excellent">Excelente</span> Conversación directa, documenta, da oportunidad, actúa si no hay cambio</div>
+              <div class="rubric-row"><span class="rubric-level level-good">Bueno</span> Aborda el problema sin evitarlo</div>
+              <div class="rubric-row"><span class="rubric-level level-basic">Básico</span> Lo reporta a su jefe sin intervenir</div>
+              <div class="rubric-row"><span class="rubric-level level-poor">Insuficiente</span> Ignora el problema o reacciona con enojo</div>
+            </div>
+        </div>
+<div class="question">
+          <span class="q-number">8</span>
+          <span class="q-competency">Ventas sugeridas</span>
+          <div class="q-text">¿Cómo entrenaba a su equipo para hacer venta sugerida (combo, agrandar, postre)?</div>
+          <div class="q-followup">Profundice: ¿Cuánto aumentaba el ticket promedio con venta sugerida?</div>
+          <div class="rubric">
+              <div class="rubric-row"><span class="rubric-level level-excellent">Excelente</span> Script de venta sugerida, mide impacto, entrena al equipo</div>
+              <div class="rubric-row"><span class="rubric-level level-good">Bueno</span> Promueve la venta sugerida y predica con el ejemplo</div>
+              <div class="rubric-row"><span class="rubric-level level-basic">Básico</span> Lo hace a veces cuando se acuerda</div>
+              <div class="rubric-row"><span class="rubric-level level-poor">Insuficiente</span> No ve valor en la venta sugerida</div>
+            </div>
+        </div>
+<div class="question">
+          <span class="q-number">9</span>
+          <span class="q-competency">Honestidad</span>
+          <div class="q-text">En restaurante hay muchas tentaciones: comida, efectivo, producto. ¿Cómo aseguraba la honestidad de su equipo?</div>
+          <div class="q-followup">Profundice: ¿Alguna vez descubrió un robo? ¿Qué hizo?</div>
+          <div class="rubric">
+              <div class="rubric-row"><span class="rubric-level level-excellent">Excelente</span> Controles preventivos, cultura de transparencia, actuó decisivamente ante robo</div>
+              <div class="rubric-row"><span class="rubric-level level-good">Bueno</span> Vigila y actúa cuando detecta problemas</div>
+              <div class="rubric-row"><span class="rubric-level level-basic">Básico</span> Confía en el equipo sin controles formales</div>
+              <div class="rubric-row"><span class="rubric-level level-poor">Insuficiente</span> No tiene mecanismos de control o los minimiza</div>
+            </div>
+        </div>
+<div class="question">
+          <span class="q-number">10</span>
+          <span class="q-competency">Flexibilidad de horario</span>
+          <div class="q-text">Restaurante es fines de semana, feriados, horarios partidos. ¿Cómo maneja eso?</div>
+          <div class="q-followup">Profundice: ¿Ha trabajado turno partido (mañana + noche) antes?</div>
+          <div class="rubric">
+              <div class="rubric-row"><span class="rubric-level level-excellent">Excelente</span> Disponibilidad total, experiencia con horarios de restaurante</div>
+              <div class="rubric-row"><span class="rubric-level level-good">Bueno</span> Disponible y dispuesto</div>
+              <div class="rubric-row"><span class="rubric-level level-basic">Básico</span> Disponible con condiciones</div>
+              <div class="rubric-row"><span class="rubric-level level-poor">Insuficiente</span> Restricciones importantes</div>
+            </div>
+        </div>
+<div class="question">
+          <span class="q-number">11</span>
+          <span class="q-competency">Conocimiento del negocio</span>
+          <div class="q-text">¿Qué indicadores revisaba para saber si el restaurante iba bien o mal ese día/semana?</div>
+          <div class="q-followup">Profundice: ¿Ticket promedio, rotación de mesas, costo de comida?</div>
+          <div class="rubric">
+              <div class="rubric-row"><span class="rubric-level level-excellent">Excelente</span> Maneja KPIs del negocio: food cost, ticket, rotación, satisfacción</div>
+              <div class="rubric-row"><span class="rubric-level level-good">Bueno</span> Entiende los indicadores principales</div>
+              <div class="rubric-row"><span class="rubric-level level-basic">Básico</span> Solo mira ventas totales</div>
+              <div class="rubric-row"><span class="rubric-level level-poor">Insuficiente</span> No mide nada</div>
+            </div>
+        </div>
+<div class="question">
+          <span class="q-number">12</span>
+          <span class="q-competency">Resolución de problemas</span>
+          <div class="q-text">Se quedó sin un ingrediente clave a mitad del turno. ¿Qué hace?</div>
+          <div class="q-followup">Profundice: ¿Cómo prevenía que eso pasara?</div>
+          <div class="rubric">
+              <div class="rubric-row"><span class="rubric-level level-excellent">Excelente</span> Solución inmediata + acción preventiva para que no se repita</div>
+              <div class="rubric-row"><span class="rubric-level level-good">Bueno</span> Encuentra alternativa rápida</div>
+              <div class="rubric-row"><span class="rubric-level level-basic">Básico</span> Avisa al cliente que no está disponible</div>
+              <div class="rubric-row"><span class="rubric-level level-poor">Insuficiente</span> No sabe qué hacer o deja de vender sin buscar alternativa</div>
+            </div>
+        </div>
+<div class="question">
+          <span class="q-number">13</span>
+          <span class="q-competency">Comunicación con cocina</span>
+          <div class="q-text">¿Cómo era la relación entre el equipo de piso y el de cocina? ¿Había conflictos?</div>
+          <div class="q-followup">Profundice: ¿Cómo los resolvía?</div>
+          <div class="rubric">
+              <div class="rubric-row"><span class="rubric-level level-excellent">Excelente</span> Comunicación fluida, reuniones breves, resolver conflictos al momento</div>
+              <div class="rubric-row"><span class="rubric-level level-good">Bueno</span> Buena relación y comunicación efectiva</div>
+              <div class="rubric-row"><span class="rubric-level level-basic">Básico</span> Funcional pero con roces</div>
+              <div class="rubric-row"><span class="rubric-level level-poor">Insuficiente</span> Conflictos frecuentes entre piso y cocina</div>
+            </div>
+        </div>
+<div class="question">
+          <span class="q-number">14</span>
+          <span class="q-competency">Imagen del local</span>
+          <div class="q-text">¿Qué hacía para mantener la imagen y limpieza del restaurante durante todo el turno?</div>
+          <div class="q-followup">Profundice: ¿Quién era responsable de la limpieza? ¿Cómo se aseguraba?</div>
+          <div class="rubric">
+              <div class="rubric-row"><span class="rubric-level level-excellent">Excelente</span> Rutina de limpieza por hora, inspecciona personalmente, estándar alto</div>
+              <div class="rubric-row"><span class="rubric-level level-good">Bueno</span> Se preocupa por la imagen y la vigila</div>
+              <div class="rubric-row"><span class="rubric-level level-basic">Básico</span> Limpieza al inicio y al final del turno</div>
+              <div class="rubric-row"><span class="rubric-level level-poor">Insuficiente</span> No le da prioridad o lo delega sin verificar</div>
+            </div>
+        </div>
+<div class="question">
+          <span class="q-number">15</span>
+          <span class="q-competency">Motivación</span>
+          <div class="q-text">¿Por qué El Pollote y no cualquier otro restaurante? ¿Qué le atrae?</div>
+          <div class="q-followup">Profundice: ¿Ha comido ahí? ¿Qué le pareció?</div>
+          <div class="rubric">
+              <div class="rubric-row"><span class="rubric-level level-excellent">Excelente</span> Conoce la marca, ha sido cliente, conecta con la cultura</div>
+              <div class="rubric-row"><span class="rubric-level level-good">Bueno</span> Interesado genuinamente en la empresa</div>
+              <div class="rubric-row"><span class="rubric-level level-basic">Básico</span> Busca trabajo en restaurantes en general</div>
+              <div class="rubric-row"><span class="rubric-level level-poor">Insuficiente</span> No sabe nada de El Pollote</div>
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header"><h2>Red Flags: Señales de Alerta</h2></div>
+    <div class="section-body">
+      <div class="redflag">
+        <div class="redflag-title">Observe estas señales durante la entrevista:</div>
+        <ul>
+          <li>Faltantes de caja sin explicación clara</li>
+<li>No conoce protocolos básicos de higiene alimentaria</li>
+<li>Conflictos frecuentes con equipo de cocina o personal</li>
+<li>No puede dar ejemplos de manejo de situaciones difíciles</li>
+<li>Restricciones de horario incompatibles con restaurante</li>
+<li>No muestra interés en el negocio ni en la marca</li>
+<li>Actitud de 'yo solo hago mi trabajo' sin visión integral</li>
+<li>Cambios frecuentes de restaurante en restaurante</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header"><h2>Preguntas Prohibidas en Costa Rica</h2></div>
+    <div class="section-body">
+      <div class="illegal">
+        <div class="illegal-title">Estas preguntas violan la legislación laboral costarricense (Código de Trabajo + Ley 2694 + Ley 8107):</div>
+        <ul>
+          <li>Estado civil, si tiene pareja o planes de casarse</li>
+<li>Si está embarazada, planea embarazarse o tiene hijos</li>
+<li>Edad exacta (puede preguntar si es mayor de 18 para efectos legales)</li>
+<li>Religión, creencias espirituales o prácticas religiosas</li>
+<li>Orientación sexual o identidad de género</li>
+<li>Afiliación política o sindical</li>
+<li>Nacionalidad u origen étnico (puede preguntar si tiene permiso de trabajo)</li>
+<li>Si tiene deudas, embargos o problemas financieros</li>
+<li>Si padece alguna enfermedad crónica (salvo certificado de salud requerido por ley para manipulación de alimentos)</li>
+<li>Antecedentes penales (solo hoja de delincuencia si el puesto lo justifica)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header"><h2>Hoja de Calificación</h2></div>
+    <div class="section-body">
+      <table class="scoresheet">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Competencia</th>
+            <th class="score-cell">1</th>
+            <th class="score-cell">2</th>
+            <th class="score-cell">3</th>
+            <th class="score-cell">4</th>
+            <th class="score-cell">5</th>
+            <th>Notas</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>Liderazgo operativo</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td style="min-width:120px"></td></tr>
+<tr><td>2</td><td>Servicio al cliente</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td style="min-width:120px"></td></tr>
+<tr><td>3</td><td>Manejo de efectivo</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td style="min-width:120px"></td></tr>
+<tr><td>4</td><td>Higiene y BPM</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td style="min-width:120px"></td></tr>
+<tr><td>5</td><td>Trabajo bajo presión</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td style="min-width:120px"></td></tr>
+<tr><td>6</td><td>Control de inventario y merma</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td style="min-width:120px"></td></tr>
+<tr><td>7</td><td>Gestión de personal</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td style="min-width:120px"></td></tr>
+<tr><td>8</td><td>Ventas sugeridas</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td style="min-width:120px"></td></tr>
+<tr><td>9</td><td>Honestidad</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td style="min-width:120px"></td></tr>
+<tr><td>10</td><td>Flexibilidad de horario</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td style="min-width:120px"></td></tr>
+<tr><td>11</td><td>Conocimiento del negocio</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td style="min-width:120px"></td></tr>
+<tr><td>12</td><td>Resolución de problemas</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td style="min-width:120px"></td></tr>
+<tr><td>13</td><td>Comunicación con cocina</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td style="min-width:120px"></td></tr>
+<tr><td>14</td><td>Imagen del local</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td style="min-width:120px"></td></tr>
+<tr><td>15</td><td>Motivación</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td class="score-cell">&#9675;</td><td style="min-width:120px"></td></tr>
+        </tbody>
+      </table>
+      <p style="margin-top:1rem;font-size:0.8rem;color:var(--gti-gray);">
+        <strong>Escala:</strong> 1 = No demuestra la competencia · 2 = Básico · 3 = Competente · 4 = Avanzado · 5 = Excepcional
+      </p>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
+  <p style="font-size:0.9rem;margin-bottom:0.5rem;">Esta guía fue generada automáticamente por el sistema de IA de GTI Consultoría.</p>
+  <p style="font-size:0.85rem;opacity:0.9;">¿Quiere evaluar a sus candidatos con pruebas psicométricas validadas?</p>
+  <a href="https://wa.me/50670464896?text=Hola%2C%20recib%C3%AD%20la%20gu%C3%ADa%20de%20entrevista%20y%20me%20interesa%20saber%20m%C3%A1s%20sobre%20evaluaciones%20psicom%C3%A9tricas" class="cta">Solicitar evaluación gratuita</a>
+  <p style="margin-top:1.5rem;font-size:0.75rem;opacity:0.7;">GTI Consultoría en Recursos Humanos · gticr.net · +506 7046-4896</p>
+</div>
+
+</body>
+</html>
