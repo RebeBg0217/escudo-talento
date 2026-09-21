@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guion - Sesion de Diagnostico Escudo de Talento</title>
+<style>
+body { font-family: 'Segoe UI', Arial, sans-serif; max-width: 850px; margin: 0 auto; padding: 20px; background: #f5f5f5; color: #333; line-height: 1.7; }
+h1 { color: #1a365d; border-bottom: 3px solid #c9a84c; padding-bottom: 10px; }
+h2 { color: #1a365d; margin-top: 35px; border-left: 4px solid #c9a84c; padding-left: 12px; }
+h3 { color: #2d5a8e; margin-top: 25px; }
+.duracion { background: #1a365d; color: white; display: inline-block; padding: 3px 12px; border-radius: 12px; font-size: 0.85em; margin-left: 10px; }
+.fase { background: white; border: 1px solid #ddd; border-radius: 10px; padding: 22px; margin: 20px 0; box-shadow: 0 2px 6px rgba(0,0,0,0.08); }
+.tip { background: #fff3cd; border-left: 4px solid #ffc107; padding: 12px 16px; margin: 12px 0; border-radius: 0 6px 6px 0; font-size: 0.92em; }
+.tip strong { color: #856404; }
+.pregunta { background: #e8f0fe; padding: 10px 16px; border-radius: 6px; margin: 8px 0; border-left: 3px solid #1a365d; }
+.frase { background: #dcf8c6; padding: 12px 16px; border-radius: 10px; margin: 10px 0; font-style: italic; }
+.frase::before { content: "Di:"; font-weight: bold; font-style: normal; display: block; font-size: 0.8em; color: #666; margin-bottom: 4px; }
+.no-hacer { background: #fff5f5; border-left: 4px solid #e53e3e; padding: 12px 16px; margin: 12px 0; border-radius: 0 6px 6px 0; }
+.no-hacer strong { color: #c53030; }
+.cierre { background: #f0fff4; border: 2px solid #38a169; border-radius: 10px; padding: 22px; margin: 20px 0; }
+.cierre h2 { color: #276749; border-left-color: #38a169; }
+.paquetes { width: 100%; border-collapse: collapse; margin: 15px 0; }
+.paquetes th { background: #1a365d; color: white; padding: 10px; text-align: left; }
+.paquetes td { padding: 10px; border: 1px solid #ddd; }
+.paquetes tr:nth-child(even) { background: #f8f9fa; }
+.highlight { background: #c9a84c; color: white; font-weight: bold; }
+.objecion { margin: 15px 0; padding: 15px; background: #f8f9fa; border-radius: 8px; }
+.objecion .q { color: #c53030; font-weight: bold; margin-bottom: 5px; }
+.objecion .a { color: #276749; }
+.checklist { list-style: none; padding: 0; }
+.checklist li { padding: 6px 0; padding-left: 28px; position: relative; }
+.checklist li::before { content: "\\2610"; position: absolute; left: 0; font-size: 1.2em; }
+.header-info { background: #e8f0fe; border-radius: 8px; padding: 18px; margin: 20px 0; }
+@media print { body { background: white; } .fase, .cierre { box-shadow: none; page-break-inside: avoid; } }
+</style>
+</head>
+<body>
+
+<h1>Guion: Sesi&oacute;n de Diagn&oacute;stico &mdash; Escudo de Talento GTI</h1>
+
+<div class="header-info">
+<strong>Duraci&oacute;n total:</strong> 25-30 minutos<br>
+<strong>Formato:</strong> Videollamada (Zoom/Google Meet) o presencial<br>
+<strong>Objetivo:</strong> Diagnosticar el dolor real del prospecto y cerrar con el paquete correcto<br>
+<strong>Regla de oro:</strong> T&uacute; preguntas el 70% del tiempo. Ellos hablan. T&uacute; solo presentas cuando ya sabes qu&eacute; les duele.
+</div>
+
+<!-- ====== FASE 0 ====== -->
+<div class="fase">
+<h2>Fase 0: Preparaci&oacute;n (antes de la llamada) <span class="duracion">10 min</span></h2>
+
+<p>Antes de la sesi&oacute;n, investiga:</p>
+<ul class="checklist">
+<li>Cu&aacute;ntas vacantes tienen publicadas en ANE / CompuTrabajo / LinkedIn</li>
+<li>Qu&eacute; puestos est&aacute;n buscando (ventas, operativos, administrativos)</li>
+<li>Tama&ntilde;o de la empresa (empleados, sucursales)</li>
+<li>Si tienen p&aacute;gina de "Trabaja con nosotros"</li>
+<li>Noticias recientes (expansi&oacute;n, problemas legales, rotaci&oacute;n)</li>
+</ul>
+
+<div class="tip">
+<strong>Tip Spencer:</strong> Llega con trabajo hecho. Si ya les mandaste la Gu&iacute;a de Entrevista, menciona que la hiciste espec&iacute;ficamente para ellos. Eso demuestra que no eres una vendedora gen&eacute;rica.
+</div>
+</div>
+
+<!-- ====== FASE 1 ====== -->
+<div class="fase">
+<h2>Fase 1: Apertura y rapport <span class="duracion">3 min</span></h2>
+
+<div class="frase">Hola [nombre], mucho gusto. Soy Rebe Bustamante, consultora en Recursos Humanos con GTI. Gracias por tomarte el tiempo. La idea de esta sesi&oacute;n es que yo entienda c&oacute;mo est&aacute;n manejando sus procesos de contrataci&oacute;n hoy, y si hay algo donde les pueda aportar valor. No es una presentaci&oacute;n de ventas &mdash; es un diagn&oacute;stico. ¿Te parece bien si empiezo con unas preguntas?</div>
+
+<div class="no-hacer">
+<strong>NO hagas:</strong> No empieces hablando de tus servicios, de GTI ni de precios. Primero escucha.
+</div>
+</div>
+
+<!-- ====== FASE 2 ====== -->
+<div class="fase">
+<h2>Fase 2: Descubrimiento del dolor <span class="duracion">10-12 min</span></h2>
+
+<h3>Bloque A &mdash; Situaci&oacute;n actual de contrataci&oacute;n</h3>
+
+<div class="pregunta">1. ¿Cu&aacute;ntas personas han contratado en los &uacute;ltimos 6 meses?</div>
+<div class="pregunta">2. ¿Cu&aacute;ntas de esas siguen en la empresa hoy?</div>
+
+<div class="tip">
+<strong>Tip:</strong> Si la respuesta a la 2 es menor al 70% de la 1, tienes un DOLOR fuerte. Apunta el n&uacute;mero exacto &mdash; lo vas a usar en el cierre.
+</div>
+
+<div class="pregunta">3. ¿C&oacute;mo hacen las entrevistas hoy? ¿Tienen un formato estructurado o cada jefe pregunta lo que se le ocurre?</div>
+<div class="pregunta">4. ¿Usan alguna prueba psicom&eacute;trica o de competencias antes de contratar?</div>
+<div class="pregunta">5. ¿Qui&eacute;n toma la decisi&oacute;n final de contrataci&oacute;n?</div>
+
+<h3>Bloque B &mdash; Costo del problema</h3>
+
+<div class="pregunta">6. Cuando un empleado no funciona y se va en los primeros 3 meses, ¿cu&aacute;nto sienten que les cuesta? (Reclutamiento, capacitaci&oacute;n, uniformes, tiempo del jefe...)</div>
+
+<div class="tip">
+<strong>Tip:</strong> La mayor&iacute;a no lo ha calculado. Si dicen "no s&eacute;", diles: "En estudios internacionales, reemplazar un puesto operativo cuesta entre 3 y 6 meses de salario. Si el puesto gana &cent;500,000, estamos hablando de &cent;1.5 a &cent;3 millones por cada mala contrataci&oacute;n." Deja que eso aterrice.
+</div>
+
+<div class="pregunta">7. ¿Han tenido alg&uacute;n problema legal con un despido? ¿Alguna demanda laboral?</div>
+<div class="pregunta">8. ¿Saben si est&aacute;n cumpliendo con la Ley de Protecci&oacute;n de Datos (PRODHAB) en sus expedientes de empleados?</div>
+
+<h3>Bloque C &mdash; Urgencia</h3>
+
+<div class="pregunta">9. De las vacantes que tienen abiertas hoy, ¿cu&aacute;les son las m&aacute;s urgentes?</div>
+<div class="pregunta">10. ¿Qu&eacute; pasa si esos puestos siguen vac&iacute;os 2 semanas m&aacute;s?</div>
+
+<div class="tip">
+<strong>Tip:</strong> La pregunta 10 es la m&aacute;s importante. La respuesta te dice qu&eacute; tan urgido est&aacute; el cliente. Si dice "perdemos ventas" o "se nos cae la operaci&oacute;n", tienes un cierre casi seguro.
+</div>
+</div>
+
+<!-- ====== FASE 3 ====== -->
+<div class="fase">
+<h2>Fase 3: Presentaci&oacute;n de la soluci&oacute;n <span class="duracion">7-8 min</span></h2>
+
+<div class="frase">Perfecto, ya tengo una foto clara de lo que est&aacute;n viviendo. D&eacute;jame mostrarte exactamente c&oacute;mo podemos ayudarles, basado en lo que me acabas de contar.</div>
+
+<h3>Presenta SOLO lo que les duele:</h3>
+
+<p><strong>Si el dolor es contratar mal / entrevistas sin estructura:</strong></p>
+<div class="frase">Mira, la gu&iacute;a que les mand&eacute; es un ejemplo de lo que hacemos. Para cada puesto que necesiten llenar, les dise&ntilde;amos una Gu&iacute;a de Entrevista Conductual con IA &mdash; 15 preguntas espec&iacute;ficas para evaluar las competencias cr&iacute;ticas del puesto, con r&uacute;brica de calificaci&oacute;n incluida. Cualquier persona de su equipo puede aplicarla ma&ntilde;ana mismo y tomar una decisi&oacute;n objetiva, no de corazonada.</div>
+
+<p><strong>Si el dolor es retenci&oacute;n / salarios:</strong></p>
+<div class="frase">Lo que les pasa con la rotaci&oacute;n muchas veces tiene que ver con salarios fuera de mercado. Les damos un Radar Salarial actualizado mensualmente con datos reales de Costa Rica &mdash; para que sepan exactamente d&oacute;nde est&aacute;n parados contra la competencia antes de hacer una oferta.</div>
+
+<p><strong>Si el dolor es riesgo legal / despidos:</strong></p>
+<div class="frase">Para lo de los despidos, tenemos un kit completo: carta de despido revisada legalmente, gu&iacute;on para la conversaci&oacute;n de salida, checklist de lo que se debe pagar seg&uacute;n la ley, y la calculadora de liquidaci&oacute;n que les da el monto exacto al col&oacute;n.</div>
+
+<p><strong>Si el dolor es datos / PRODHAB:</strong></p>
+<div class="frase">Sobre la Ley de Protecci&oacute;n de Datos, les hacemos un diagn&oacute;stico completo de sus expedientes de personal y les damos un plan de remediaci&oacute;n para que est&eacute;n en cumplimiento antes de que la Agencia les toque la puerta. Las multas van de 5 a 30 salarios base.</div>
+
+<div class="no-hacer">
+<strong>NO hagas:</strong> No presentes los 4 servicios siempre. Solo muestra lo que resuelve SU dolor espec&iacute;fico. Si les duele todo, presenta 2 m&aacute;ximo y menciona los otros como "tambi&eacute;n viene incluido en su plan."
+</div>
+</div>
+
+<!-- ====== FASE 4 ====== -->
+<div class="cierre">
+<h2>Fase 4: Cierre <span class="duracion">5 min</span></h2>
+
+<div class="frase">Basado en lo que me contaste, lo que m&aacute;s les va a servir es [el paquete que corresponda]. Incluye [lista de lo que resuelve su dolor]. La inversi&oacute;n es de [precio]. ¿Les funcionar&iacute;a arrancar esta semana?</div>
+
+<h3>Tabla de paquetes (para tu referencia, no se la lees completa)</h3>
+
+<table class="paquetes">
+<tr>
+<th>Plan</th>
+<th>Precio</th>
+<th>Incluye</th>
+<th>Para qui&eacute;n</th>
+</tr>
+<tr>
+<td><strong>Individual</strong></td>
+<td>$97 (una vez)</td>
+<td>1 Gu&iacute;a de Entrevista IA para 1 puesto</td>
+<td>Empresa que quiere probar antes de comprometerse</td>
+</tr>
+<tr>
+<td><strong>B&aacute;sico</strong></td>
+<td>$197/mes</td>
+<td>Gu&iacute;as ilimitadas + Radar Salarial</td>
+<td>Empresa que contrata regularmente (5+ vacantes/mes)</td>
+</tr>
+<tr>
+<td><strong>Completo</strong></td>
+<td>$497/mes</td>
+<td>Todo: gu&iacute;as + radar + despido seguro + PRODHAB</td>
+<td>Empresa mediana con riesgos legales y rotaci&oacute;n</td>
+</tr>
+<tr class="highlight">
+<td><strong>Premium</strong></td>
+<td>$697/mes</td>
+<td>Todo Escudo + Psicoweb (pruebas psicom&eacute;tricas)</td>
+<td>Empresa que quiere filtrar candidatos con ciencia, no intuici&oacute;n</td>
+</tr>
+</table>
+
+<div class="tip">
+<strong>Estrategia de cierre:</strong> Siempre recomienda UN solo plan. Si no sabes cu&aacute;l, recomienda el <strong>B&aacute;sico ($197/mes)</strong> &mdash; es el punto de entrada m&aacute;s natural. Si dicen que es mucho, ofrece el Individual ($97 una vez) como prueba. Si est&aacute;n muy interesados, sube al Completo.
+</div>
+
+<h3>C&oacute;mo cerrar sin presi&oacute;n</h3>
+
+<div class="frase">Mira, no quiero que tomen una decisi&oacute;n hoy si no est&aacute;n listos. Pero s&iacute; quiero que sepan que cada semana que pasa sin un proceso estructurado, est&aacute;n arriesgando [usar el n&uacute;mero que dieron en la pregunta 6] por cada contrataci&oacute;n equivocada. Les propongo que arranquemos con [plan recomendado] y si en 30 d&iacute;as no ven resultados, cancelan sin penalidad.</div>
+</div>
+
+<!-- ====== FASE 5 ====== -->
+<div class="fase">
+<h2>Fase 5: Manejo de objeciones</h2>
+
+<div class="objecion">
+<div class="q">"Est&aacute; muy caro"</div>
+<div class="a">&rarr; "Entiendo. D&eacute;jame ponerlo en perspectiva: si una sola mala contrataci&oacute;n les cuesta &cent;1.5 millones [o el n&uacute;mero que dieron], el plan B&aacute;sico se paga solo con evitar UNA mala contrataci&oacute;n al a&ntilde;o. ¿Cu&aacute;ntas malas contrataciones tuvieron el a&ntilde;o pasado?"</div>
+</div>
+
+<div class="objecion">
+<div class="q">"Necesito consultarlo con mi jefe / con gerencia"</div>
+<div class="a">&rarr; "Perfecto. ¿Te sirve si les preparo un resumen ejecutivo de una p&aacute;gina con el diagn&oacute;stico que hicimos hoy y la recomendaci&oacute;n? As&iacute; lo presentas con datos y se ve profesional. ¿Para cu&aacute;ndo lo necesitas?"</div>
+</div>
+
+<div class="objecion">
+<div class="q">"Ya tenemos un proceso de entrevistas"</div>
+<div class="a">&rarr; "Qu&eacute; bueno que ya tienen algo. ¿Y qu&eacute; porcentaje de las personas que contratan pasan el per&iacute;odo de prueba? [Si es bajo:] Lo que hacemos es estructurar ese proceso para que la predicci&oacute;n sea mucho m&aacute;s precisa. No reemplazamos lo que tienen, lo potenciamos."</div>
+</div>
+
+<div class="objecion">
+<div class="q">"Voy a pensarlo"</div>
+<div class="a">&rarr; "Claro, t&oacute;mate tu tiempo. Solo una cosa: ¿hay algo que no qued&oacute; claro o que te genera duda? Prefiero resolverlo ahora que dejarte con la inquietud." [Si insisten:] "Perfecto, te escribo el viernes para ver c&oacute;mo les fue pensando."</div>
+</div>
+
+<div class="objecion">
+<div class="q">"¿Ustedes quiénes son? No los conozco"</div>
+<div class="a">&rarr; "GTI es una consultora costarricense especializada en gesti&oacute;n humana. Trabajamos con empresas que necesitan contratar mejor, retener talento y cumplir con la legislaci&oacute;n laboral. Le mand&eacute; esa gu&iacute;a de entrevista justamente para que vieran la calidad de nuestro trabajo antes de que hablemos de cualquier otra cosa."</div>
+</div>
+</div>
+
+<!-- ====== FASE 6 ====== -->
+<div class="fase">
+<h2>Fase 6: Cierre y siguiente paso <span class="duracion">2 min</span></h2>
+
+<h3>Si dicen que S&Iacute;:</h3>
+<div class="frase">Excelente. Les voy a mandar el link de pago por WhatsApp ahora mismo. Una vez que procesan el pago, les env&iacute;o las credenciales de acceso y agendamos una sesi&oacute;n de arranque de 20 minutos para configurar todo seg&uacute;n sus puestos prioritarios. ¿Les parece?</div>
+
+<h3>Si dicen que NO / necesitan tiempo:</h3>
+<div class="frase">No hay problema. Lo que voy a hacer es mandarles por correo el resumen del diagn&oacute;stico que hicimos hoy, con la recomendaci&oacute;n y los precios. ¿Me puedo comunicar el [d&iacute;a espec&iacute;fico] para darle seguimiento?</div>
+
+<div class="tip">
+<strong>Tip cr&iacute;tico:</strong> SIEMPRE establece una fecha de seguimiento concreta. Nunca te vayas con un "los llamo despu&eacute;s". Si no ponen fecha, t&uacute; la propones: "¿Les parece que les escribo el mi&eacute;rcoles?"
+</div>
+</div>
+
+<!-- ====== UPSELL PSICOWEB ====== -->
+<div class="fase">
+<h2>Bonus: Cu&aacute;ndo y c&oacute;mo meter Psicoweb</h2>
+
+<p><strong>NO lo menciones en la primera sesi&oacute;n</strong> a menos que el cliente pregunte directamente por pruebas psicom&eacute;tricas.</p>
+
+<p><strong>Cu&aacute;ndo mencionarlo:</strong></p>
+<ul>
+<li>Cuando ya son clientes de Escudo (2-4 semanas despu&eacute;s)</li>
+<li>Cuando te dicen "la gu&iacute;a de entrevista es buena pero quisiera algo m&aacute;s"</li>
+<li>Cuando contratan en volumen (+10 vacantes) y necesitan filtrar r&aacute;pido</li>
+</ul>
+
+<div class="frase">Oye [nombre], he notado que est&aacute;n usando mucho las gu&iacute;as. Hay algo que les puede complementar incre&iacute;ble: pruebas psicom&eacute;tricas validadas que les dicen antes de la entrevista si el candidato tiene las competencias que necesitan. Se llama Psicoweb y viene incluido en el plan Premium. ¿Quieres que te lo muestre en 10 minutos?</div>
+</div>
+
+<!-- ====== CHECKLIST ====== -->
+<div class="fase">
+<h2>Checklist: Despu&eacute;s de cada sesi&oacute;n</h2>
+
+<ul class="checklist">
+<li>Anotar nombre del contacto, puesto, email, tel&eacute;fono</li>
+<li>Anotar los dolores que mencion&oacute; (con sus palabras exactas)</li>
+<li>Anotar n&uacute;meros: vacantes, rotaci&oacute;n, costo estimado</li>
+<li>Enviar resumen por correo dentro de las siguientes 2 horas</li>
+<li>Si dijo s&iacute;: enviar link de pago por WhatsApp</li>
+<li>Si dijo "lo pienso": agendar seguimiento con fecha espec&iacute;fica</li>
+<li>Registrar en tu base de prospectos: nombre, empresa, fecha, estado, pr&oacute;ximo paso</li>
+</ul>
+</div>
+
+</body>
+</html>

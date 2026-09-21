@@ -1,0 +1,118 @@
+{
+  "empresa": "Zermat Corporación",
+  "puesto": "Promotora de Ventas / Facturador / Recepcionista",
+  "fecha": "2026-09-18",
+  "preguntas": [
+    {
+      "competencia": "Orientación al cliente",
+      "texto": "Cuénteme sobre una clienta que no sabía qué producto comprar. ¿Cómo la asesoró?",
+      "followup": "¿La clienta regresó? ¿Le refirió a alguien?",
+      "rubrica": {"excelente": "Diagnóstico de necesidades, recomendación personalizada, seguimiento", "bueno": "Buena asesoría que resultó en compra satisfactoria", "basico": "Mostró opciones sin recomendar", "pobre": "Vendió sin asesorar o presionó"}
+    },
+    {
+      "competencia": "Conocimiento de producto (cosmética)",
+      "texto": "¿Qué tipo de piel tiene usted? ¿Cómo le explicaría a una clienta la diferencia entre una crema hidratante y una nutritiva?",
+      "followup": "¿Cómo aprendía sobre productos nuevos que llegaban?",
+      "rubrica": {"excelente": "Conocimiento técnico, usa analogías, adapta al nivel de la clienta", "bueno": "Conoce bien los productos y puede explicarlos", "basico": "Sabe lo básico que le enseñaron", "pobre": "No distingue entre tipos de productos"}
+    },
+    {
+      "competencia": "Imagen personal",
+      "texto": "En cosmética, usted es el primer ejemplo del producto. ¿Cómo se preparaba para ir a trabajar?",
+      "followup": "¿Usaba los productos que vendía?",
+      "rubrica": {"excelente": "Embajadora de la marca, usa productos, imagen impecable", "bueno": "Se cuida y representa bien la marca", "basico": "Cumple con lo mínimo de presentación", "pobre": "No le da importancia a ser ejemplo del producto"}
+    },
+    {
+      "competencia": "Venta consultiva",
+      "texto": "Una clienta quiere un producto que usted sabe que no es el adecuado para su tipo de piel. ¿Qué le dice?",
+      "followup": "¿Cómo balancea honestidad con ventas?",
+      "rubrica": {"excelente": "Redirige con fundamento, gana confianza, la clienta agradece", "bueno": "Honesta sobre lo que conviene", "basico": "Le vende lo que pide", "pobre": "Le vende sabiendo que no le conviene"}
+    },
+    {
+      "competencia": "Facturación y orden",
+      "texto": "¿Ha manejado facturación? ¿Qué sistema usaba? ¿Cómo aseguraba que no hubiera errores?",
+      "followup": "¿Alguna vez tuvo un error de facturación? ¿Cómo lo corrigió?",
+      "rubrica": {"excelente": "Precisa, revisa antes de enviar, sistema de verificación propio", "bueno": "Ordenada y con pocos errores", "basico": "Factura pero comete errores ocasionales", "pobre": "Errores frecuentes o no tiene experiencia"}
+    },
+    {
+      "competencia": "Trabajo en equipo",
+      "texto": "¿Cómo era la dinámica con sus compañeras de tienda o de equipo?",
+      "followup": "¿Alguna vez tuvo un conflicto? ¿Cómo lo resolvió?",
+      "rubrica": {"excelente": "Colabora, comparte tips de venta, ambiente positivo", "bueno": "Buena relación sin problemas", "basico": "Funcional sin conflicto", "pobre": "Conflictos o chismes frecuentes"}
+    },
+    {
+      "competencia": "Manejo de inventario",
+      "texto": "¿Cómo controlaba el inventario de productos? ¿Alguna vez detectó un faltante o un producto vencido?",
+      "followup": "¿Qué hizo?",
+      "rubrica": {"excelente": "Control proactivo, FIFO, reporta discrepancias de inmediato", "bueno": "Consciente del inventario y reporta", "basico": "Participa cuando se lo piden", "pobre": "No le da importancia"}
+    },
+    {
+      "competencia": "Metas de venta",
+      "texto": "¿Tenía metas de venta mensuales? ¿Las cumplía?",
+      "followup": "¿Qué hacía cuando iba atrasada en la meta?",
+      "rubrica": {"excelente": "Cifras claras, cumplimiento >90%, ajusta estrategia cuando va atrás", "bueno": "Buenos resultados consistentes", "basico": "No recuerda cifras pero cree que le iba bien", "pobre": "Evasiva sobre resultados"}
+    },
+    {
+      "competencia": "Atención telefónica/recepción",
+      "texto": "¿Cómo atendía una llamada o recibía a alguien que llegaba a la oficina?",
+      "followup": "¿Qué hacía cuando llegaban varias personas al mismo tiempo?",
+      "rubrica": {"excelente": "Protocolo profesional, prioriza, hace sentir bienvenido a todos", "bueno": "Atención cordial y eficiente", "basico": "Atiende pero sin protocolo claro", "pobre": "Desorganizada o poco cordial"}
+    },
+    {
+      "competencia": "Honestidad",
+      "texto": "¿Alguna vez una clienta le devolvió un producto diciendo que estaba defectuoso cuando usted sabía que no lo era?",
+      "followup": "¿Cómo lo manejó?",
+      "rubrica": {"excelente": "Manejo diplomático, verifica, resuelve sin acusar, sigue política", "bueno": "Sigue protocolo de devoluciones sin conflicto", "basico": "Devuelve sin verificar", "pobre": "Confronta a la clienta o ignora la política"}
+    },
+    {
+      "competencia": "Promociones y eventos",
+      "texto": "¿Ha participado en la organización de eventos de venta, demostraciones de producto o activaciones?",
+      "followup": "¿Qué resultados tuvo?",
+      "rubrica": {"excelente": "Organiza eventos, mide asistencia y venta resultante", "bueno": "Participa activamente y contribuye al éxito", "basico": "Asiste pero no lidera", "pobre": "No tiene experiencia ni interés"}
+    },
+    {
+      "competencia": "Fidelización",
+      "texto": "¿Cómo hacía para que las clientas regresaran a comprar con usted?",
+      "followup": "¿Tenía una base de clientas frecuentes?",
+      "rubrica": {"excelente": "Base de datos propia, seguimiento, recomienda según historial", "bueno": "Recuerda clientas y las atiende personalizadamente", "basico": "Atiende bien a quien llega", "pobre": "No piensa en fidelización"}
+    },
+    {
+      "competencia": "Disponibilidad",
+      "texto": "El puesto puede requerir trabajar fines de semana o viajar a otras zonas. ¿Cómo le queda eso?",
+      "followup": "¿Tiene alguna restricción de horario o zona?",
+      "rubrica": {"excelente": "Total disponibilidad, experiencia viajando por trabajo", "bueno": "Disponible y flexible", "basico": "Con algunas condiciones menores", "pobre": "Restricciones significativas"}
+    },
+    {
+      "competencia": "Maquillaje profesional (para puesto de maquillista)",
+      "texto": "¿Tiene formación en maquillaje? ¿Qué técnicas domina?",
+      "followup": "¿Puede hacer una demostración rápida?",
+      "rubrica": {"excelente": "Formación certificada, portafolio, múltiples técnicas", "bueno": "Experiencia práctica y buen ojo", "basico": "Conocimiento autodidacta", "pobre": "No tiene formación relevante"}
+    },
+    {
+      "competencia": "Motivación",
+      "texto": "¿Por qué Zermat? ¿Conoce la marca? ¿Ha usado sus productos?",
+      "followup": "¿Qué le atrae de trabajar en cosmética?",
+      "rubrica": {"excelente": "Conoce y usa la marca, conecta con la industria", "bueno": "Interesada y con afinidad por cosmética", "basico": "Busca trabajo en general", "pobre": "No conoce ni le interesa la marca"}
+    }
+  ],
+  "red_flags": [
+    "No puede dar cifras de ventas",
+    "No conoce los productos de cosmética básicos",
+    "Imagen descuidada en la entrevista (es industria de imagen)",
+    "Faltantes de inventario o caja sin explicar",
+    "Chismes o conflictos con compañeras",
+    "No muestra interés en cosmética o la marca",
+    "Vende sin asesorar — presiona al cliente"
+  ],
+  "preguntas_ilegales": [
+    "Estado civil, si tiene pareja o planes de casarse",
+    "Si está embarazada, planea embarazarse o tiene hijos",
+    "Edad exacta (puede preguntar si es mayor de 18)",
+    "Religión o creencias",
+    "Orientación sexual o identidad de género",
+    "Afiliación política o sindical",
+    "Nacionalidad u origen étnico (puede preguntar permiso de trabajo)",
+    "Deudas o problemas financieros personales",
+    "Enfermedades o discapacidades (salvo requisitos del puesto)",
+    "Antecedentes penales (solo si el puesto lo justifica por ley)"
+  ]
+}

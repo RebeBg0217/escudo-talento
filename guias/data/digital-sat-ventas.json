@@ -1,0 +1,194 @@
+{
+  "empresa": "Digital Sat S.A. (Claro Costa Rica)",
+  "puesto": "Gestor Comercial / Promotor de Tiendas / Supervisor Call Center",
+  "fecha": "2026-09-18",
+  "preguntas": [
+    {
+      "competencia": "Orientación comercial",
+      "texto": "Cuénteme sobre su mejor mes de ventas. ¿Cuánto vendió y qué hizo diferente ese mes?",
+      "followup": "¿Qué porcentaje de su meta cumplía normalmente?",
+      "rubrica": {
+        "excelente": "Cifras concretas, identifica qué funcionó, replica lo exitoso",
+        "bueno": "Tiene buenos resultados y sabe por qué",
+        "basico": "No recuerda cifras pero cree que le iba bien",
+        "pobre": "No puede hablar de resultados o culpa factores externos"
+      }
+    },
+    {
+      "competencia": "Conocimiento del sector telecom",
+      "texto": "¿Qué diferencia un plan prepago de un pospago para el cliente? ¿Cuándo recomendaría uno sobre otro?",
+      "followup": "¿Qué sabe de la competencia de Claro en Costa Rica?",
+      "rubrica": {
+        "excelente": "Entiende el sector, conoce productos de Claro y competencia, asesora bien",
+        "bueno": "Conoce las diferencias y puede explicarlas",
+        "basico": "Conocimiento superficial del sector",
+        "pobre": "No entiende el negocio de telecomunicaciones"
+      }
+    },
+    {
+      "competencia": "Venta en punto de venta",
+      "texto": "¿Cómo abordaba a un cliente que entraba a la tienda 'solo a ver'? ¿Qué hacía para convertirlo en comprador?",
+      "followup": "¿Cuál era su tasa de conversión (de los que entraban, cuántos compraban)?",
+      "rubrica": {
+        "excelente": "Técnica de apertura no invasiva, diagnóstico de necesidades, cierre natural",
+        "bueno": "Buena técnica de acercamiento y cierre",
+        "basico": "Espera a que el cliente pregunte",
+        "pobre": "Abordaje agresivo o pasividad total"
+      }
+    },
+    {
+      "competencia": "Capacitación (para puesto de Capacitador Comercial)",
+      "texto": "¿Ha tenido que enseñarle a alguien cómo vender? ¿Cómo lo hizo?",
+      "followup": "¿Esa persona mejoró sus resultados? ¿Cómo lo midió?",
+      "rubrica": {
+        "excelente": "Método de enseñanza, mide antes/después, adapta al aprendiz",
+        "bueno": "Experiencia capacitando con resultados positivos",
+        "basico": "Ha ayudado informalmente pero sin método",
+        "pobre": "No tiene experiencia ni interés en capacitar"
+      }
+    },
+    {
+      "competencia": "Manejo de inventario/activaciones",
+      "texto": "En telecomunicaciones se manejan SIMs, equipos y activaciones. ¿Cómo controlaba su inventario?",
+      "followup": "¿Alguna vez tuvo un faltante? ¿Qué pasó?",
+      "rubrica": {
+        "excelente": "Control riguroso, reporta al cierre del día, cero discrepancias",
+        "bueno": "Lleva control adecuado y reporta diferencias",
+        "basico": "Cumple con lo mínimo de control",
+        "pobre": "Faltantes o descontrol de inventario"
+      }
+    },
+    {
+      "competencia": "Trabajo de calle",
+      "texto": "El puesto de promotor implica estar en la calle visitando tiendas. ¿Tiene experiencia en trabajo de campo? ¿Cómo organizaba su día?",
+      "followup": "¿Cuántos puntos de venta visitaba por día?",
+      "rubrica": {
+        "excelente": "Ruta organizada, optimiza tiempo, visita 10+ puntos/día",
+        "bueno": "Experiencia en campo y buena organización",
+        "basico": "Dispuesto pero poca experiencia en campo",
+        "pobre": "Prefiere trabajo de oficina/tienda fija"
+      }
+    },
+    {
+      "competencia": "Supervisión de equipo (para Team Leader)",
+      "texto": "Si tuviera que supervisar un equipo de 10 agentes de call center, ¿qué haría en su primera semana?",
+      "followup": "¿Cómo manejaría a un agente que no cumple sus metas pero tiene buena actitud?",
+      "rubrica": {
+        "excelente": "Plan de acción claro: diagnóstico, escucha, metas individuales, coaching",
+        "bueno": "Tiene idea de cómo liderar y motivar",
+        "basico": "Conceptos teóricos sin experiencia práctica",
+        "pobre": "No sabe por dónde empezar o su enfoque es solo punitivo"
+      }
+    },
+    {
+      "competencia": "Manejo de objeciones",
+      "texto": "Un cliente dice: 'Kolbi tiene mejor cobertura.' ¿Qué le responde?",
+      "followup": "¿Y si dice que ya tiene un plan con la competencia y está contento?",
+      "rubrica": {
+        "excelente": "Conoce fortalezas propias, no ataca competencia, ofrece valor diferenciado",
+        "bueno": "Buenos argumentos sin desprestigiar",
+        "basico": "Repite lo que le enseñaron sin personalizar",
+        "pobre": "Se queda sin argumentos o habla mal de la competencia"
+      }
+    },
+    {
+      "competencia": "Presión por metas",
+      "texto": "En telecomunicaciones las metas cambian mes a mes. ¿Cómo manejaba la presión cuando subían la meta?",
+      "followup": "¿Alguna vez sintió que la meta era imposible? ¿Qué hizo?",
+      "rubrica": {
+        "excelente": "Se enfoca en lo controlable, ajusta estrategia, no se paraliza",
+        "bueno": "Acepta la presión y busca cumplir",
+        "basico": "Se frustra pero sigue intentando",
+        "pobre": "La presión lo desmoraliza o lo lleva a prácticas cuestionables"
+      }
+    },
+    {
+      "competencia": "Honestidad con el cliente",
+      "texto": "Un cliente quiere el plan más caro pero usted sabe que con el más barato le alcanza. ¿Qué le dice?",
+      "followup": "¿Qué impacto tiene la honestidad en sus ventas a largo plazo?",
+      "rubrica": {
+        "excelente": "Asesora con honestidad, gana confianza, genera referidos",
+        "bueno": "Transparente sobre opciones, deja que el cliente decida",
+        "basico": "Muestra ambas opciones sin recomendar la más barata",
+        "pobre": "Le vende el plan más caro sin importar la necesidad"
+      }
+    },
+    {
+      "competencia": "Disponibilidad geográfica",
+      "texto": "Las tiendas Claro están en varias zonas del GAM. ¿Tiene disponibilidad para trabajar en diferentes sucursales?",
+      "followup": "¿Tiene medio de transporte propio?",
+      "rubrica": {
+        "excelente": "Disponibilidad total, medio de transporte, flexible con ubicación",
+        "bueno": "Disponible en la mayoría de zonas",
+        "basico": "Solo en zonas cercanas a su domicilio",
+        "pobre": "Restricciones geográficas importantes"
+      }
+    },
+    {
+      "competencia": "Uso de tecnología",
+      "texto": "¿Qué herramientas digitales ha usado para gestión de ventas, CRM o reportes?",
+      "followup": "¿Se le facilita aprender apps nuevas rápidamente?",
+      "rubrica": {
+        "excelente": "Múltiples herramientas, cómodo con tecnología, aprende solo",
+        "bueno": "Usa las herramientas necesarias sin problema",
+        "basico": "Nivel básico pero dispuesto a aprender",
+        "pobre": "Resistencia a usar tecnología"
+      }
+    },
+    {
+      "competencia": "Trabajo en equipo",
+      "texto": "¿Cómo era la relación con sus compañeros de tienda o de equipo en su trabajo anterior?",
+      "followup": "¿Ayudaba a compañeros nuevos? ¿Cómo?",
+      "rubrica": {
+        "excelente": "Colaborativo, comparte conocimiento, eleva al equipo",
+        "bueno": "Buena relación y disposición a ayudar",
+        "basico": "Trabaja bien solo sin generar conflicto",
+        "pobre": "Competencia destructiva o aislamiento"
+      }
+    },
+    {
+      "competencia": "Imagen y comunicación",
+      "texto": "Represente a Claro en 30 segundos. Véndame un plan como si yo fuera un cliente que acaba de entrar a la tienda.",
+      "followup": "(Evaluar fluidez, energía, claridad, cierre)",
+      "rubrica": {
+        "excelente": "Natural, entusiasta, pregunta antes de ofrecer, cierra con próximo paso",
+        "bueno": "Buen pitch, claro y convincente",
+        "basico": "Recita características sin conectar con necesidades",
+        "pobre": "Inseguro, desordenado, no genera confianza"
+      }
+    },
+    {
+      "competencia": "Compromiso a largo plazo",
+      "texto": "¿Cuánto tiempo estuvo en su último trabajo? ¿Por qué se fue? ¿Qué busca aquí que no encontró allá?",
+      "followup": "¿Dónde se ve en un año?",
+      "rubrica": {
+        "excelente": "Estabilidad, razón clara de cambio, busca crecimiento",
+        "bueno": "Razones razonables y expectativas realistas",
+        "basico": "Cambio frecuente pero con explicación",
+        "pobre": "Patrón de inestabilidad sin reflexión"
+      }
+    }
+  ],
+  "red_flags": [
+    "No puede dar cifras de ventas o metas",
+    "No conoce los productos de telecomunicaciones básicos",
+    "Habla mal de empresas anteriores (ICE, Kolbi, Liberty)",
+    "Historial de faltantes de inventario (SIMs, equipos)",
+    "Cambios de trabajo cada 2-3 meses",
+    "No puede hacer un pitch de 30 segundos convincente",
+    "Actitud de 'solo quiero el salario fijo' sin hambre comercial",
+    "Restricciones geográficas que limiten la asignación a tiendas"
+  ],
+  "preguntas_ilegales": [
+    "Estado civil, si tiene pareja o planes de casarse",
+    "Si está embarazada, planea embarazarse o tiene hijos",
+    "Edad exacta (puede preguntar si es mayor de 18 para efectos legales)",
+    "Religión, creencias espirituales o prácticas religiosas",
+    "Orientación sexual o identidad de género",
+    "Afiliación política o sindical",
+    "Nacionalidad u origen étnico (puede preguntar si tiene permiso de trabajo)",
+    "Si tiene deudas, embargos o problemas financieros personales",
+    "Si padece alguna enfermedad crónica o discapacidad (salvo requisitos objetivos del puesto)",
+    "Antecedentes penales (solo puede solicitar hoja de delincuencia si el puesto lo justifica por ley)"
+  ]
+}

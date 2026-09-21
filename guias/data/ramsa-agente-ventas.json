@@ -1,0 +1,194 @@
+{
+  "empresa": "RAMSA Internacional",
+  "puesto": "Agente de Ventas Ruta",
+  "fecha": "2026-09-18",
+  "preguntas": [
+    {
+      "competencia": "Orientación a resultados",
+      "texto": "¿Cuál fue la cuota de ventas más alta que le asignaron? ¿La cumplió? Cuénteme qué hizo para lograrlo.",
+      "followup": "¿Qué porcentaje de cumplimiento tenía en promedio?",
+      "rubrica": {
+        "excelente": "Cifras claras, acciones específicas, cumplimiento consistente >90%",
+        "bueno": "Recuerda su cuota y tiene buenos resultados",
+        "basico": "No recuerda cifras exactas pero cree que le iba bien",
+        "pobre": "Evasivo sobre resultados o culpa a factores externos"
+      }
+    },
+    {
+      "competencia": "Conocimiento del territorio",
+      "texto": "Usted va a cubrir zona de Alajuela. ¿Conoce la zona? ¿Cómo se familiariza con un territorio nuevo?",
+      "followup": "¿Cuánto tiempo le toma conocer bien una zona nueva?",
+      "rubrica": {
+        "excelente": "Conoce la zona o tiene método claro para mapearla rápido",
+        "bueno": "Dispuesto a aprender y tiene experiencia adaptándose",
+        "basico": "Conoce algo pero no tiene estrategia de cobertura",
+        "pobre": "No conoce la zona y no muestra proactividad para aprenderla"
+      }
+    },
+    {
+      "competencia": "Prospección",
+      "texto": "Además de atender clientes asignados, ¿cómo abría clientes nuevos en su ruta?",
+      "followup": "¿Cuántos clientes nuevos abrió en su último año?",
+      "rubrica": {
+        "excelente": "Estrategia activa, cifras concretas, sistema de prospección",
+        "bueno": "Abría clientes cuando veía la oportunidad",
+        "basico": "Solo atendía los asignados",
+        "pobre": "Nunca abrió clientes nuevos"
+      }
+    },
+    {
+      "competencia": "Manejo de cartera",
+      "texto": "¿Cómo organizaba sus cobros? ¿Qué hacía cuando un cliente se atrasaba en el pago?",
+      "followup": "¿Cuál era su porcentaje de cartera vencida?",
+      "rubrica": {
+        "excelente": "Control riguroso, comunicación preventiva, baja morosidad",
+        "bueno": "Lleva control y gestiona cobros proactivamente",
+        "basico": "Cobra cuando visita pero sin seguimiento activo",
+        "pobre": "Cartera descontrolada o no le daba importancia"
+      }
+    },
+    {
+      "competencia": "Relación con el cliente",
+      "texto": "Cuénteme sobre su mejor cliente. ¿Por qué era el mejor? ¿Cómo construyó esa relación?",
+      "followup": "¿Ese cliente seguiría comprando con usted si se cambia de empresa?",
+      "rubrica": {
+        "excelente": "Relación genuina, entiende el negocio del cliente, genera valor más allá de la venta",
+        "bueno": "Buena relación basada en buen servicio y confiabilidad",
+        "basico": "Relación funcional y cordial",
+        "pobre": "No distingue entre clientes o no genera relaciones"
+      }
+    },
+    {
+      "competencia": "Negociación",
+      "texto": "Un cliente le dice que la competencia le ofrece el mismo producto más barato. ¿Qué hace?",
+      "followup": "¿Alguna vez perdió un cliente por precio? ¿Qué aprendió?",
+      "rubrica": {
+        "excelente": "Diferencia valor, conoce a la competencia, tiene argumentos concretos",
+        "bueno": "Defiende su producto y busca alternativas",
+        "basico": "Pide autorización para bajar precio",
+        "pobre": "Pierde la venta sin pelear o baja el precio sin autorización"
+      }
+    },
+    {
+      "competencia": "Honestidad con dinero",
+      "texto": "En ruta se maneja efectivo, producto y liquidaciones diarias. ¿Alguna vez tuvo un faltante? ¿Qué pasó?",
+      "followup": "¿Cómo llevaba el control de su liquidación?",
+      "rubrica": {
+        "excelente": "Cero faltantes o mínimos con explicación transparente, sistema de control propio",
+        "bueno": "Control adecuado, reporta diferencias",
+        "basico": "Cumple pero sin sistema propio",
+        "pobre": "Faltantes frecuentes o evasivas"
+      }
+    },
+    {
+      "competencia": "Resistencia física",
+      "texto": "Este trabajo implica manejar todo el día, cargar producto, sol, lluvia. Cuénteme cómo manejaba esas condiciones.",
+      "followup": "¿Su salud le ha limitado alguna vez en un trabajo de campo?",
+      "rubrica": {
+        "excelente": "Experiencia comprobada en campo, maneja las condiciones sin problema",
+        "bueno": "Dispuesto y con experiencia similar",
+        "basico": "Acepta las condiciones aunque no tiene mucha experiencia",
+        "pobre": "Preocupaciones sobre las condiciones físicas del trabajo"
+      }
+    },
+    {
+      "competencia": "Merchandising",
+      "texto": "¿Cómo acomodaba el producto en los puntos de venta? ¿Le enseñaron técnicas de exhibición?",
+      "followup": "¿Alguna vez la exhibición que usted hizo generó más ventas?",
+      "rubrica": {
+        "excelente": "Conoce principios de exhibición, tiene impacto medible",
+        "bueno": "Se preocupa por la exhibición y sigue lineamientos",
+        "basico": "Coloca producto donde le dicen",
+        "pobre": "No le ve importancia al acomodo del producto"
+      }
+    },
+    {
+      "competencia": "Uso de tecnología",
+      "texto": "¿Qué herramientas usaba para registrar pedidos, cobros y visitas? ¿App, tablet, papel?",
+      "followup": "¿Se le facilita aprender apps nuevas?",
+      "rubrica": {
+        "excelente": "Maneja apps de ruteo y registro, aprovecha la tecnología",
+        "bueno": "Usa las herramientas que le dan sin problema",
+        "basico": "Prefiere papel pero puede aprender",
+        "pobre": "Resistencia a usar tecnología"
+      }
+    },
+    {
+      "competencia": "Planificación",
+      "texto": "¿Cómo planeaba su semana? ¿Tenía ruta fija o la ajustaba?",
+      "followup": "¿Qué hacía cuando un cliente no estaba?",
+      "rubrica": {
+        "excelente": "Planificación semanal con flexibilidad, optimiza ruta, clientes alternos",
+        "bueno": "Sigue ruta con ajustes según necesidad",
+        "basico": "Sigue la ruta asignada sin modificar",
+        "pobre": "Sin planificación, improvisa"
+      }
+    },
+    {
+      "competencia": "Comunicación con supervisión",
+      "texto": "¿Cómo era la relación con su supervisor directo? ¿Cada cuánto hablaban?",
+      "followup": "¿Alguna vez tuvo un desacuerdo con su jefe? ¿Cómo lo manejó?",
+      "rubrica": {
+        "excelente": "Comunicación proactiva, reportes sin que se los pidan, maneja desacuerdos con madurez",
+        "bueno": "Buena relación, cumple con reportes",
+        "basico": "Cumple lo mínimo en comunicación",
+        "pobre": "Conflictos frecuentes o evita a su supervisor"
+      }
+    },
+    {
+      "competencia": "Manejo de rechazos",
+      "texto": "En ventas de ruta, muchas puertas se cierran. ¿Cómo maneja el rechazo constante?",
+      "followup": "¿Alguna vez un rechazo se convirtió en venta? ¿Cómo?",
+      "rubrica": {
+        "excelente": "Resiliencia clara, no lo toma personal, aprende de cada no",
+        "bueno": "Maneja el rechazo sin que afecte su desempeño",
+        "basico": "Lo afecta pero sigue adelante",
+        "pobre": "Se desmotiva fácilmente con los rechazos"
+      }
+    },
+    {
+      "competencia": "Conocimiento de producto",
+      "texto": "¿Qué vendía en su trabajo anterior? ¿Cómo se preparaba para conocer el catálogo?",
+      "followup": "¿Qué haría si un cliente pregunta algo que no sabe?",
+      "rubrica": {
+        "excelente": "Estudia activamente, conoce beneficios y diferenciadores",
+        "bueno": "Buen conocimiento de lo que vende",
+        "basico": "Conoce lo básico de inducción",
+        "pobre": "No se preparaba o no le importaba"
+      }
+    },
+    {
+      "competencia": "Compromiso",
+      "texto": "¿Por qué quiere trabajar en RAMSA y no en otra empresa de distribución?",
+      "followup": "¿Qué sabe de RAMSA y sus productos?",
+      "rubrica": {
+        "excelente": "Investigó sobre la empresa, conecta su experiencia con la necesidad",
+        "bueno": "Tiene razones claras y muestra interés genuino",
+        "basico": "Quiere el trabajo pero no investigó la empresa",
+        "pobre": "No sabe nada de RAMSA o solo le importa el salario"
+      }
+    }
+  ],
+  "red_flags": [
+    "No puede dar cifras de cuota o cumplimiento",
+    "Faltantes de efectivo o producto sin explicación clara",
+    "Habla mal de supervisores o compañeros anteriores",
+    "Cambios de trabajo frecuentes sin crecimiento visible",
+    "No tiene licencia vigente o tiene multas/accidentes recientes",
+    "No pregunta sobre el producto, la zona o las condiciones",
+    "Actitud de 'solo recibo pedidos' sin proactividad comercial",
+    "Evasivo al hablar de manejo de dinero"
+  ],
+  "preguntas_ilegales": [
+    "Estado civil, si tiene pareja o planes de casarse",
+    "Si está embarazada, planea embarazarse o tiene hijos",
+    "Edad exacta (puede preguntar si es mayor de 18 para efectos legales)",
+    "Religión, creencias espirituales o prácticas religiosas",
+    "Orientación sexual o identidad de género",
+    "Afiliación política o sindical",
+    "Nacionalidad u origen étnico (puede preguntar si tiene permiso de trabajo)",
+    "Si tiene deudas, embargos o problemas financieros personales",
+    "Si padece alguna enfermedad crónica o discapacidad (salvo requisitos objetivos del puesto)",
+    "Antecedentes penales (solo puede solicitar hoja de delincuencia si el puesto lo justifica por ley)"
+  ]
+}

@@ -1,0 +1,194 @@
+{
+  "empresa": "Ópticas Munkel",
+  "puesto": "Asesor Óptico / Asesor de Ventas",
+  "fecha": "2026-09-18",
+  "preguntas": [
+    {
+      "competencia": "Atención al cliente",
+      "texto": "Cuénteme sobre una vez que un cliente llegó frustrado o confundido con su receta de lentes. ¿Cómo lo atendió?",
+      "followup": "¿El cliente terminó comprando? ¿Regresó después?",
+      "rubrica": {
+        "excelente": "Escuchó con empatía, explicó con claridad, guió la decisión sin presionar",
+        "bueno": "Atendió bien y resolvió la duda del cliente",
+        "basico": "Respondió lo que le preguntaron sin ir más allá",
+        "pobre": "No mostró paciencia o derivó al cliente sin intentar ayudar"
+      }
+    },
+    {
+      "competencia": "Conocimiento técnico",
+      "texto": "¿Qué diferencia hay entre un lente progresivo y un bifocal? ¿Cómo le explicaría eso a un cliente que no sabe nada de óptica?",
+      "followup": "¿Cómo aprendió sobre los diferentes tipos de lentes?",
+      "rubrica": {
+        "excelente": "Explicación clara, usa analogías, adapta el lenguaje al cliente",
+        "bueno": "Conoce las diferencias y puede explicarlas de forma comprensible",
+        "basico": "Sabe las diferencias pero usa lenguaje técnico",
+        "pobre": "No conoce las diferencias o da información incorrecta"
+      }
+    },
+    {
+      "competencia": "Venta consultiva",
+      "texto": "Describa una venta donde el cliente entró pidiendo algo básico y usted logró que se llevara algo mejor. ¿Cómo lo hizo sin que se sintiera presionado?",
+      "followup": "¿Cuál fue el monto final vs. lo que el cliente pensaba gastar?",
+      "rubrica": {
+        "excelente": "Identificó necesidad real, presentó beneficios, cliente agradeció la recomendación",
+        "bueno": "Ofreció opciones y el cliente eligió algo mejor",
+        "basico": "Mencionó opciones más caras sin conectar con la necesidad",
+        "pobre": "Presionó al cliente o no intentó ofrecer alternativas"
+      }
+    },
+    {
+      "competencia": "Manejo de objeciones",
+      "texto": "Un cliente dice: 'En la óptica de al lado me dan los lentes más baratos.' ¿Qué le responde?",
+      "followup": "¿Y si insiste en que el precio es lo único que importa?",
+      "rubrica": {
+        "excelente": "Diferencia valor vs. precio, destaca garantía y calidad, sin hablar mal de la competencia",
+        "bueno": "Explica los beneficios del producto sin atacar al competidor",
+        "basico": "Ofrece descuento como primera respuesta",
+        "pobre": "Se queda sin argumentos o habla mal de la competencia"
+      }
+    },
+    {
+      "competencia": "Imagen personal",
+      "texto": "En óptica, la imagen del asesor influye en la confianza del cliente. ¿Cómo se prepara usted cada mañana antes de llegar al trabajo?",
+      "followup": "¿Usa lentes usted? ¿Considera que eso importa en este puesto?",
+      "rubrica": {
+        "excelente": "Rutina clara de presentación, entiende que es embajador de la marca",
+        "bueno": "Se preocupa por su imagen y entiende su impacto",
+        "basico": "Cumple con el código de vestimenta",
+        "pobre": "No le da importancia a la imagen personal"
+      }
+    },
+    {
+      "competencia": "Trabajo en equipo",
+      "texto": "¿Cómo era la dinámica con sus compañeros de tienda? ¿Cómo manejaban cuando dos asesores querían atender al mismo cliente?",
+      "followup": "¿Tuvo algún conflicto con un compañero? ¿Cómo lo resolvió?",
+      "rubrica": {
+        "excelente": "Sistema claro de turnos, colabora sin competir destructivamente",
+        "bueno": "Buena relación con compañeros, respeta turnos",
+        "basico": "Trabaja bien solo pero no muestra colaboración activa",
+        "pobre": "Conflictos frecuentes o actitud competitiva tóxica"
+      }
+    },
+    {
+      "competencia": "Manejo de inventario",
+      "texto": "¿Cómo controlaba el inventario de marcos y accesorios en su tienda anterior? ¿Alguna vez detectó un faltante?",
+      "followup": "¿Qué hizo cuando lo detectó?",
+      "rubrica": {
+        "excelente": "Protocolo propio de verificación, reportó de inmediato, ayudó a resolver",
+        "bueno": "Consciente del inventario, reporta diferencias",
+        "basico": "Solo participa en inventarios cuando se lo piden",
+        "pobre": "No muestra interés en el control de inventario"
+      }
+    },
+    {
+      "competencia": "Cierre de venta",
+      "texto": "Describa el momento más difícil que tuvo para cerrar una venta. El cliente quería pero algo lo detenía. ¿Qué hizo?",
+      "followup": "¿Cerró la venta ese día o tuvo que dar seguimiento?",
+      "rubrica": {
+        "excelente": "Identificó la objeción real, ofreció solución, cerró con confianza",
+        "bueno": "Intentó diferentes ángulos y logró cerrar",
+        "basico": "Esperó a que el cliente decidiera solo",
+        "pobre": "Perdió la venta sin entender por qué"
+      }
+    },
+    {
+      "competencia": "Orientación a resultados",
+      "texto": "¿Cuál fue su mejor mes en ventas? ¿Qué hizo diferente ese mes comparado con los demás?",
+      "followup": "¿Cuánto vendía en promedio mensual?",
+      "rubrica": {
+        "excelente": "Cifras concretas, identifica qué funcionó, puede replicarlo",
+        "bueno": "Recuerda montos y tiene una idea de qué ayudó",
+        "basico": "No recuerda cifras exactas pero sabe que le fue bien",
+        "pobre": "No puede hablar de resultados numéricos"
+      }
+    },
+    {
+      "competencia": "Manejo de garantías y reclamos",
+      "texto": "Un cliente regresa molesto porque sus lentes nuevos le dan dolor de cabeza. ¿Qué haría usted?",
+      "followup": "¿Cómo diferencia un problema de adaptación de un error en la receta?",
+      "rubrica": {
+        "excelente": "Protocolo claro: escucha, verifica receta vs. lente, periodo de adaptación, solución",
+        "bueno": "Sabe que debe verificar antes de asumir, maneja con calma",
+        "basico": "Deriva al optometrista sin intentar entender",
+        "pobre": "Se pone a la defensiva o no sabe qué hacer"
+      }
+    },
+    {
+      "competencia": "Honestidad",
+      "texto": "¿Alguna vez un cliente le preguntó si realmente necesitaba un tratamiento o accesorio adicional que usted sabía que no era indispensable? ¿Qué le dijo?",
+      "followup": "¿Cómo balancea ser honesto con cumplir sus metas de venta?",
+      "rubrica": {
+        "excelente": "Transparente sobre lo necesario vs. lo opcional, gana confianza a largo plazo",
+        "bueno": "Honesto sin dejar de mencionar las opciones",
+        "basico": "Vende todo lo que puede sin mentir pero sin transparencia total",
+        "pobre": "Exagera la necesidad para vender más"
+      }
+    },
+    {
+      "competencia": "Tecnología y sistemas",
+      "texto": "¿Qué sistemas de punto de venta o CRM ha usado? ¿Cómo manejaba las órdenes de laboratorio?",
+      "followup": "¿Se le facilita aprender nuevos sistemas?",
+      "rubrica": {
+        "excelente": "Experiencia con múltiples sistemas, aprende rápido, sugiere mejoras",
+        "bueno": "Maneja sistemas sin problema y se adapta",
+        "basico": "Usa lo básico del sistema",
+        "pobre": "Dificultad con tecnología o resistencia a usarla"
+      }
+    },
+    {
+      "competencia": "Fidelización",
+      "texto": "¿Qué hacía para que un cliente regresara a comprar con usted y no con otro asesor o en otra óptica?",
+      "followup": "¿Tiene clientes que lo seguirían si usted cambia de óptica?",
+      "rubrica": {
+        "excelente": "Seguimiento post-venta, recuerda nombres, construye relación genuina",
+        "bueno": "Buen trato que genera que el cliente regrese",
+        "basico": "No tiene estrategia de fidelización pero atiende bien",
+        "pobre": "No piensa en la relación a largo plazo"
+      }
+    },
+    {
+      "competencia": "Adaptabilidad",
+      "texto": "Si lo transfieren a una sucursal nueva donde no conoce a nadie y la zona es diferente. ¿Cómo se adaptaría?",
+      "followup": "¿Ha vivido un cambio así? ¿Cómo le fue?",
+      "rubrica": {
+        "excelente": "Ve la oportunidad, tiene plan de acción, ha pasado por eso exitosamente",
+        "bueno": "Dispuesto al cambio, actitud positiva",
+        "basico": "Aceptaría pero prefiere no moverse",
+        "pobre": "Rechaza la posibilidad o pone muchas condiciones"
+      }
+    },
+    {
+      "competencia": "Compromiso y disponibilidad",
+      "texto": "Este puesto puede requerir trabajar fines de semana y horarios de centro comercial. ¿Cómo encaja eso con su vida personal?",
+      "followup": "¿Ha trabajado en horarios similares antes?",
+      "rubrica": {
+        "excelente": "Experiencia previa con esos horarios, los maneja bien, sin restricciones",
+        "bueno": "Disponible y dispuesto aunque sea nuevo para su persona",
+        "basico": "Disponible con condiciones menores",
+        "pobre": "Restricciones significativas de horario"
+      }
+    }
+  ],
+  "red_flags": [
+    "No puede mencionar cifras de ventas ni metas alcanzadas",
+    "Habla mal de compañeros o jefes anteriores",
+    "No tiene conocimiento básico de óptica (si dice tener experiencia en el ramo)",
+    "Presiona o manipula en lugar de asesorar — eso lo hará con los clientes",
+    "Cambios frecuentes de trabajo (menos de 6 meses en cada tienda)",
+    "No hace preguntas sobre el puesto, los productos o la marca",
+    "Actitud negativa hacia horarios de centro comercial",
+    "No demuestra interés en aprender sobre los productos"
+  ],
+  "preguntas_ilegales": [
+    "Estado civil, si tiene pareja o planes de casarse",
+    "Si está embarazada, planea embarazarse o tiene hijos",
+    "Edad exacta (puede preguntar si es mayor de 18 para efectos legales)",
+    "Religión, creencias espirituales o prácticas religiosas",
+    "Orientación sexual o identidad de género",
+    "Afiliación política o sindical",
+    "Nacionalidad u origen étnico (puede preguntar si tiene permiso de trabajo)",
+    "Si tiene deudas, embargos o problemas financieros personales",
+    "Si padece alguna enfermedad crónica o discapacidad (salvo requisitos objetivos del puesto)",
+    "Antecedentes penales (solo puede solicitar hoja de delincuencia si el puesto lo justifica por ley)"
+  ]
+}

@@ -1,0 +1,194 @@
+{
+  "empresa": "Nekajui, a Ritz-Carlton Reserve",
+  "puesto": "Butler / Agente de Seguridad / Personal de Hospitalidad",
+  "fecha": "2026-09-18",
+  "preguntas": [
+    {
+      "competencia": "Servicio de excelencia",
+      "texto": "Cuénteme sobre la vez que un huésped le hizo una solicitud inusual o difícil de cumplir. ¿Qué hizo?",
+      "followup": "¿El huésped quedó satisfecho? ¿Se lo agradeció?",
+      "rubrica": {
+        "excelente": "Superó la expectativa, fue creativo, el huésped recordará la experiencia",
+        "bueno": "Cumplió la solicitud y el huésped quedó contento",
+        "basico": "Derivó a alguien más o cumplió lo mínimo",
+        "pobre": "No encontró forma de ayudar o no le dio importancia"
+      }
+    },
+    {
+      "competencia": "Atención al detalle",
+      "texto": "En hotelería de lujo, los detalles lo son todo. ¿Cómo se aseguraba de que todo estuviera perfecto antes de la llegada de un huésped?",
+      "followup": "¿Alguna vez detectó un error que otros pasaron por alto?",
+      "rubrica": {
+        "excelente": "Checklist propio, revisa dos veces, anticipa necesidades",
+        "bueno": "Observador y cuidadoso con los estándares",
+        "basico": "Sigue el protocolo sin ir más allá",
+        "pobre": "No muestra sensibilidad por los detalles"
+      }
+    },
+    {
+      "competencia": "Discreción y confidencialidad",
+      "texto": "¿Alguna vez tuvo acceso a información personal de un huésped VIP? ¿Cómo manejó esa información?",
+      "followup": "¿Qué haría si un medio de comunicación le preguntara por un huésped famoso?",
+      "rubrica": {
+        "excelente": "Política clara de confidencialidad, ejemplos de discreción bajo presión",
+        "bueno": "Entiende la importancia y actúa en consecuencia",
+        "basico": "No ha estado en esa situación pero entiende el concepto",
+        "pobre": "Comparte anécdotas de huéspedes con detalles identificables"
+      }
+    },
+    {
+      "competencia": "Manejo de crisis",
+      "texto": "Describa una emergencia que vivió en un hotel: un huésped enfermo, un accidente, un reclamo grave. ¿Qué hizo usted?",
+      "followup": "¿Siguió el protocolo o tuvo que improvisar?",
+      "rubrica": {
+        "excelente": "Reacción rápida, calma bajo presión, siguió protocolo y resolvió",
+        "bueno": "Manejó la situación sin empeorarla",
+        "basico": "Buscó ayuda y siguió instrucciones",
+        "pobre": "Se paralizó o manejó mal la situación"
+      }
+    },
+    {
+      "competencia": "Idiomas",
+      "texto": "¿Qué nivel de inglés maneja? Cambiemos a inglés un momento: tell me about the best guest experience you ever created.",
+      "followup": "(Evaluar fluidez, pronunciación, vocabulario de hospitalidad)",
+      "rubrica": {
+        "excelente": "Fluido en inglés, vocabulario de hospitalidad, puede sostener conversación compleja",
+        "bueno": "Buen nivel conversacional, se hace entender bien",
+        "basico": "Nivel básico, necesita mejorar",
+        "pobre": "No puede mantener una conversación básica en inglés"
+      }
+    },
+    {
+      "competencia": "Presentación personal",
+      "texto": "En un resort de la categoría de Ritz-Carlton, ¿qué significa para usted la presentación personal? ¿Cómo se prepara cada día?",
+      "followup": "¿Qué haría si un compañero no cumple con los estándares de presentación?",
+      "rubrica": {
+        "excelente": "Rutina impecable, entiende que representa la marca, autoexigente",
+        "bueno": "Se preocupa por su imagen y cumple estándares",
+        "basico": "Cumple el código de vestimenta",
+        "pobre": "No le da importancia o lo ve como imposición"
+      }
+    },
+    {
+      "competencia": "Trabajo nocturno/turnos",
+      "texto": "Este puesto puede requerir turnos rotativos incluyendo noches, fines de semana y feriados. ¿Cómo maneja eso?",
+      "followup": "¿Ha trabajado en turno nocturno? ¿Cómo se mantenía alerta?",
+      "rubrica": {
+        "excelente": "Experiencia con turnos rotativos, estrategia para mantenerse bien",
+        "bueno": "Disponible y dispuesto, ha trabajado en horarios similares",
+        "basico": "Disponible con algunas reservas",
+        "pobre": "Restricciones importantes de horario"
+      }
+    },
+    {
+      "competencia": "Seguridad y prevención",
+      "texto": "¿Cómo identificaría una situación de riesgo para un huésped o para el resort? ¿Qué protocolos de seguridad conoce?",
+      "followup": "¿Ha tenido que manejar una situación de seguridad real?",
+      "rubrica": {
+        "excelente": "Conoce protocolos, observador, reacción apropiada, experiencia real",
+        "bueno": "Entiende los principios de seguridad y prevención",
+        "basico": "Conocimiento teórico sin experiencia práctica",
+        "pobre": "No tiene noción de seguridad preventiva"
+      }
+    },
+    {
+      "competencia": "Trabajo bajo estándares de marca",
+      "texto": "Ritz-Carlton tiene estándares muy específicos (los Gold Standards). ¿Ha trabajado con estándares de marca antes? ¿Cómo se aseguraba de cumplirlos?",
+      "followup": "¿Qué hacía cuando el estándar le parecía excesivo o innecesario?",
+      "rubrica": {
+        "excelente": "Entiende y valora los estándares, los interioriza, mejora dentro del marco",
+        "bueno": "Cumple estándares consistentemente",
+        "basico": "Cumple cuando lo supervisan",
+        "pobre": "Ve los estándares como burocracia innecesaria"
+      }
+    },
+    {
+      "competencia": "Anticipación de necesidades",
+      "texto": "¿Cómo sabía qué necesitaba un huésped antes de que lo pidiera? Déme un ejemplo.",
+      "followup": "¿Qué señales observaba para anticipar?",
+      "rubrica": {
+        "excelente": "Lee lenguaje corporal, conoce perfil del huésped, anticipa activamente",
+        "bueno": "Observador y proactivo en situaciones obvias",
+        "basico": "Responde cuando le piden pero no anticipa",
+        "pobre": "Reactivo, espera instrucciones para actuar"
+      }
+    },
+    {
+      "competencia": "Manejo de quejas",
+      "texto": "Un huésped se queja de que su habitación no está lista a pesar de que ya pasó la hora de check-in. Está molesto. ¿Qué hace?",
+      "followup": "¿Qué ofrece? ¿Cómo convierte el problema en una oportunidad?",
+      "rubrica": {
+        "excelente": "Disculpa sincera, solución inmediata, compensación proactiva, recupera la experiencia",
+        "bueno": "Maneja la queja con calma y busca solución",
+        "basico": "Deriva al front desk sin intentar resolver",
+        "pobre": "Se pone a la defensiva o no sabe qué hacer"
+      }
+    },
+    {
+      "competencia": "Conocimiento del destino",
+      "texto": "Un huésped le pregunta qué hacer en Guanacaste por un día. ¿Qué le recomienda?",
+      "followup": "¿Conoce la zona? ¿Qué restaurantes, playas o actividades recomendaría?",
+      "rubrica": {
+        "excelente": "Conoce la zona a fondo, recomendaciones personalizadas según perfil del huésped",
+        "bueno": "Conoce los atractivos principales y puede recomendar",
+        "basico": "Conocimiento limitado de la zona",
+        "pobre": "No conoce la zona y no investigaría"
+      }
+    },
+    {
+      "competencia": "Honestidad e integridad",
+      "texto": "Un huésped deja una propina generosa en la habitación. ¿Cómo maneja las propinas? ¿Alguna vez encontró objetos de valor olvidados?",
+      "followup": "¿Qué hizo con esos objetos?",
+      "rubrica": {
+        "excelente": "Reporta inmediatamente objetos encontrados, transparente con propinas",
+        "bueno": "Sigue el protocolo de objetos perdidos sin dudarlo",
+        "basico": "Haría lo correcto pero no tiene experiencia",
+        "pobre": "Evasivo o ambiguo en su respuesta"
+      }
+    },
+    {
+      "competencia": "Resistencia física",
+      "texto": "Un butler o agente de seguridad puede estar de pie 8-10 horas seguidas. ¿Cómo maneja la demanda física del trabajo?",
+      "followup": "¿Practica algún deporte o actividad que lo mantenga en forma?",
+      "rubrica": {
+        "excelente": "En buena condición física, experiencia con jornadas largas de pie",
+        "bueno": "Capaz de manejar la demanda física sin problema",
+        "basico": "Dispuesto aunque no tiene experiencia con jornadas tan largas",
+        "pobre": "Preocupaciones de salud que limitarían el desempeño"
+      }
+    },
+    {
+      "competencia": "Motivación y vocación",
+      "texto": "¿Por qué quiere trabajar en hotelería de lujo y específicamente en Ritz-Carlton? ¿Qué sabe de la marca?",
+      "followup": "¿Dónde se ve en 3 años dentro de la industria hotelera?",
+      "rubrica": {
+        "excelente": "Investigó la marca, conecta con sus valores, tiene plan de carrera en hospitalidad",
+        "bueno": "Genuinamente interesado en la industria y la marca",
+        "basico": "Quiere el trabajo pero no investigó la empresa",
+        "pobre": "Solo busca empleo, no tiene conexión con hospitalidad"
+      }
+    }
+  ],
+  "red_flags": [
+    "No habla inglés funcional (requisito en hotelería de lujo en Guanacaste)",
+    "Comparte anécdotas de huéspedes con datos identificables — falta de discreción",
+    "Actitud de 'es solo un trabajo' sin vocación de servicio",
+    "No puede dar ejemplos de ir más allá por un cliente/huésped",
+    "Problemas con turnos rotativos o trabajo en fines de semana",
+    "No investigó la marca ni el destino",
+    "Apariencia descuidada en la entrevista",
+    "Historial de conflictos con compañeros o supervisores"
+  ],
+  "preguntas_ilegales": [
+    "Estado civil, si tiene pareja o planes de casarse",
+    "Si está embarazada, planea embarazarse o tiene hijos",
+    "Edad exacta (puede preguntar si es mayor de 18 para efectos legales)",
+    "Religión, creencias espirituales o prácticas religiosas",
+    "Orientación sexual o identidad de género",
+    "Afiliación política o sindical",
+    "Nacionalidad u origen étnico (puede preguntar si tiene permiso de trabajo)",
+    "Si tiene deudas, embargos o problemas financieros personales",
+    "Si padece alguna enfermedad crónica o discapacidad (salvo requisitos objetivos del puesto)",
+    "Antecedentes penales (solo puede solicitar hoja de delincuencia si el puesto lo justifica por ley)"
+  ]
+}

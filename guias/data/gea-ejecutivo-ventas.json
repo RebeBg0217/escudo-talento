@@ -1,0 +1,194 @@
+{
+  "empresa": "Grupo GEA de Costa Rica",
+  "puesto": "Ejecutivo de Ventas de Tarjetas de Crédito / Agente de Contact Center",
+  "fecha": "2026-09-18",
+  "preguntas": [
+    {
+      "competencia": "Tolerancia a la presión",
+      "texto": "Cuénteme sobre el día más difícil que tuvo en un call center o piso de ventas. ¿Qué pasó y cómo lo manejó?",
+      "followup": "¿Cuántas llamadas o contactos hacía por día? ¿Cuál era su tasa de cierre?",
+      "rubrica": {
+        "excelente": "Maneja presión con método, cuantifica su desempeño, se repone rápido",
+        "bueno": "Reconoce la presión y tiene estrategias para manejarla",
+        "basico": "Aguanta pero no tiene estrategia clara",
+        "pobre": "La presión le afecta el desempeño o lo lleva a renunciar"
+      }
+    },
+    {
+      "competencia": "Persuasión ética",
+      "texto": "¿Cómo convencía a un cliente de adquirir una tarjeta de crédito sin presionarlo ni engañarlo?",
+      "followup": "¿Alguna vez un cliente regresó a quejarse de que no le explicaron bien los términos?",
+      "rubrica": {
+        "excelente": "Identifica necesidades, explica beneficios y costos con transparencia, cierra sin presión",
+        "bueno": "Buen balance entre persuasión y honestidad",
+        "basico": "Sigue un script sin personalizarlo",
+        "pobre": "Omite información importante para cerrar la venta"
+      }
+    },
+    {
+      "competencia": "Manejo de objeciones",
+      "texto": "El cliente dice: 'No quiero tarjetas, ya debo mucho.' ¿Qué hace?",
+      "followup": "¿Y si dice que no está interesado y quiere colgar?",
+      "rubrica": {
+        "excelente": "Respeta la objeción, ofrece valor sin insistir de más, sabe cuándo parar",
+        "bueno": "Intenta resolver la objeción con argumentos válidos",
+        "basico": "Repite el script",
+        "pobre": "Insiste agresivamente o se rinde de inmediato"
+      }
+    },
+    {
+      "competencia": "Cumplimiento de metas",
+      "texto": "¿Cuál era su meta mensual de ventas o colocaciones? ¿Qué porcentaje cumplía en promedio?",
+      "followup": "¿Qué hacía diferente en los meses buenos vs. los malos?",
+      "rubrica": {
+        "excelente": "Cifras concretas, >90% cumplimiento, identifica qué funciona",
+        "bueno": "Recuerda sus metas y tiene buen cumplimiento",
+        "basico": "No recuerda cifras exactas",
+        "pobre": "Evasivo sobre resultados o no alcanzaba metas"
+      }
+    },
+    {
+      "competencia": "Disciplina operativa",
+      "texto": "En un call center hay reglas estrictas: tiempos de llamada, scripts, horarios de break. ¿Cómo se llevaba con esas reglas?",
+      "followup": "¿Alguna vez le llamaron la atención por no seguir un proceso?",
+      "rubrica": {
+        "excelente": "Sigue reglas y encuentra formas de mejorar dentro del marco",
+        "bueno": "Cumple consistentemente sin problemas",
+        "basico": "Cumple la mayoría pero con excepciones",
+        "pobre": "Problemas frecuentes con las reglas o lo ve como limitante"
+      }
+    },
+    {
+      "competencia": "Comunicación verbal",
+      "texto": "Hágame un pitch de 30 segundos vendiéndome cualquier producto que usted elija. Lo que quiera.",
+      "followup": "¿Cómo ajustaría ese pitch si el cliente fuera una persona mayor?",
+      "rubrica": {
+        "excelente": "Fluido, convincente, adapta el lenguaje, genera interés en 30 seg",
+        "bueno": "Buen pitch, claro y organizado",
+        "basico": "Logra comunicar pero sin enganchar",
+        "pobre": "Desorganizado, titubeante, no genera interés"
+      }
+    },
+    {
+      "competencia": "Trabajo en equipo",
+      "texto": "En ventas de piso o call center, ¿cómo era la dinámica con sus compañeros? ¿Competían o se ayudaban?",
+      "followup": "¿Algún compañero le pedía ayuda? ¿La daba?",
+      "rubrica": {
+        "excelente": "Competencia sana, comparte tips, celebra éxitos ajenos",
+        "bueno": "Buena relación sin competencia tóxica",
+        "basico": "Trabaja bien solo pero no comparte conocimiento",
+        "pobre": "Competencia destructiva o conflictos frecuentes"
+      }
+    },
+    {
+      "competencia": "Manejo de rechazo",
+      "texto": "En venta de tarjetas, la mayoría de las personas dicen que no. ¿Cómo manejaba recibir 50+ rechazos al día?",
+      "followup": "¿En qué momento del día le costaba más mantener la energía?",
+      "rubrica": {
+        "excelente": "Estrategia clara para mantenerse motivado, no personaliza el rechazo",
+        "bueno": "Acepta el rechazo como parte del trabajo",
+        "basico": "Le afecta pero sigue",
+        "pobre": "Se desmotiva fácilmente o lo toma personal"
+      }
+    },
+    {
+      "competencia": "Honestidad",
+      "texto": "¿Alguna vez la empresa le pidió vender algo de una forma que usted sentía que no era correcta? ¿Qué hizo?",
+      "followup": "¿Dónde pone el límite entre persuadir e insistir de más?",
+      "rubrica": {
+        "excelente": "Tiene línea ética clara, ha puesto límites, prioriza al cliente",
+        "bueno": "Consciente de la ética, no cruza líneas obvias",
+        "basico": "Sigue instrucciones sin cuestionarlas mucho",
+        "pobre": "Haría lo que sea por cerrar la venta"
+      }
+    },
+    {
+      "competencia": "Puntualidad y asistencia",
+      "texto": "¿Cuál era su porcentaje de asistencia en su último trabajo? ¿Llegaba a tiempo?",
+      "followup": "¿Qué hacía cuando se enfermaba o tenía una emergencia?",
+      "rubrica": {
+        "excelente": ">95% asistencia, puntual, avisa con anticipación",
+        "bueno": "Buena asistencia y puntualidad",
+        "basico": "Cumple pero con faltas ocasionales sin aviso",
+        "pobre": "Ausentismo frecuente o impuntualidad"
+      }
+    },
+    {
+      "competencia": "Aprendizaje rápido",
+      "texto": "Si mañana le dan un producto financiero nuevo que nunca ha vendido, ¿cómo se prepararía para venderlo en una semana?",
+      "followup": "¿Ha vivido esa situación? ¿Cuánto tardó en sentirse cómodo?",
+      "rubrica": {
+        "excelente": "Método de estudio, practica, pide feedback, se lanza rápido",
+        "bueno": "Dispuesto y capaz de aprender rápido",
+        "basico": "Necesita tiempo y acompañamiento cercano",
+        "pobre": "Se paraliza ante lo nuevo o espera que le enseñen todo"
+      }
+    },
+    {
+      "competencia": "Gestión del tiempo",
+      "texto": "¿Cómo distribuía su tiempo entre hacer llamadas, dar seguimiento a interesados y completar papeleo?",
+      "followup": "¿En qué momento del día era más productivo?",
+      "rubrica": {
+        "excelente": "Bloques de tiempo, prioriza llamadas en horas pico, minimiza lo administrativo",
+        "bueno": "Organizado y productivo sin un sistema formal",
+        "basico": "Hace lo que le van pidiendo en el momento",
+        "pobre": "Desorganizado, pierde tiempo en tareas de bajo impacto"
+      }
+    },
+    {
+      "competencia": "Orientación al cliente",
+      "texto": "¿Qué es más importante: cerrar la venta o que el cliente quede satisfecho? ¿Por qué?",
+      "followup": "¿Alguna vez decidió NO venderle a alguien porque sabía que no le convenía?",
+      "rubrica": {
+        "excelente": "Entiende que la satisfacción genera más ventas a largo plazo, ejemplos concretos",
+        "bueno": "Busca el balance y tiene consciencia del impacto",
+        "basico": "Respuesta correcta pero sin convicción real",
+        "pobre": "La venta es lo único que importa"
+      }
+    },
+    {
+      "competencia": "Manejo de sistemas",
+      "texto": "¿Qué CRM o sistema de gestión de llamadas ha usado? ¿Se le facilita la tecnología?",
+      "followup": "¿Cuántas pantallas manejaba al mismo tiempo?",
+      "rubrica": {
+        "excelente": "Múltiples sistemas simultáneos, rápido con tecnología",
+        "bueno": "Maneja sistemas sin dificultad",
+        "basico": "Necesita práctica pero aprende",
+        "pobre": "Lento con tecnología o frustrado con sistemas"
+      }
+    },
+    {
+      "competencia": "Liderazgo",
+      "texto": "El puesto de Team Leader está abierto también. ¿Se ve liderando un equipo de ventas? ¿Por qué?",
+      "followup": "¿Ha liderado aunque sea informalmente a compañeros nuevos?",
+      "rubrica": {
+        "excelente": "Experiencia liderando, motiva con ejemplo, tiene visión de equipo",
+        "bueno": "Potencial de liderazgo, ayuda a nuevos",
+        "basico": "Prefiere ser contribuidor individual por ahora",
+        "pobre": "No le interesa liderar ni ayudar a otros"
+      }
+    }
+  ],
+  "red_flags": [
+    "No puede dar cifras de metas o cierre de ventas",
+    "Actitud negativa hacia los scripts o las reglas del call center",
+    "Historial de quejas de clientes por prácticas agresivas",
+    "Rotación cada 2-3 meses sin crecimiento",
+    "No muestra empatía hacia el cliente — solo habla de comisiones",
+    "Problemas de puntualidad o asistencia en empleos anteriores",
+    "Se pone nervioso o tartamudea en el pitch de 30 segundos",
+    "No puede explicar por qué dejó sus trabajos anteriores de forma clara"
+  ],
+  "preguntas_ilegales": [
+    "Estado civil, si tiene pareja o planes de casarse",
+    "Si está embarazada, planea embarazarse o tiene hijos",
+    "Edad exacta (puede preguntar si es mayor de 18 para efectos legales)",
+    "Religión, creencias espirituales o prácticas religiosas",
+    "Orientación sexual o identidad de género",
+    "Afiliación política o sindical",
+    "Nacionalidad u origen étnico (puede preguntar si tiene permiso de trabajo)",
+    "Si tiene deudas, embargos o problemas financieros personales",
+    "Si padece alguna enfermedad crónica o discapacidad (salvo requisitos objetivos del puesto)",
+    "Antecedentes penales (solo puede solicitar hoja de delincuencia si el puesto lo justifica por ley)"
+  ]
+}

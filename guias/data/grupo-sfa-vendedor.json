@@ -1,0 +1,194 @@
+{
+  "empresa": "Grupo SFA",
+  "puesto": "Vendedor-Entregador / Agente de Ventas Ruta",
+  "fecha": "2026-09-18",
+  "preguntas": [
+    {
+      "competencia": "Orientación a resultados",
+      "texto": "Cuénteme sobre una vez que tuvo que cumplir una meta de ventas que parecía inalcanzable. ¿Qué hizo exactamente para acercarse a ella?",
+      "followup": "¿Cuánto logró vender vs. la meta? ¿Qué haría diferente hoy?",
+      "rubrica": {
+        "excelente": "Describe acciones concretas, cuantifica resultados, muestra aprendizaje",
+        "bueno": "Identifica acciones específicas y menciona resultados",
+        "basico": "Respuesta general sin datos concretos",
+        "pobre": "No puede dar un ejemplo real o culpa a factores externos"
+      }
+    },
+    {
+      "competencia": "Planificación de ruta",
+      "texto": "Describa cómo organizaba su ruta diaria de visitas en su trabajo anterior. ¿Qué criterios usaba para priorizar clientes?",
+      "followup": "¿Cuántos clientes visitaba por día? ¿Cómo manejaba los imprevistos?",
+      "rubrica": {
+        "excelente": "Sistema claro de priorización, manejo de contingencias, optimización de tiempo",
+        "bueno": "Tiene un método aunque informal, menciona criterios razonables",
+        "basico": "Sigue la ruta asignada sin cuestionarla",
+        "pobre": "No muestra capacidad de planificación"
+      }
+    },
+    {
+      "competencia": "Servicio al cliente",
+      "texto": "Cuénteme sobre un cliente difícil con el que tuvo que lidiar durante una entrega o visita de ventas. ¿Cómo manejó la situación?",
+      "followup": "¿El cliente siguió comprando después? ¿Qué aprendió?",
+      "rubrica": {
+        "excelente": "Escuchó, mantuvo la calma, encontró solución, preservó la relación",
+        "bueno": "Manejó la situación sin escalarla, cliente quedó satisfecho",
+        "basico": "Resolvió pero de forma reactiva",
+        "pobre": "Se frustró, escaló o perdió al cliente"
+      }
+    },
+    {
+      "competencia": "Responsabilidad con activos",
+      "texto": "En su experiencia, ¿cómo aseguraba que el producto llegara en buen estado al cliente? ¿Tuvo alguna vez un problema con mercadería dañada?",
+      "followup": "¿Cómo manejó la situación con la empresa y con el cliente?",
+      "rubrica": {
+        "excelente": "Protocolo propio de revisión, reporte inmediato, solución proactiva",
+        "bueno": "Cuida el producto y sabe qué hacer ante un problema",
+        "basico": "Sigue instrucciones pero no tiene iniciativa propia",
+        "pobre": "No muestra conciencia sobre el cuidado del producto"
+      }
+    },
+    {
+      "competencia": "Manejo de efectivo",
+      "texto": "Describa su experiencia manejando cobros y efectivo en ruta. ¿Alguna vez tuvo un faltante? ¿Qué pasó?",
+      "followup": "¿Qué sistema usaba para llevar el control de cobros del día?",
+      "rubrica": {
+        "excelente": "Sistema riguroso de control, transparencia total, nunca faltantes significativos",
+        "bueno": "Lleva control adecuado y reporta cualquier diferencia",
+        "basico": "Cumple pero sin sistema propio",
+        "pobre": "Historial de faltantes o evasivas al hablar del tema"
+      }
+    },
+    {
+      "competencia": "Negociación",
+      "texto": "Deme un ejemplo de cuando tuvo que negociar con un cliente que pedía descuento o condiciones especiales que usted no podía autorizar.",
+      "followup": "¿Logró cerrar la venta? ¿Qué alternativas ofreció?",
+      "rubrica": {
+        "excelente": "Ofreció alternativas creativas respetando políticas, cerró la venta",
+        "bueno": "Negoció dentro de sus límites y consultó cuando fue necesario",
+        "basico": "Cedió al descuento o perdió la venta",
+        "pobre": "Otorgó descuentos no autorizados o no supo manejar la objeción"
+      }
+    },
+    {
+      "competencia": "Trabajo bajo presión",
+      "texto": "Cuénteme sobre un día particularmente difícil en ruta: mucho calor, tráfico, clientes que no estaban, producto que no alcanzó. ¿Cómo lo manejó?",
+      "followup": "¿Terminó la ruta? ¿Qué hizo con los clientes que no pudo visitar?",
+      "rubrica": {
+        "excelente": "Mantiene la calma, reprograma, comunica, completa lo esencial",
+        "bueno": "Se adapta aunque con algo de estrés",
+        "basico": "Completa la ruta pero sin gestionar las excepciones",
+        "pobre": "Se frustró, dejó pendientes sin comunicar"
+      }
+    },
+    {
+      "competencia": "Conocimiento de producto",
+      "texto": "¿Cómo se preparaba para conocer los productos que vendía? ¿Alguna vez un cliente le hizo una pregunta que no supo responder?",
+      "followup": "¿Qué hizo en ese momento? ¿Cómo se aseguró de saber la respuesta para la próxima vez?",
+      "rubrica": {
+        "excelente": "Estudia activamente, admite lo que no sabe, investiga y regresa con respuesta",
+        "bueno": "Conoce bien su catálogo y busca información cuando la necesita",
+        "basico": "Sabe lo básico que le enseñaron en la inducción",
+        "pobre": "No demuestra interés en conocer lo que vende"
+      }
+    },
+    {
+      "competencia": "Honestidad",
+      "texto": "Cuénteme sobre una situación en la que haber sido deshonesto le habría facilitado las cosas, pero eligió ser transparente.",
+      "followup": "¿Qué consecuencias tuvo ser honesto? ¿Lo haría igual?",
+      "rubrica": {
+        "excelente": "Ejemplo claro, consecuencias reales, reafirma el valor",
+        "bueno": "Da un ejemplo creíble aunque menos impactante",
+        "basico": "Respuesta genérica sobre la importancia de la honestidad",
+        "pobre": "No puede dar un ejemplo concreto o la respuesta suena ensayada"
+      }
+    },
+    {
+      "competencia": "Comunicación",
+      "texto": "¿Cómo le reportaba a su jefe los resultados del día? ¿Usaba algún sistema o herramienta?",
+      "followup": "¿Qué información incluía? ¿Cada cuánto?",
+      "rubrica": {
+        "excelente": "Reportes diarios estructurados, proactivo con información relevante",
+        "bueno": "Reporta consistentemente con la información solicitada",
+        "basico": "Reporta cuando se lo piden",
+        "pobre": "No tiene costumbre de reportar o lo hace incompleto"
+      }
+    },
+    {
+      "competencia": "Adaptabilidad",
+      "texto": "Cuénteme sobre un cambio importante que le hicieron en su trabajo: nueva ruta, nuevo producto, nuevo sistema. ¿Cómo lo manejó?",
+      "followup": "¿Cuánto tiempo le tomó adaptarse? ¿Pidió ayuda?",
+      "rubrica": {
+        "excelente": "Se adaptó rápido, vio oportunidad en el cambio, ayudó a otros",
+        "bueno": "Se adaptó en tiempo razonable sin quejarse",
+        "basico": "Se adaptó pero con resistencia inicial",
+        "pobre": "No se adaptó o el cambio fue motivo de renuncia"
+      }
+    },
+    {
+      "competencia": "Trabajo en equipo",
+      "texto": "En ventas de ruta, muchas veces depende de bodega, despacho y facturación. ¿Cómo era su relación con esos equipos?",
+      "followup": "¿Tuvo algún conflicto? ¿Cómo lo resolvió?",
+      "rubrica": {
+        "excelente": "Relación proactiva con equipos de soporte, resuelve conflictos directamente",
+        "bueno": "Buena relación, comunica necesidades claramente",
+        "basico": "Relación funcional sin problemas pero sin iniciativa",
+        "pobre": "Conflictos recurrentes o culpa a otros departamentos"
+      }
+    },
+    {
+      "competencia": "Orientación comercial",
+      "texto": "¿Cómo identificaba oportunidades para vender más a un cliente existente o para abrir un cliente nuevo en su zona?",
+      "followup": "¿Tiene un ejemplo de un cliente que usted abrió desde cero?",
+      "rubrica": {
+        "excelente": "Prospección activa, identifica necesidades, abre clientes nuevos",
+        "bueno": "Aprovecha oportunidades cuando las ve",
+        "basico": "Se enfoca solo en clientes asignados",
+        "pobre": "No muestra iniciativa comercial"
+      }
+    },
+    {
+      "competencia": "Manejo de vehículo/licencia",
+      "texto": "¿Qué tipo de licencia tiene? ¿Ha tenido algún accidente o multa de tránsito en los últimos dos años?",
+      "followup": "¿Cómo cuida el vehículo de la empresa?",
+      "rubrica": {
+        "excelente": "Licencia al día, historial limpio, protocolo de cuidado del vehículo",
+        "bueno": "Licencia vigente, sin accidentes significativos",
+        "basico": "Licencia vigente, alguna multa menor",
+        "pobre": "Licencia vencida, accidentes recientes, o no tiene tipo correcto"
+      }
+    },
+    {
+      "competencia": "Disponibilidad y compromiso",
+      "texto": "Este puesto requiere trabajar de lunes a sábado, con horario temprano. ¿Cómo encaja eso con su situación personal?",
+      "followup": "¿Tiene alguna limitación de horario o zona geográfica?",
+      "rubrica": {
+        "excelente": "Disponibilidad total, entiende las demandas del puesto, compromiso claro",
+        "bueno": "Disponible y dispuesto aunque con alguna consideración menor",
+        "basico": "Disponible pero con condiciones",
+        "pobre": "Restricciones significativas que afectarían el desempeño"
+      }
+    }
+  ],
+  "red_flags": [
+    "Habla mal de empleadores anteriores o culpa a otros de sus resultados",
+    "No puede dar cifras concretas de ventas (montos, clientes, rutas)",
+    "Menciona faltantes de efectivo sin darle importancia",
+    "Cambio frecuente de trabajo sin razones claras (menos de 6 meses en cada puesto)",
+    "Evasivas al hablar de honestidad o manejo de dinero",
+    "No tiene licencia vigente o tiene historial de accidentes",
+    "Actitud negativa hacia el horario o las exigencias del puesto",
+    "No pregunta nada sobre la empresa, el producto o la zona de trabajo"
+  ],
+  "preguntas_ilegales": [
+    "Estado civil, si tiene pareja o planes de casarse",
+    "Si está embarazada, planea embarazarse o tiene hijos",
+    "Edad exacta (puede preguntar si es mayor de 18 para efectos legales)",
+    "Religión, creencias espirituales o prácticas religiosas",
+    "Orientación sexual o identidad de género",
+    "Afiliación política o sindical",
+    "Nacionalidad u origen étnico (puede preguntar si tiene permiso de trabajo)",
+    "Si tiene deudas, embargos o problemas financieros personales",
+    "Si padece alguna enfermedad crónica o discapacidad (salvo requisitos objetivos del puesto)",
+    "Antecedentes penales (solo puede solicitar hoja de delincuencia si el puesto lo justifica por ley)"
+  ]
+}

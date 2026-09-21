@@ -1,0 +1,119 @@
+{
+  "empresa": "El Pollote",
+  "puesto": "Administrador de Punto de Venta / Dependiente de Restaurante",
+  "fecha": "2026-09-18",
+  "preguntas": [
+    {
+      "competencia": "Liderazgo operativo",
+      "texto": "Cuénteme cómo organizaba un turno completo: apertura, rush del almuerzo, cierre. ¿Qué era lo primero que revisaba?",
+      "followup": "¿Cuántas personas tenía a cargo? ¿Cómo asignaba roles?",
+      "rubrica": {"excelente": "Sistema de gestión de turno, anticipa picos, asigna por fortaleza de cada persona", "bueno": "Organiza bien y maneja el ritmo del restaurante", "basico": "Sigue rutina establecida sin innovar", "pobre": "Reactivo, no tiene sistema de organización"}
+    },
+    {
+      "competencia": "Servicio al cliente",
+      "texto": "Un cliente se queja de que su pedido tardó mucho y la comida llegó fría. ¿Qué hace?",
+      "followup": "¿Alguna vez perdió un cliente por mal servicio? ¿Qué aprendió?",
+      "rubrica": {"excelente": "Disculpa, corrige, compensa, el cliente regresa", "bueno": "Resuelve sin escalar", "basico": "Corrige pero sin compensar", "pobre": "Se pone a la defensiva o culpa a la cocina"}
+    },
+    {
+      "competencia": "Manejo de efectivo",
+      "texto": "¿Cómo hacía el cierre de caja? ¿Alguna vez tuvo un faltante?",
+      "followup": "¿Qué sistema de control usaba?",
+      "rubrica": {"excelente": "Cierre metódico, arqueo diario, controles cruzados, historial limpio", "bueno": "Proceso ordenado y transparente", "basico": "Cierra caja pero sin controles adicionales", "pobre": "Faltantes frecuentes o evasivas"}
+    },
+    {
+      "competencia": "Higiene y BPM",
+      "texto": "¿Qué protocolos de higiene y manipulación de alimentos conoce? ¿Tiene certificado del Ministerio de Salud?",
+      "followup": "¿Alguna vez tuvo que corregir a un compañero por incumplir normas de higiene?",
+      "rubrica": {"excelente": "Conoce BPM, certificado al día, vigila cumplimiento del equipo", "bueno": "Cumple y conoce lo básico de higiene alimentaria", "basico": "Sabe que es importante pero no tiene formación", "pobre": "No conoce protocolos de higiene"}
+    },
+    {
+      "competencia": "Trabajo bajo presión",
+      "texto": "Viernes a las 12:30, cola hasta la puerta, cocina atrasada 15 minutos, un colaborador no llegó. ¿Qué hace?",
+      "followup": "¿Cuántos pedidos simultáneos ha manejado?",
+      "rubrica": {"excelente": "Prioriza, redistribuye, comunica tiempos al cliente, mantiene la calma", "bueno": "Maneja el caos sin colapsar", "basico": "Se estresa pero sale adelante", "pobre": "Se paraliza o pierde el control"}
+    },
+    {
+      "competencia": "Control de inventario y merma",
+      "texto": "¿Cómo controlaba el inventario de producto? ¿Qué porcentaje de merma era aceptable?",
+      "followup": "¿Qué hacía para reducir la merma?",
+      "rubrica": {"excelente": "Monitoreo diario, FIFO, metas de merma, identifica causas", "bueno": "Control organizado y consciente de la merma", "basico": "Hace inventario cuando se lo piden", "pobre": "No le da importancia al control de merma"}
+    },
+    {
+      "competencia": "Gestión de personal",
+      "texto": "¿Cómo manejaba cuando un colaborador llegaba tarde repetidamente o tenía mala actitud?",
+      "followup": "¿Alguna vez tuvo que despedir a alguien? ¿Cómo lo hizo?",
+      "rubrica": {"excelente": "Conversación directa, documenta, da oportunidad, actúa si no hay cambio", "bueno": "Aborda el problema sin evitarlo", "basico": "Lo reporta a su jefe sin intervenir", "pobre": "Ignora el problema o reacciona con enojo"}
+    },
+    {
+      "competencia": "Ventas sugeridas",
+      "texto": "¿Cómo entrenaba a su equipo para hacer venta sugerida (combo, agrandar, postre)?",
+      "followup": "¿Cuánto aumentaba el ticket promedio con venta sugerida?",
+      "rubrica": {"excelente": "Script de venta sugerida, mide impacto, entrena al equipo", "bueno": "Promueve la venta sugerida y predica con el ejemplo", "basico": "Lo hace a veces cuando se acuerda", "pobre": "No ve valor en la venta sugerida"}
+    },
+    {
+      "competencia": "Honestidad",
+      "texto": "En restaurante hay muchas tentaciones: comida, efectivo, producto. ¿Cómo aseguraba la honestidad de su equipo?",
+      "followup": "¿Alguna vez descubrió un robo? ¿Qué hizo?",
+      "rubrica": {"excelente": "Controles preventivos, cultura de transparencia, actuó decisivamente ante robo", "bueno": "Vigila y actúa cuando detecta problemas", "basico": "Confía en el equipo sin controles formales", "pobre": "No tiene mecanismos de control o los minimiza"}
+    },
+    {
+      "competencia": "Flexibilidad de horario",
+      "texto": "Restaurante es fines de semana, feriados, horarios partidos. ¿Cómo maneja eso?",
+      "followup": "¿Ha trabajado turno partido (mañana + noche) antes?",
+      "rubrica": {"excelente": "Disponibilidad total, experiencia con horarios de restaurante", "bueno": "Disponible y dispuesto", "basico": "Disponible con condiciones", "pobre": "Restricciones importantes"}
+    },
+    {
+      "competencia": "Conocimiento del negocio",
+      "texto": "¿Qué indicadores revisaba para saber si el restaurante iba bien o mal ese día/semana?",
+      "followup": "¿Ticket promedio, rotación de mesas, costo de comida?",
+      "rubrica": {"excelente": "Maneja KPIs del negocio: food cost, ticket, rotación, satisfacción", "bueno": "Entiende los indicadores principales", "basico": "Solo mira ventas totales", "pobre": "No mide nada"}
+    },
+    {
+      "competencia": "Resolución de problemas",
+      "texto": "Se quedó sin un ingrediente clave a mitad del turno. ¿Qué hace?",
+      "followup": "¿Cómo prevenía que eso pasara?",
+      "rubrica": {"excelente": "Solución inmediata + acción preventiva para que no se repita", "bueno": "Encuentra alternativa rápida", "basico": "Avisa al cliente que no está disponible", "pobre": "No sabe qué hacer o deja de vender sin buscar alternativa"}
+    },
+    {
+      "competencia": "Comunicación con cocina",
+      "texto": "¿Cómo era la relación entre el equipo de piso y el de cocina? ¿Había conflictos?",
+      "followup": "¿Cómo los resolvía?",
+      "rubrica": {"excelente": "Comunicación fluida, reuniones breves, resolver conflictos al momento", "bueno": "Buena relación y comunicación efectiva", "basico": "Funcional pero con roces", "pobre": "Conflictos frecuentes entre piso y cocina"}
+    },
+    {
+      "competencia": "Imagen del local",
+      "texto": "¿Qué hacía para mantener la imagen y limpieza del restaurante durante todo el turno?",
+      "followup": "¿Quién era responsable de la limpieza? ¿Cómo se aseguraba?",
+      "rubrica": {"excelente": "Rutina de limpieza por hora, inspecciona personalmente, estándar alto", "bueno": "Se preocupa por la imagen y la vigila", "basico": "Limpieza al inicio y al final del turno", "pobre": "No le da prioridad o lo delega sin verificar"}
+    },
+    {
+      "competencia": "Motivación",
+      "texto": "¿Por qué El Pollote y no cualquier otro restaurante? ¿Qué le atrae?",
+      "followup": "¿Ha comido ahí? ¿Qué le pareció?",
+      "rubrica": {"excelente": "Conoce la marca, ha sido cliente, conecta con la cultura", "bueno": "Interesado genuinamente en la empresa", "basico": "Busca trabajo en restaurantes en general", "pobre": "No sabe nada de El Pollote"}
+    }
+  ],
+  "red_flags": [
+    "Faltantes de caja sin explicación clara",
+    "No conoce protocolos básicos de higiene alimentaria",
+    "Conflictos frecuentes con equipo de cocina o personal",
+    "No puede dar ejemplos de manejo de situaciones difíciles",
+    "Restricciones de horario incompatibles con restaurante",
+    "No muestra interés en el negocio ni en la marca",
+    "Actitud de 'yo solo hago mi trabajo' sin visión integral",
+    "Cambios frecuentes de restaurante en restaurante"
+  ],
+  "preguntas_ilegales": [
+    "Estado civil, si tiene pareja o planes de casarse",
+    "Si está embarazada, planea embarazarse o tiene hijos",
+    "Edad exacta (puede preguntar si es mayor de 18 para efectos legales)",
+    "Religión, creencias espirituales o prácticas religiosas",
+    "Orientación sexual o identidad de género",
+    "Afiliación política o sindical",
+    "Nacionalidad u origen étnico (puede preguntar si tiene permiso de trabajo)",
+    "Si tiene deudas, embargos o problemas financieros",
+    "Si padece alguna enfermedad crónica (salvo certificado de salud requerido por ley para manipulación de alimentos)",
+    "Antecedentes penales (solo hoja de delincuencia si el puesto lo justifica)"
+  ]
+}
