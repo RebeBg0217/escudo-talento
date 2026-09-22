@@ -16,15 +16,9 @@ body { font-family: 'Segoe UI', system-ui, sans-serif; color: var(--dark); backg
 .header p { opacity: 0.9; font-size: 0.9rem; max-width: 600px; margin: 0 auto; }
 .badge { display: inline-block; background: var(--gold); color: var(--blue); padding: 0.3rem 1rem; border-radius: 20px; font-weight: 700; font-size: 0.8rem; margin-bottom: 1rem; }
 .sample-tag { display: inline-block; background: #fed7d7; color: #c53030; padding: 0.2rem 0.8rem; border-radius: 12px; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; }
-.official-tag { display: inline-block; background: #c6f6d5; color: #276749; padding: 0.2rem 0.8rem; border-radius: 12px; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; }
-.container { max-width: 960px; margin: 0 auto; padding: 1.5rem; }
+.container { max-width: 900px; margin: 0 auto; padding: 1.5rem; }
 .section { background: white; border-radius: 12px; padding: 2rem; margin-bottom: 1.5rem; border: 1px solid #e2e8f0; }
 .section h2 { color: var(--blue); font-size: 1.1rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--light); }
-.section-official { background: white; border-radius: 12px; padding: 2rem; margin-bottom: 1.5rem; border: 2px solid var(--blue); }
-.section-official h2 { color: var(--blue); font-size: 1.1rem; margin-bottom: 0.5rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--blue); }
-.decree-ref { font-size: 0.78rem; color: var(--gray); margin-bottom: 1rem; line-height: 1.5; }
-.decree-ref a { color: var(--accent); text-decoration: none; font-weight: 600; }
-.decree-ref a:hover { text-decoration: underline; }
 .table-wrap { overflow-x: auto; }
 table { width: 100%; border-collapse: collapse; font-size: 0.82rem; }
 th { background: var(--blue); color: white; padding: 0.5rem 0.6rem; text-align: left; font-weight: 600; font-size: 0.75rem; white-space: nowrap; }
@@ -32,17 +26,15 @@ th.th-mtss { background: #2c5282; }
 th.th-market { background: var(--accent); }
 td { padding: 0.45rem 0.6rem; border-bottom: 1px solid #edf2f7; }
 tr:hover td { background: var(--light); }
-.salary { font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums; }
 .salary-mtss { font-weight: 700; color: #2c5282; font-variant-numeric: tabular-nums; }
 .salary-p25 { font-weight: 600; color: #38a169; font-variant-numeric: tabular-nums; }
 .salary-p50 { font-weight: 700; color: #d69e2e; font-variant-numeric: tabular-nums; }
 .salary-p75 { font-weight: 700; color: #e53e3e; font-variant-numeric: tabular-nums; }
+.sigla { display: inline-block; background: #edf2f7; color: var(--blue); padding: 0.08rem 0.35rem; border-radius: 3px; font-size: 0.68rem; font-weight: 700; font-family: monospace; }
 .tag { display: inline-block; padding: 0.12rem 0.45rem; border-radius: 4px; font-size: 0.65rem; font-weight: 600; }
 .tag-hot { background: #fed7d7; color: #c53030; }
 .tag-warm { background: #fefcbf; color: #975a16; }
 .tag-cool { background: #c6f6d5; color: #276749; }
-.tag-official { background: var(--blue); color: white; }
-.sigla { display: inline-block; background: #edf2f7; color: var(--blue); padding: 0.08rem 0.35rem; border-radius: 3px; font-size: 0.68rem; font-weight: 700; font-family: monospace; }
 .insight { background: var(--light); border-left: 3px solid var(--accent); padding: 1rem; margin: 1rem 0; border-radius: 0 8px 8px 0; font-size: 0.85rem; line-height: 1.5; }
 .insight strong { color: var(--blue); }
 .warning-box { background: #fff5f5; border-left: 3px solid var(--red); padding: 1rem; margin: 1rem 0; border-radius: 0 8px 8px 0; font-size: 0.85rem; color: #742a2a; line-height: 1.5; }
@@ -57,338 +49,232 @@ tr:hover td { background: var(--light); }
 .locked-msg p { color: var(--gray); font-size: 0.85rem; margin-bottom: 1rem; line-height: 1.5; }
 .locked-msg a { display: inline-block; background: var(--accent); color: white; padding: 0.6rem 1.5rem; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 0.9rem; }
 .locked-msg a:hover { background: #2c5282; }
+.subtitle { font-size: 0.82rem; color: var(--gray); margin-bottom: 1rem; line-height: 1.5; }
 .cta-box { background: var(--blue); border-radius: 12px; padding: 2rem; color: white; text-align: center; margin: 2rem 0; }
 .cta-box a { display: inline-block; background: var(--gold); color: var(--blue); padding: 0.8rem 2rem; border-radius: 8px; font-weight: 700; text-decoration: none; margin-top: 1rem; }
-.watermark { text-align: center; color: var(--gray); font-size: 0.75rem; margin: 1rem 0; opacity: 0.7; }
-.subtitle { font-size: 0.82rem; color: var(--gray); margin-bottom: 1rem; line-height: 1.5; }
-.gap-bar { display: flex; align-items: center; gap: 0; height: 18px; border-radius: 3px; overflow: hidden; margin: 0.2rem 0; }
-.gap-bar div { height: 100%; display: flex; align-items: center; justify-content: center; font-size: 0.6rem; font-weight: 700; color: white; }
+.features { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; margin: 1rem 0; }
+.feature { display: flex; align-items: flex-start; gap: 0.5rem; font-size: 0.85rem; }
+.feature-check { color: var(--green); font-weight: 700; flex-shrink: 0; }
 footer { text-align: center; padding: 2rem; font-size: 0.75rem; color: var(--gray); }
-@media (max-width: 700px) { table { font-size: 0.75rem; } th, td { padding: 0.35rem 0.4rem; } }
+@media (max-width: 700px) { table { font-size: 0.75rem; } th, td { padding: 0.35rem 0.4rem; } .features { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
 
 <div class="header">
   <div class="badge">RADAR SALARIAL CR — MUESTRA DEMOSTRATIVA</div>
-  <h1>Escala Salarial por Puesto: Mínimo Legal + Mercado Competitivo</h1>
-  <p>Cada puesto con su base mínima de ley (Decreto MTSS) y los percentiles 25, 50 y 75 que paga el mercado real en Costa Rica</p>
+  <h1>Radar Salarial: Piso Legal + Mercado Competitivo</h1>
+  <p>Vea un ejemplo del informe que generamos: cada puesto con su base mínima de ley (MTSS) y los percentiles que paga el mercado real</p>
 </div>
 
 <div class="container">
 
   <!-- CÓMO SE LEE EL RADAR -->
   <div class="section">
-    <h2>¿Cómo funciona el Radar Salarial?</h2>
-    <p class="subtitle">Para cada puesto le mostramos <strong>4 datos</strong> que le permiten tomar decisiones de compensación con evidencia:</p>
+    <h2>¿Cómo se lee el informe?</h2>
+    <p class="subtitle">Para cada puesto mostramos <strong>4 datos</strong> que le permiten tomar decisiones de compensación con evidencia:</p>
     <div class="scale-legend">
       <div class="scale-item"><div class="scale-dot" style="background:#2c5282;"></div><strong>Mínimo MTSS</strong> — Lo que la ley exige (Decreto 45303-MTSS)</div>
       <div class="scale-item"><div class="scale-dot" style="background:#38a169;"></div><strong>P25</strong> — El 25% más bajo del mercado</div>
       <div class="scale-item"><div class="scale-dot" style="background:#d69e2e;"></div><strong>P50</strong> — La mediana del mercado</div>
       <div class="scale-item"><div class="scale-dot" style="background:#e53e3e;"></div><strong>P75</strong> — El 25% que mejor paga</div>
     </div>
-    <p class="subtitle">Si usted paga el mínimo MTSS y su competencia paga P50 o P75, pierde talento. Si paga por encima de P75 sin saberlo, está sobrepagando. El Radar le dice <strong>exactamente dónde está usted.</strong></p>
   </div>
 
-  <!-- ESCALA OFICIAL MTSS -->
-  <div class="section-official">
-    <h2>Escala de salarios mínimos de ley <span class="official-tag">Decreto 45303-MTSS · 2026</span></h2>
-    <div class="decree-ref">
-      Decreto Ejecutivo N.° 45303-MTSS · Alcance N.° 156, La Gaceta N.° 229 · 5 dic 2025 · Vigente 1° enero 2026 · Aumento general: +1.63%<br>
-      <a href="https://app.powerbi.com/view?r=eyJrIjoiY2NhYThiOTctMTY3ZS00NzE3LTg2NTAtYTU3OWY4MWE4MGRjIiwidCI6IjM1ZDRkMWFhLWFlYTItNDI3Ny1iMGUyLWJkNDM3OWQ2OGVkMiJ9" target="_blank">Dashboard oficial MTSS / Consejo Nacional de Salarios &rarr;</a>
-    </div>
-    <div class="table-wrap">
-      <table>
-        <tr>
-          <th>Categoría</th>
-          <th>Sigla</th>
-          <th>₡ Mínimo mensual</th>
-          <th>Tipo</th>
-        </tr>
-        <tr><td>Trabajador no calificado genérico</td><td><span class="sigla">TONCG</span></td><td class="salary-mtss">₡373,092</td><td><span class="tag tag-official">Mensual</span></td></tr>
-        <tr><td>Trabajador semicalificado genérico</td><td><span class="sigla">TOSCG</span></td><td class="salary-mtss">₡405,711</td><td><span class="tag tag-official">Mensual</span></td></tr>
-        <tr><td>Trabajador calificado genérico</td><td><span class="sigla">TOCG</span></td><td class="salary-mtss">₡419,756</td><td><span class="tag tag-official">Mensual</span></td></tr>
-        <tr><td>Trabajador especializado genérico</td><td><span class="sigla">TOEG</span></td><td class="salary-mtss">₡487,335</td><td><span class="tag tag-official">Mensual</span></td></tr>
-        <tr><td>Técnico medio educ. diversificada</td><td><span class="sigla">TMED</span></td><td class="salary-mtss">₡496,838</td><td><span class="tag tag-official">Mensual</span></td></tr>
-        <tr><td>Técnico de educación superior</td><td><span class="sigla">TEdS</span></td><td class="salary-mtss">₡542,097</td><td><span class="tag tag-official">Mensual</span></td></tr>
-        <tr><td>Diplomado en educación superior</td><td><span class="sigla">DES</span></td><td class="salary-mtss">₡585,485</td><td><span class="tag tag-official">Mensual</span></td></tr>
-        <tr><td>Bachillerato universitario</td><td><span class="sigla">Bach.</span></td><td class="salary-mtss">₡664,078</td><td><span class="tag tag-official">Mensual</span></td></tr>
-        <tr><td>Licenciado universitario</td><td><span class="sigla">Lic.</span></td><td class="salary-mtss">₡796,921</td><td><span class="tag tag-official">Mensual</span></td></tr>
-        <tr style="background:#fafbfc;"><td>Trabajo doméstico</td><td>—</td><td class="salary-mtss">₡268,731</td><td><span class="tag tag-official">Mensual</span></td></tr>
-      </table>
-    </div>
-
-    <h3 style="color:var(--blue);font-size:0.95rem;margin:1.5rem 0 0.5rem;">Salarios por jornada (categorías no genéricas)</h3>
-    <div class="table-wrap">
-      <table>
-        <tr><th>Categoría</th><th>Sigla</th><th>₡/Jornada</th><th>₡/Mes (×30)</th></tr>
-        <tr><td>No calificado</td><td><span class="sigla">TONC</span></td><td class="salary-mtss">₡12,436</td><td style="color:var(--gray);">₡373,092</td></tr>
-        <tr><td>Semicalificado</td><td><span class="sigla">TOSC</span></td><td class="salary-mtss">₡13,524</td><td style="color:var(--gray);">₡405,711</td></tr>
-        <tr><td>Calificado</td><td><span class="sigla">TOC</span></td><td class="salary-mtss">₡13,992</td><td style="color:var(--gray);">₡419,756</td></tr>
-        <tr><td>Especializado</td><td><span class="sigla">TOE</span></td><td class="salary-mtss">₡16,245</td><td style="color:var(--gray);">₡487,335</td></tr>
-        <tr><td>Especialización superior</td><td><span class="sigla">TES</span></td><td class="salary-mtss">₡25,210</td><td style="color:var(--gray);">₡756,294</td></tr>
-      </table>
-    </div>
-
-    <div class="warning-box">
-      <strong>Pagar por debajo de estos mínimos es ilegal.</strong> Genera responsabilidad administrativa ante el MTSS y diferencias salariales reclamables en sede judicial. Error frecuente: confundir el monto por jornada (diario) con el mensual.
-    </div>
-  </div>
-
-  <!-- TABLA DUAL: MÍNIMO + MERCADO (EJEMPLO) -->
+  <!-- EJEMPLO DE INFORME: 3 puestos por categoría -->
   <div class="section">
-    <h2>Escala salarial por puesto: mínimo legal + mercado real <span class="sample-tag">Ejemplo</span></h2>
-    <p class="subtitle">Cada fila muestra el piso legal (MTSS) y los 3 percentiles que paga el mercado competitivo del GAM. Ejemplo para puestos administrativos y operativos:</p>
+    <h2>Ejemplo de informe: puestos administrativos <span class="sample-tag">Muestra — 3 de 80+</span></h2>
+    <p class="subtitle">Así se ve una sección del informe completo. Ejemplo para el GAM, sector servicios:</p>
 
-    <div class="table-wrap">
-      <table>
-        <tr>
-          <th>Puesto</th>
-          <th class="th-mtss">MTSS Mínimo</th>
-          <th class="th-market" style="background:#276749;">P25</th>
-          <th class="th-market" style="background:#975a16;">P50</th>
-          <th class="th-market" style="background:#c53030;">P75</th>
-          <th>Brecha</th>
-        </tr>
-        <tr>
-          <td>Misceláneo / Conserje <span class="sigla">TONCG</span></td>
-          <td class="salary-mtss">₡373,092</td>
-          <td class="salary-p25">₡385,000</td>
-          <td class="salary-p50">₡410,000</td>
-          <td class="salary-p75">₡450,000</td>
-          <td><span class="tag tag-cool">+3%–21%</span></td>
-        </tr>
-        <tr>
-          <td>Recepcionista <span class="sigla">TOSCG</span></td>
-          <td class="salary-mtss">₡405,711</td>
-          <td class="salary-p25">₡430,000</td>
-          <td class="salary-p50">₡480,000</td>
-          <td class="salary-p75">₡550,000</td>
-          <td><span class="tag tag-warm">+6%–36%</span></td>
-        </tr>
-        <tr>
-          <td>Cajero <span class="sigla">TOCG</span></td>
-          <td class="salary-mtss">₡419,756</td>
-          <td class="salary-p25">₡435,000</td>
-          <td class="salary-p50">₡475,000</td>
-          <td class="salary-p75">₡530,000</td>
-          <td><span class="tag tag-warm">+4%–26%</span></td>
-        </tr>
-        <tr>
-          <td>Secretaria / Asist. Admin. <span class="sigla">TOCG</span></td>
-          <td class="salary-mtss">₡419,756</td>
-          <td class="salary-p25">₡475,000</td>
-          <td class="salary-p50">₡550,000</td>
-          <td class="salary-p75">₡680,000</td>
-          <td><span class="tag tag-hot">+13%–62%</span></td>
-        </tr>
-        <tr>
-          <td>Auxiliar de contabilidad <span class="sigla">TOCG</span></td>
-          <td class="salary-mtss">₡419,756</td>
-          <td class="salary-p25">₡480,000</td>
-          <td class="salary-p50">₡560,000</td>
-          <td class="salary-p75">₡700,000</td>
-          <td><span class="tag tag-hot">+14%–67%</span></td>
-        </tr>
-        <tr>
-          <td>Oficinista general <span class="sigla">TOSCG</span></td>
-          <td class="salary-mtss">₡405,711</td>
-          <td class="salary-p25">₡420,000</td>
-          <td class="salary-p50">₡465,000</td>
-          <td class="salary-p75">₡520,000</td>
-          <td><span class="tag tag-warm">+4%–28%</span></td>
-        </tr>
-        <tr>
-          <td>Contador (Téc. Medio) <span class="sigla">TMED</span></td>
-          <td class="salary-mtss">₡496,838</td>
-          <td class="salary-p25">₡550,000</td>
-          <td class="salary-p50">₡650,000</td>
-          <td class="salary-p75">₡800,000</td>
-          <td><span class="tag tag-hot">+11%–61%</span></td>
-        </tr>
-        <tr>
-          <td>Contador (Bach. Univ.) <span class="sigla">Bach.</span></td>
-          <td class="salary-mtss">₡664,078</td>
-          <td class="salary-p25">₡750,000</td>
-          <td class="salary-p50">₡900,000</td>
-          <td class="salary-p75">₡1,150,000</td>
-          <td><span class="tag tag-hot">+13%–73%</span></td>
-        </tr>
-      </table>
+    <div style="background:#fafbfc;border:1px solid #e2e8f0;border-radius:8px;padding:1rem;position:relative;">
+      <span style="position:absolute;top:8px;right:10px;background:#fed7d7;color:#c53030;padding:0.12rem 0.5rem;border-radius:4px;font-size:0.65rem;font-weight:700;text-transform:uppercase;">Ejemplo</span>
+      <div class="table-wrap">
+        <table>
+          <tr>
+            <th>Puesto</th>
+            <th class="th-mtss">MTSS Mínimo</th>
+            <th class="th-market" style="background:#276749;">P25</th>
+            <th class="th-market" style="background:#975a16;">P50</th>
+            <th class="th-market" style="background:#c53030;">P75</th>
+            <th>Brecha</th>
+          </tr>
+          <tr>
+            <td>Recepcionista <span class="sigla">TOSCG</span></td>
+            <td class="salary-mtss">₡405,711</td>
+            <td class="salary-p25">₡430,000</td>
+            <td class="salary-p50">₡480,000</td>
+            <td class="salary-p75">₡550,000</td>
+            <td><span class="tag tag-warm">+6%–36%</span></td>
+          </tr>
+          <tr>
+            <td>Auxiliar contable <span class="sigla">TOCG</span></td>
+            <td class="salary-mtss">₡419,756</td>
+            <td class="salary-p25">₡480,000</td>
+            <td class="salary-p50">₡560,000</td>
+            <td class="salary-p75">₡700,000</td>
+            <td><span class="tag tag-hot">+14%–67%</span></td>
+          </tr>
+          <tr>
+            <td>Contador (Bach.) <span class="sigla">Bach.</span></td>
+            <td class="salary-mtss">₡664,078</td>
+            <td class="salary-p25">₡750,000</td>
+            <td class="salary-p50">₡900,000</td>
+            <td class="salary-p75">₡1,150,000</td>
+            <td><span class="tag tag-hot">+13%–73%</span></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Ejemplo de informe: puestos operativos <span class="sample-tag">Muestra — 3 de 60+</span></h2>
+
+    <div style="background:#fafbfc;border:1px solid #e2e8f0;border-radius:8px;padding:1rem;position:relative;">
+      <span style="position:absolute;top:8px;right:10px;background:#fed7d7;color:#c53030;padding:0.12rem 0.5rem;border-radius:4px;font-size:0.65rem;font-weight:700;text-transform:uppercase;">Ejemplo</span>
+      <div class="table-wrap">
+        <table>
+          <tr>
+            <th>Puesto</th>
+            <th class="th-mtss">MTSS Mínimo</th>
+            <th class="th-market" style="background:#276749;">P25</th>
+            <th class="th-market" style="background:#975a16;">P50</th>
+            <th class="th-market" style="background:#c53030;">P75</th>
+          </tr>
+          <tr>
+            <td>Electricista <span class="sigla">TOC</span></td>
+            <td class="salary-mtss">₡419,756</td>
+            <td class="salary-p25">₡475,000</td>
+            <td class="salary-p50">₡550,000</td>
+            <td class="salary-p75">₡700,000</td>
+          </tr>
+          <tr>
+            <td>Chef <span class="sigla">TOE</span></td>
+            <td class="salary-mtss">₡487,335</td>
+            <td class="salary-p25">₡600,000</td>
+            <td class="salary-p50">₡800,000</td>
+            <td class="salary-p75">₡1,200,000</td>
+          </tr>
+          <tr>
+            <td>Conductor pesado <span class="sigla">TOC</span></td>
+            <td class="salary-mtss">₡419,756</td>
+            <td class="salary-p25">₡450,000</td>
+            <td class="salary-p50">₡520,000</td>
+            <td class="salary-p75">₡620,000</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Ejemplo de informe: puestos profesionales <span class="sample-tag">Muestra — 3 de 60+</span></h2>
+
+    <div style="background:#fafbfc;border:1px solid #e2e8f0;border-radius:8px;padding:1rem;position:relative;">
+      <span style="position:absolute;top:8px;right:10px;background:#fed7d7;color:#c53030;padding:0.12rem 0.5rem;border-radius:4px;font-size:0.65rem;font-weight:700;text-transform:uppercase;">Ejemplo</span>
+      <div class="table-wrap">
+        <table>
+          <tr>
+            <th>Puesto</th>
+            <th class="th-mtss">MTSS Mínimo</th>
+            <th class="th-market" style="background:#276749;">P25</th>
+            <th class="th-market" style="background:#975a16;">P50</th>
+            <th class="th-market" style="background:#c53030;">P75</th>
+          </tr>
+          <tr>
+            <td>Analista RRHH <span class="sigla">Bach.</span></td>
+            <td class="salary-mtss">₡664,078</td>
+            <td class="salary-p25">₡750,000</td>
+            <td class="salary-p50">₡950,000</td>
+            <td class="salary-p75">₡1,250,000</td>
+          </tr>
+          <tr>
+            <td>Desarrollador de software <span class="sigla">Lic.</span></td>
+            <td class="salary-mtss">₡796,921</td>
+            <td class="salary-p25">₡1,200,000</td>
+            <td class="salary-p50">₡1,800,000</td>
+            <td class="salary-p75">₡2,800,000</td>
+          </tr>
+          <tr>
+            <td>Contador CPA <span class="sigla">Lic.</span></td>
+            <td class="salary-mtss">₡796,921</td>
+            <td class="salary-p25">₡900,000</td>
+            <td class="salary-p50">₡1,200,000</td>
+            <td class="salary-p75">₡1,600,000</td>
+          </tr>
+        </table>
+      </div>
     </div>
 
     <div class="insight">
-      <strong>Lo que revela esta tabla:</strong> Una Secretaria clasificada como TOCG tiene un mínimo legal de ₡419,756 — pero el mercado paga entre ₡475K (P25) y ₡680K (P75). Si usted paga el mínimo, su oferta está <strong>62% por debajo</strong> de los empleadores que mejor pagan. El reporte completo incluye estos datos para los 200+ puestos del decreto.
+      <strong>Lo que revela este análisis:</strong> Un Desarrollador de software con mínimo legal de ₡796,921 recibe en el mercado entre ₡1.2M y ₡2.8M — hasta <strong>251% más</strong> que el piso de ley. Si usted paga cerca del mínimo para un puesto profesional, pierde talento frente a quienes pagan P50 o más.
     </div>
   </div>
 
-  <!-- PUESTOS OPERATIVOS Y TÉCNICOS (ejemplo visible parcial) -->
-  <div class="section">
-    <h2>Puestos operativos y técnicos <span class="sample-tag">Ejemplo</span></h2>
-    <div class="table-wrap">
-      <table>
-        <tr>
-          <th>Puesto</th>
-          <th class="th-mtss">MTSS Mínimo</th>
-          <th class="th-market" style="background:#276749;">P25</th>
-          <th class="th-market" style="background:#975a16;">P50</th>
-          <th class="th-market" style="background:#c53030;">P75</th>
-        </tr>
-        <tr>
-          <td>Cocinero <span class="sigla">TOC</span></td>
-          <td class="salary-mtss">₡419,756</td>
-          <td class="salary-p25">₡440,000</td>
-          <td class="salary-p50">₡500,000</td>
-          <td class="salary-p75">₡600,000</td>
-        </tr>
-        <tr>
-          <td>Chef <span class="sigla">TOE</span></td>
-          <td class="salary-mtss">₡487,335</td>
-          <td class="salary-p25">₡600,000</td>
-          <td class="salary-p50">₡800,000</td>
-          <td class="salary-p75">₡1,200,000</td>
-        </tr>
-        <tr>
-          <td>Electricista <span class="sigla">TOC</span></td>
-          <td class="salary-mtss">₡419,756</td>
-          <td class="salary-p25">₡475,000</td>
-          <td class="salary-p50">₡550,000</td>
-          <td class="salary-p75">₡700,000</td>
-        </tr>
-        <tr>
-          <td>Conductor vehículo pesado <span class="sigla">TOC</span></td>
-          <td class="salary-mtss">₡419,756</td>
-          <td class="salary-p25">₡450,000</td>
-          <td class="salary-p50">₡520,000</td>
-          <td class="salary-p75">₡620,000</td>
-        </tr>
-        <tr>
-          <td>Soldador general <span class="sigla">TOC</span></td>
-          <td class="salary-mtss">₡419,756</td>
-          <td class="salary-p25">₡460,000</td>
-          <td class="salary-p50">₡540,000</td>
-          <td class="salary-p75">₡680,000</td>
-        </tr>
-        <tr>
-          <td>Albañil <span class="sigla">TOC</span></td>
-          <td class="salary-mtss">₡419,756</td>
-          <td class="salary-p25">₡440,000</td>
-          <td class="salary-p50">₡500,000</td>
-          <td class="salary-p75">₡580,000</td>
-        </tr>
-      </table>
-    </div>
-  </div>
-
-  <!-- PROFESIONALES (visible parcial + bloqueado) -->
-  <div class="section">
-    <h2>Puestos profesionales y gerenciales <span class="sample-tag">Ejemplo</span></h2>
-    <div class="table-wrap">
-      <table>
-        <tr>
-          <th>Puesto</th>
-          <th class="th-mtss">MTSS Mínimo</th>
-          <th class="th-market" style="background:#276749;">P25</th>
-          <th class="th-market" style="background:#975a16;">P50</th>
-          <th class="th-market" style="background:#c53030;">P75</th>
-        </tr>
-        <tr>
-          <td>Analista RRHH <span class="sigla">Bach.</span></td>
-          <td class="salary-mtss">₡664,078</td>
-          <td class="salary-p25">₡750,000</td>
-          <td class="salary-p50">₡950,000</td>
-          <td class="salary-p75">₡1,250,000</td>
-        </tr>
-        <tr>
-          <td>Desarrollador de software <span class="sigla">Lic.</span></td>
-          <td class="salary-mtss">₡796,921</td>
-          <td class="salary-p25">₡1,200,000</td>
-          <td class="salary-p50">₡1,800,000</td>
-          <td class="salary-p75">₡2,800,000</td>
-        </tr>
-        <tr>
-          <td>Contador CPA <span class="sigla">Lic.</span></td>
-          <td class="salary-mtss">₡796,921</td>
-          <td class="salary-p25">₡900,000</td>
-          <td class="salary-p50">₡1,200,000</td>
-          <td class="salary-p75">₡1,600,000</td>
-        </tr>
-      </table>
-    </div>
-
-    <div class="locked-section">
-      <div style="min-height:300px;padding:1rem 0;">
-        <div class="blurred">
+  <!-- SECCIONES BLOQUEADAS -->
+  <div class="locked-section">
+    <div class="section" style="min-height:320px;">
+      <h2>Informe completo</h2>
+      <div class="blurred">
+        <p class="subtitle">El reporte mensual incluye las siguientes secciones adicionales:</p>
+        <div class="table-wrap">
           <table>
-            <tr>
-              <th>Puesto</th>
-              <th>MTSS Mínimo</th>
-              <th>P25</th>
-              <th>P50</th>
-              <th>P75</th>
-            </tr>
+            <tr><th>Puesto</th><th>MTSS</th><th>P25</th><th>P50</th><th>P75</th></tr>
             <tr><td>Gerente de RRHH</td><td>₡796,921</td><td>₡1,500,000</td><td>₡2,200,000</td><td>₡3,000,000</td></tr>
-            <tr><td>Gerente Financiero</td><td>₡796,921</td><td>₡1,800,000</td><td>₡2,500,000</td><td>₡3,500,000</td></tr>
-            <tr><td>Gerente de Operaciones</td><td>₡796,921</td><td>₡1,600,000</td><td>₡2,300,000</td><td>₡3,200,000</td></tr>
             <tr><td>Director General</td><td>₡796,921</td><td>₡2,500,000</td><td>₡4,000,000</td><td>₡7,000,000</td></tr>
-            <tr><td>Ingeniero de procesos</td><td>₡796,921</td><td>₡1,100,000</td><td>₡1,500,000</td><td>₡2,000,000</td></tr>
-            <tr><td>Abogado corporativo</td><td>₡796,921</td><td>₡1,300,000</td><td>₡1,800,000</td><td>₡2,500,000</td></tr>
-            <tr><td>Analista de datos Sr</td><td>₡796,921</td><td>₡1,100,000</td><td>₡1,600,000</td><td>₡2,200,000</td></tr>
+            <tr><td>Gerente Financiero</td><td>₡796,921</td><td>₡1,800,000</td><td>₡2,500,000</td><td>₡3,500,000</td></tr>
           </table>
         </div>
-      </div>
-      <div class="locked-overlay">
-        <div class="locked-msg">
-          <h3>200+ puestos en el reporte completo</h3>
-          <p>El Radar Salarial completo cubre todas las categorías del decreto MTSS con datos reales de mercado: administrativos, operativos, técnicos, profesionales y gerenciales, segmentados por industria y región.</p>
-          <a href="https://wa.me/50670464896?text=Hola%2C%20me%20interesa%20el%20Radar%20Salarial%20CR%20completo">Solicitar asesoría diagnóstica gratuita</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- COMPARATIVO POR INDUSTRIA (bloqueado) -->
-  <div class="locked-section">
-    <div class="section" style="min-height:350px;">
-      <h2>Comparativo por industria</h2>
-      <p class="subtitle">El mismo puesto, distinto salario según sector:</p>
-      <div class="table-wrap">
+        <h3 style="margin-top:1.5rem;color:var(--blue);">Comparativo por industria</h3>
         <table>
           <tr><th>Puesto</th><th>Tecnología</th><th>Manufactura</th><th>Retail</th><th>Servicios</th></tr>
           <tr><td>Contador CPA</td><td>₡1,400K</td><td>₡1,100K</td><td>₡950K</td><td>₡1,050K</td></tr>
           <tr><td>Gerente RRHH</td><td>₡2,500K</td><td>₡2,100K</td><td>₡1,800K</td><td>₡1,950K</td></tr>
-          <tr><td>Asistente Admin.</td><td>₡650K</td><td>₡580K</td><td>₡520K</td><td>₡540K</td></tr>
         </table>
+        <h3 style="margin-top:1.5rem;color:var(--blue);">Beneficios no salariales</h3>
+        <p>Teletrabajo, seguros, bonos por sector...</p>
+        <h3 style="margin-top:1rem;color:var(--blue);">Recomendaciones de ajuste</h3>
+        <p>Ajustes sugeridos para su estructura salarial...</p>
       </div>
-      <h2 style="margin-top:2rem;">Beneficios no salariales</h2>
-      <p>Comparativo de teletrabajo, seguros, bonos por sector...</p>
-      <h2 style="margin-top:2rem;">Alertas de competidores</h2>
-      <p>Empresas contratando los mismos perfiles en su zona...</p>
-      <h2 style="margin-top:2rem;">Recomendaciones personalizadas</h2>
-      <p>Ajustes sugeridos para su estructura salarial...</p>
     </div>
     <div class="locked-overlay">
       <div class="locked-msg">
-        <h3>Análisis por industria + recomendaciones</h3>
-        <p>El reporte completo segmenta por industria, incluye beneficios no salariales, alertas de competidores contratando y recomendaciones personalizadas de ajuste salarial.</p>
-        <a href="https://wa.me/50670464896?text=Hola%2C%20me%20interesa%20el%20Radar%20Salarial%20completo%20por%20industria">Solicitar asesoría diagnóstica gratuita</a>
+        <h3>200+ puestos · 4 industrias · actualización mensual</h3>
+        <p>El informe completo cubre todas las categorías del decreto MTSS, segmentado por industria y región, con comparativo de beneficios y recomendaciones personalizadas de ajuste.</p>
+        <a href="https://wa.me/50670464896?text=Hola%2C%20me%20interesa%20el%20Radar%20Salarial%20CR%20completo">Solicitar asesoría diagnóstica gratuita</a>
       </div>
     </div>
   </div>
 
-  <div class="watermark">
-    Salarios mínimos: Decreto 45303-MTSS (datos oficiales 2026) · Percentiles de mercado: datos ilustrativos para demostración
+  <!-- QUÉ INCLUYE -->
+  <div class="section">
+    <h2>¿Qué incluye el Radar Salarial completo?</h2>
+    <div class="features">
+      <div class="feature"><span class="feature-check">✓</span><span>200+ puestos con piso MTSS + percentiles</span></div>
+      <div class="feature"><span class="feature-check">✓</span><span>Segmentado por industria y región</span></div>
+      <div class="feature"><span class="feature-check">✓</span><span>Decreto 45303-MTSS como base legal</span></div>
+      <div class="feature"><span class="feature-check">✓</span><span>Brecha % entre ley y mercado</span></div>
+      <div class="feature"><span class="feature-check">✓</span><span>Comparativo de beneficios no salariales</span></div>
+      <div class="feature"><span class="feature-check">✓</span><span>Recomendaciones personalizadas de ajuste</span></div>
+      <div class="feature"><span class="feature-check">✓</span><span>Actualización mensual con datos frescos</span></div>
+      <div class="feature"><span class="feature-check">✓</span><span>Exportable PDF para presentación a gerencia</span></div>
+    </div>
+
+    <div class="warning-box">
+      <strong>Dato clave:</strong> Pagar por debajo del mínimo MTSS genera responsabilidad administrativa y diferencias salariales reclamables en sede judicial (Art. 177 Código de Trabajo). El 43% de las empresas en Costa Rica paga al menos un puesto por debajo del percentil 25 del mercado — sin saberlo.
+    </div>
   </div>
 
   <div class="cta-box">
     <p style="font-size:1.1rem;font-weight:600;">¿Cuánto debería pagar realmente por cada puesto?</p>
-    <p style="opacity:0.9;font-size:0.9rem;margin-top:0.5rem;">Reciba cada mes su Radar Salarial personalizado con los 200+ puestos del decreto MTSS, percentiles reales de su industria, comparativo sectorial y recomendaciones de ajuste.</p>
+    <p style="opacity:0.9;font-size:0.9rem;margin-top:0.5rem;">Reciba el Radar Salarial completo con los 200+ puestos, percentiles reales de su industria y recomendaciones de ajuste personalizadas.</p>
     <a href="https://wa.me/50670464896?text=Hola%2C%20quiero%20saber%20m%C3%A1s%20sobre%20el%20Radar%20Salarial%20CR">Solicitar asesoría diagnóstica gratuita</a>
   </div>
 </div>
 
 <footer>
-  <p>Salarios mínimos: Decreto Ejecutivo N.° 45303-MTSS, vigente desde 1° de enero de 2026, Consejo Nacional de Salarios. Percentiles de mercado son ilustrativos en esta muestra.</p>
+  <p>Los datos mostrados son ilustrativos. Cada informe se genera con datos reales de mercado actualizados mensualmente.</p>
+  <p>Base legal: Decreto Ejecutivo N.° 45303-MTSS · Fuente: <a href="https://app.powerbi.com/view?r=eyJrIjoiY2NhYThiOTctMTY3ZS00NzE3LTg2NTAtYTU3OWY4MWE4MGRjIiwidCI6IjM1ZDRkMWFhLWFlYTItNDI3Ny1iMGUyLWJkNDM3OWQ2OGVkMiJ9" style="color:var(--accent)" target="_blank">Dashboard MTSS</a></p>
   <p>GTI Consultoría en Recursos Humanos · <a href="https://gticr.net" style="color:var(--accent)">gticr.net</a> · +506 7046-4896</p>
 </footer>
 
