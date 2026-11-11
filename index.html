@@ -92,6 +92,15 @@ footer {
 }
 footer a { color: var(--gold); text-decoration: none; }
 footer p { font-size: 0.85rem; margin-bottom: 0.5rem; opacity: 0.9; }
+/* Imagenes (regla GTI: material promocional con imagen alusiva) */
+.hero { position: relative; overflow: hidden; background: #163B6D; }
+.hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 30%; z-index: 0; }
+.hero::before { content: ''; position: absolute; inset: 0; z-index: 1; background: linear-gradient(135deg, rgba(22,59,109,0.94) 0%, rgba(22,59,109,0.82) 55%, rgba(22,59,109,0.70) 100%); }
+.hero > *:not(.hero-bg) { position: relative; z-index: 2; }
+.card { overflow: hidden; }
+.card-img { display: block; width: calc(100% + 3rem); max-width: none; height: 160px; object-fit: cover; margin: -2rem -1.5rem 1.2rem; }
+.pain-item { overflow: hidden; }
+.pain-img { display: block; width: calc(100% + 3rem); max-width: none; height: 140px; object-fit: cover; margin: -1.5rem -1.5rem 1rem; }
 @media (max-width: 600px) {
   .hero h1 { font-size: 1.6rem; }
   .hero { padding: 3rem 1rem; }
@@ -102,10 +111,11 @@ footer p { font-size: 0.85rem; margin-bottom: 0.5rem; opacity: 0.9; }
 <body>
 
 <section class="hero">
+  <img class="hero-bg" src="https://servicio.gticr.net/gti-img-escudo-reunion-tensa.jpg" alt="Jefatura revisando con tensión un documento de personal junto a dos colaboradores" fetchpriority="high">
   <div class="hero-badge">NUEVO EN COSTA RICA</div>
   <h1>Proteja su empresa en cada etapa del ciclo laboral</h1>
   <p>Arquitecto de Puestos con guia de entrevista premium, radar salarial, despidos seguros y cumplimiento PRODHAB. Todo lo que su departamento de RRHH necesita, sin la complejidad.</p>
-  <a href="https://wa.me/50670464896?text=Hola%2C%20quiero%20una%20asesor%C3%ADa%20diagn%C3%B3stica%20para%20saber%20qu%C3%A9%20necesita%20mi%20empresa" class="cta-btn">Asesoría diagnóstica gratuita</a>
+  <a href="https://wa.me/50662498790?text=Hola%2C%20quiero%20una%20asesor%C3%ADa%20diagn%C3%B3stica%20para%20saber%20qu%C3%A9%20necesita%20mi%20empresa" class="cta-btn">Asesoría diagnóstica gratuita</a>
 </section>
 
 <section class="products">
@@ -114,6 +124,7 @@ footer p { font-size: 0.85rem; margin-bottom: 0.5rem; opacity: 0.9; }
     <p class="sub">Cada producto resuelve un problema urgente que su empresa enfrenta hoy</p>
     <div class="grid">
       <div class="card">
+        <img class="card-img" src="https://servicio.gticr.net/gti-img-puesto-perfil.jpg" alt="Profesional revisando un perfil de puesto en su portapapeles" loading="lazy">
         <div class="card-icon">🎯</div>
         <h3>Arquitecto de Puestos</h3>
         <p>Perfiles de puesto profesionales en minutos: manual completo, guia de entrevista STAR con banderas rojas y preguntas prohibidas, referencia salarial y evaluacion de candidatos.</p>
@@ -121,6 +132,7 @@ footer p { font-size: 0.85rem; margin-bottom: 0.5rem; opacity: 0.9; }
         <a href="https://arquitecto-puestos.vercel.app/landing.html" style="display:inline-block;margin-top:0.8rem;color:var(--accent);font-size:0.85rem;font-weight:600;text-decoration:none;">Conocer mas →</a>
       </div>
       <div class="card">
+        <img class="card-img" src="https://servicio.gticr.net/gti-img-puesto-pizarra.jpg" alt="Profesional presentando un gráfico de barras con datos de mercado" loading="lazy">
         <div class="card-icon">📊</div>
         <h3>Radar Salarial CR</h3>
         <p>Reporte mensual con datos reales de mercado costarricense por sector y posición. Sepa si está pagando de más o de menos.</p>
@@ -128,6 +140,7 @@ footer p { font-size: 0.85rem; margin-bottom: 0.5rem; opacity: 0.9; }
         <a href="radar-salarial.html" style="display:inline-block;margin-top:0.8rem;color:var(--accent);font-size:0.85rem;font-weight:600;text-decoration:none;">Ver reporte de muestra →</a>
       </div>
       <div class="card">
+        <img class="card-img" src="https://servicio.gticr.net/gti-img-rrhh-despido-tenso.jpg" alt="Reunión tensa en una oficina donde se comunica una salida laboral" loading="lazy">
         <div class="card-icon">🛡️</div>
         <h3>Despido Seguro</h3>
         <p>Cálculo exacto de liquidación, carta de despido, guía de conversación y checklist post-terminación. Todo conforme a ley CR.</p>
@@ -136,6 +149,7 @@ footer p { font-size: 0.85rem; margin-bottom: 0.5rem; opacity: 0.9; }
         <a href="despido-seguro-kit.html" style="display:inline-block;margin-top:0.3rem;color:var(--accent);font-size:0.85rem;font-weight:600;text-decoration:none;">Ver kit completo →</a>
       </div>
       <div class="card">
+        <img class="card-img" src="https://servicio.gticr.net/gti-img-escudo-legal2.jpg" alt="Asesora legal revisando documentos de cumplimiento en su despacho" loading="lazy">
         <div class="card-icon">🔒</div>
         <h3>Blindaje PRODHAB</h3>
         <p>Diagnóstico de cumplimiento de la Ley 8968, reporte de brechas, plan de remediación y plantillas legales para protección de datos.</p>
@@ -151,21 +165,25 @@ footer p { font-size: 0.85rem; margin-bottom: 0.5rem; opacity: 0.9; }
     <h2>¿Cuánto le cuesta NO tener esto?</h2>
     <div class="pain-grid">
       <div class="pain-item">
+        <img class="pain-img" src="https://servicio.gticr.net/gti-img-reclut-entrevista.jpg" alt="Entrevista de selección con un candidato frente al entrevistador" loading="lazy">
         <h4>Contratar mal</h4>
         <p>Un empleado que no funciona cuesta entre 50% y 200% de su salario anual en reclutamiento, capacitación perdida y productividad.</p>
         <div class="cost">Costo: ₡2-8 millones por mala contratación</div>
       </div>
       <div class="pain-item">
+        <img class="pain-img" src="https://servicio.gticr.net/gti-img-rrhh-estres2.jpg" alt="Gerente agobiado frente a su escritorio lleno de papeles" loading="lazy">
         <h4>Pagar a ciegas</h4>
         <p>Sin datos de mercado, paga de más (pierde margen) o paga de menos (pierde talento). Ambos le cuestan.</p>
         <div class="cost">Costo: 15-25% de la planilla desperdiciado</div>
       </div>
       <div class="pain-item">
+        <img class="pain-img" src="https://servicio.gticr.net/gti-img-escudo-abogado.jpg" alt="Reunión con abogados por un reclamo laboral" loading="lazy">
         <h4>Despedir mal</h4>
         <p>Un despido mal ejecutado genera demandas laborales, indemnizaciones extra y daño reputacional. En Costa Rica, los errores se pagan caro.</p>
         <div class="cost">Costo: ₡3-15 millones por demanda laboral</div>
       </div>
       <div class="pain-item">
+        <img class="pain-img" src="https://servicio.gticr.net/gti-img-reclut-cv.jpg" alt="Candidata entregando su currículum con datos personales" loading="lazy">
         <h4>Ignorar la Ley 8968</h4>
         <p>La PRODHAB puede multar hasta 30 salarios base por incumplimiento. Y su empresa probablemente no cumple.</p>
         <div class="cost">Costo: hasta ₡15 millones en multas</div>
@@ -188,7 +206,7 @@ footer p { font-size: 0.85rem; margin-bottom: 0.5rem; opacity: 0.9; }
           <li>Entrega en 24 horas</li>
           <li>Sin compromiso</li>
         </ul>
-        <a href="https://wa.me/50670464896?text=Hola%2C%20quiero%20contratar%20un%20servicio%20individual%20del%20Escudo%20de%20Talento" class="plan-cta secondary">Solicitar</a>
+        <a href="https://wa.me/50662498790?text=Hola%2C%20quiero%20contratar%20un%20servicio%20individual%20del%20Escudo%20de%20Talento" class="plan-cta secondary">Solicitar</a>
       </div>
       <div class="plan featured">
         <h3>Básico</h3>
@@ -200,7 +218,7 @@ footer p { font-size: 0.85rem; margin-bottom: 0.5rem; opacity: 0.9; }
           <li>Soporte prioritario por WhatsApp</li>
           <li>Acceso a plantillas legales</li>
         </ul>
-        <a href="https://wa.me/50670464896?text=Hola%2C%20me%20interesa%20el%20plan%20B%C3%A1sico%20del%20Escudo%20de%20Talento%20%28%24197%2Fmes%29" class="plan-cta primary">Empezar ahora</a>
+        <a href="https://wa.me/50662498790?text=Hola%2C%20me%20interesa%20el%20plan%20B%C3%A1sico%20del%20Escudo%20de%20Talento%20%28%24197%2Fmes%29" class="plan-cta primary">Empezar ahora</a>
       </div>
       <div class="plan">
         <h3>Completo</h3>
@@ -212,7 +230,7 @@ footer p { font-size: 0.85rem; margin-bottom: 0.5rem; opacity: 0.9; }
           <li>Despido seguro ilimitado</li>
           <li>Auditoria PRODHAB incluida</li>
         </ul>
-        <a href="https://wa.me/50670464896?text=Hola%2C%20me%20interesa%20el%20plan%20Completo%20del%20Escudo%20de%20Talento%20%28%24497%2Fmes%29" class="plan-cta secondary">Solicitar</a>
+        <a href="https://wa.me/50662498790?text=Hola%2C%20me%20interesa%20el%20plan%20Completo%20del%20Escudo%20de%20Talento%20%28%24497%2Fmes%29" class="plan-cta secondary">Solicitar</a>
       </div>
       <div class="plan">
         <h3>Premium</h3>
@@ -224,7 +242,7 @@ footer p { font-size: 0.85rem; margin-bottom: 0.5rem; opacity: 0.9; }
           <li>Consultoria mensual 1:1</li>
           <li>Usuarios ilimitados</li>
         </ul>
-        <a href="https://wa.me/50670464896?text=Hola%2C%20me%20interesa%20el%20plan%20Premium%20del%20Escudo%20de%20Talento%20%28%24697%2Fmes%29" class="plan-cta secondary">Solicitar</a>
+        <a href="https://wa.me/50662498790?text=Hola%2C%20me%20interesa%20el%20plan%20Premium%20del%20Escudo%20de%20Talento%20%28%24697%2Fmes%29" class="plan-cta secondary">Solicitar</a>
       </div>
     </div>
   </div>
@@ -257,7 +275,7 @@ footer p { font-size: 0.85rem; margin-bottom: 0.5rem; opacity: 0.9; }
 <footer>
   <p><strong>GTI Consultoría en Recursos Humanos</strong></p>
   <p>Escudo de Talento GTI — Proteja su empresa en cada etapa del ciclo laboral</p>
-  <p><a href="https://gticr.net">gticr.net</a> · <a href="https://wa.me/50670464896">+506 7046-4896</a></p>
+  <p><a href="https://gticr.net">gticr.net</a> · <a href="https://wa.me/50662498790">+506 6249 8790</a></p>
   <p style="margin-top:1rem;font-size:0.75rem;opacity:0.6;">© 2026 GTI Consultoría. Todos los derechos reservados.</p>
 </footer>
 
